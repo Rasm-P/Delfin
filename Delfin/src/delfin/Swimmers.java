@@ -5,11 +5,18 @@
  */
 package delfin;
 
+import java.util.Date;
+
 /**
  *
  * @author rashe
  */
 public class Swimmers {
     
-    //test 
+    private String name;
+    private Date dob;
+    private String email;
+    //hej
+    
+            
 }
