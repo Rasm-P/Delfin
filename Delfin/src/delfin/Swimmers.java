@@ -18,14 +18,16 @@ public class Swimmers {
     private String email;
     private boolean status;
     private boolean pro; 
+    private boolean payment;
 
-    public Swimmers(String name, Date dob, String email, boolean status, boolean pro)
+    public Swimmers(String name, Date dob, String email, boolean status, boolean pro, boolean payment)
     {
         this.name = name;
         this.dob = dob;
         this.email = email;
         this.status = status;
         this.pro = pro;
+        this.payment = payment;
     }
 
     public String getName()
@@ -76,6 +78,16 @@ public class Swimmers {
     public void setPro(boolean pro)
     {
         this.pro = pro;
+    }
+
+    public boolean isPayment()
+    {
+        return payment;
+    }
+
+    public void setPayment(boolean payment)
+    {
+        this.payment = payment;
     }
     
     
