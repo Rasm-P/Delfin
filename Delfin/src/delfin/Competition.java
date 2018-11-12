@@ -5,10 +5,18 @@
  */
 package delfin;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author Rumle
+ * @author Dxtlxv Xndxrsxn
  */
 public class Competition {
+private String comName;
+private double time;
+private int placement;
+private String disciplin;
+private ArrayList<Result> placements;
+
     
 }
