@@ -89,8 +89,10 @@ public class Swimmers {
     {
         this.payment = payment;
     }
-    
-    
-    
-            
+
+    @Override
+    public String toString() {
+        return "Swimmers{" + "name=" + name + ", dob=" + dob + ", email=" + email + ", status=" + status + ", pro=" + pro + ", payment=" + payment + '}';
+    }
+     
 }

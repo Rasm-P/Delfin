@@ -21,8 +21,6 @@ public class Team {
         this.TeamID = TeamID;
     }
 
-   
-
     public String getName() {
         return Name;
     }
