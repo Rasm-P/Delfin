@@ -39,10 +39,10 @@ public class Result {
     {
         this.comp = comp;
     }
-    
 
-
-    
-    
+    @Override
+    public String toString() {
+        return "Result{" + "swimmer=" + swimmer + ", comp=" + comp + '}';
+    }
     
 }

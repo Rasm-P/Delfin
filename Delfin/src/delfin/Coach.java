@@ -68,11 +68,9 @@ public class Coach {
         this.teams = team;
     }
     
-    
-
     @Override
     public String toString() {
-        return "Coach{" + "name=" + name + ", dob=" + dob + ", email=" + email + ", sallery=" + sallery + ", team=" + teams + '}';
+        return "Coach{" + "name=" + name + ", dob=" + dob + ", email=" + email + ", sallery=" + sallery + ", teams=" + teams + '}';
     }
     
 }
