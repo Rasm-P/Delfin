@@ -9,14 +9,6 @@ package delfin;
  *
  * @author rashe
  */
-public class Delfin {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args)
-    {
-        
-    }
-    
+public class Coach {
+    //test
 }
