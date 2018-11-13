@@ -28,8 +28,7 @@ public class Filereader {
     private static final boolean DEBUG = true;
     String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner.txt";
     //String outFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner.txt";
-    
-<<<<<<< HEAD
+
     public ArrayList<String[]> getSwimmersByName() {
         try {
             ArrayList<String[]> swimmers = new ArrayList();
@@ -49,9 +48,5 @@ public class Filereader {
             }
         }
         return null;
-=======
-    public ArrayList<Swimmers> getSvimmersByName() {
-      return null;  
->>>>>>> 84520d57d8dff352bb218fa534a8660939a42f59
     }
 }

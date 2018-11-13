@@ -190,13 +190,21 @@ public class NewMemberGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
     {//GEN-HEADEREND:event_jButton1ActionPerformed
-       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
        String tempname = this.jTextField1.getText();
+<<<<<<< HEAD
        String tempEmail = this.jTextField7.getText();
        LocalDate tempDate = LocalDate.parse(this.jTextField8.getText(), formatter);
        Boolean tempStatus = HelpUI.status(this.jTextField9.getText());
        Boolean tempPro = HelpUI.status(this.jTextField10.getText());
        Boolean tempPayment = HelpUI.status(this.jTextField11.getText());
+=======
+       String tempEmail = this.jTextField3.getText();
+       LocalDate tempDate = LocalDate.parse(this.jTextField2.getText(), formatter);
+       Boolean tempStatus = HelpUI.memberShipStatus(this.jTextField4.getText());
+       Boolean tempPro = HelpUI.isPro(this.jTextField5.getText());
+       Boolean tempPayment = HelpUI.havePaid(this.jTextField6.getText());
+>>>>>>> fb9452dafe4240ec4f5879e24b36d4ecad104537
        Swimmers swim = new Swimmers(tempname, tempDate, tempEmail, tempStatus, tempPro, tempPayment);
         try
         {

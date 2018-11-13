@@ -17,16 +17,16 @@ public class TUI {
 
     public static void main(String[] args) {
         ArrayList<String[]> swimmers = new ArrayList();
-        
+
         Filereader fr = new Filereader();
         swimmers = fr.getSwimmersByName();
-        
+
         for (int i = 0; i < swimmers.size(); i++) {
-        String[] strings = swimmers.get(i);
-        for (int j = 0; j < strings.length; j++) {
-            System.out.print(strings[j] + " ");
+            String[] strings = swimmers.get(i);
+            for (int j = 0; j < strings.length; j++) {
+                System.out.print(strings[j] + " ");
+            }
+            System.out.println();
         }
-        System.out.println();
-    }
     }
 }
