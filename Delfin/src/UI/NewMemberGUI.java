@@ -127,7 +127,7 @@ public class NewMemberGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
     {//GEN-HEADEREND:event_jButton1ActionPerformed
-       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
        String tempname = this.jTextField1.getText();
        String tempEmail = this.jTextField3.getText();
        LocalDate tempDate = LocalDate.parse(this.jTextField2.getText(), formatter);

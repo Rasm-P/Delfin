@@ -5,7 +5,6 @@
  */
 package UI;
 
-import com.sun.java.util.jar.pack.Attribute.FormatException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
@@ -21,10 +20,15 @@ public class HelpUI {
     
     public static String checkIsString(String s) {
         
+         
         if(!s.matches("[a-zA-Z]*")) {
-            throw new FormatException();
+            throw new IllegalArgumentException("OOPS");
+        
         }
         return s;
+    }
+    public static void main(String[] args) {
+        HelpUI.checkIsString("qwe123");
     }
     public static LocalDate setDob() {
 
