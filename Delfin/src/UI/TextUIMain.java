@@ -6,6 +6,8 @@
 package UI;
 
 import delfin.Swimmers;
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.Date;
 
 /**
@@ -18,9 +20,9 @@ public class TextUIMain {
         //Swimmers swimmer1 = new Swimmers
         System.out.println("Navn");
         String name = TextUI.setName();
-        System.out.println("Date of birth(Day/Month/year)");
-        Date date = TextUI.setDob();
-        System.out.println("Emil:");
+        System.out.println("Date of birth(d/MM/yyyy)");
+        LocalDate date = TextUI.setDob();
+        System.out.println("Email:");
         String mail = TextUI.getEmail();
         System.out.println("Medlemsskabsstatus");
         Boolean status = TextUI.status();
@@ -30,6 +32,7 @@ public class TextUIMain {
         Boolean payment = TextUI.havePaid();
         Swimmers swimmer = new Swimmers(name, date, mail, status, pro, payment);
         System.out.println(swimmer.toString());
+        
         
     }
     

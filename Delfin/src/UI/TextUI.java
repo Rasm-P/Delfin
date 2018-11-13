@@ -8,6 +8,9 @@ package presentation;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Month;
+import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
 import java.util.Calendar;
 import java.util.Scanner;
@@ -35,18 +38,17 @@ public class TextUI {
     }
 
         
-    public static Date setDob () {
+    public static LocalDate setDob () {
         
         while(true)
         try {
             
-            
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d/MM/yyyy");
             String dob = scanner.nextLine();
-            
-            Date date = new SimpleDateFormat("dd/MM/yyyy").parse(dob);
-            
-                 return date;   
-        } catch(ParseException e) {
+            LocalDate localDate = LocalDate.parse(dob, formatter);
+             return localDate;
+             
+        } catch(Exception e) {
             
             System.err.println("Oooops");
             
@@ -77,8 +79,10 @@ public class TextUI {
     public static boolean havePaid() {
         String paid = scanner.nextLine();
         if(paid.equals("ja"))
-            return false;
+            
         return true;
+        
+        return false;
     }
 
         
