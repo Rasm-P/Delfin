@@ -199,14 +199,14 @@ public class NewMemberGUI extends javax.swing.JFrame {
         Boolean tempStatus = HelpUI.memberShipStatus(this.jTextField9.getText());
         Boolean tempPro = HelpUI.isPro(this.jTextField10.getText());
         Boolean tempPayment = HelpUI.havePaid(this.jTextField11.getText());
-        
+
         this.jTextField1.setText("");
         this.jTextField7.setText("");
         this.jTextField8.setText("");
         this.jTextField9.setText("");
         this.jTextField10.setText("");
         this.jTextField11.setText("");
-        
+
         Swimmers swim = new Swimmers(tempname, tempDate, tempEmail, tempStatus,
                 tempPro, tempPayment);
         try
@@ -214,10 +214,10 @@ public class NewMemberGUI extends javax.swing.JFrame {
             FileWriter.writeFile(swim);
         } catch (FileNotFoundException ex)
         {
-            Logger.getLogger(NewMemberGUI.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error!");
         } catch (UnsupportedEncodingException ex)
         {
-            Logger.getLogger(NewMemberGUI.class.getName()).log(Level.SEVERE, null, ex);
+            System.out.println("Error!");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -233,7 +233,7 @@ public class NewMemberGUI extends javax.swing.JFrame {
 
     private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextField8ActionPerformed
     {//GEN-HEADEREND:event_jTextField8ActionPerformed
-        
+
     }//GEN-LAST:event_jTextField8ActionPerformed
 
     private void jTextField9ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextField9ActionPerformed
