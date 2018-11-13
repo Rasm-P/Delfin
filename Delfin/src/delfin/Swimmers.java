@@ -5,13 +5,9 @@
  */
 package delfin;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+
 import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
+
 
 /**
  *
@@ -98,7 +94,7 @@ public class Swimmers {
     
     @Override
     public String toString() {
-        return "Swimmers{" + "name=" + name + ", dob=" + dob + ", email=" + email + ", status=" + status + ", pro=" + pro + ", payment=" + payment + '}';
+        return "Swimmers{" + "name= " + name + ", dob= " + dob + ", email= " + email + ", status= " + status + ", pro= " + pro + ", payment= " + payment + '}';
     }
      
 }
