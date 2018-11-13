@@ -102,7 +102,7 @@ public class Swimmers {
     public ArrayList<Swimmers> getSvimmersByName() {
         //throw new UnsupportedOperationException("Not supported yet.");
         try{
-        String query = "Select * from user Order By 'name';";
+        String query = "Select * from delfin.svimmers Order By 'name';";
 
         Connection connection = connector.getConnection();
         Statement stmt = connection.createStatement();
@@ -146,7 +146,7 @@ public class Swimmers {
     public ArrayList<Swimmers> getSvimmersByDob() {
         //throw new UnsupportedOperationException("Not supported yet.");
         try{
-        String query = "Select * from user Order By 'dob';";
+        String query = "Select * from delfin.svimmers Order By 'dob';";
 
         Connection connection = connector.getConnection();
         Statement stmt = connection.createStatement();
@@ -190,7 +190,7 @@ public class Swimmers {
     public ArrayList<Swimmers> getSvimmersByEmail() {
         //throw new UnsupportedOperationException("Not supported yet.");
         try{
-        String query = "Select * from user Order By 'email';";
+        String query = "Select * from delfin.svimmers Order By 'email';";
 
         Connection connection = connector.getConnection();
         Statement stmt = connection.createStatement();
@@ -233,7 +233,7 @@ public class Swimmers {
     public ArrayList<Swimmers> getSvimmersByStatus() {
         //throw new UnsupportedOperationException("Not supported yet.");
         try{
-        String query = "Select * from user Order By 'status';";
+        String query = "Select * from delfin.svimmers Order By 'status';";
 
         Connection connection = connector.getConnection();
         Statement stmt = connection.createStatement();
@@ -277,7 +277,7 @@ public class Swimmers {
     public ArrayList<Swimmers> getSvimmersByPro() {
         //throw new UnsupportedOperationException("Not supported yet.");
         try{
-        String query = "Select * from user Order By 'pro';";
+        String query = "Select * from delfin.svimmers Order By 'pro';";
 
         Connection connection = connector.getConnection();
         Statement stmt = connection.createStatement();
@@ -321,7 +321,7 @@ public class Swimmers {
     public ArrayList<Swimmers> getSvimmersByPayment() {
         //throw new UnsupportedOperationException("Not supported yet.");
         try{
-        String query = "Select * from user Order By 'payment';";
+        String query = "Select * from delfin.svimmers Order By 'payment';";
 
         Connection connection = connector.getConnection();
         Statement stmt = connection.createStatement();
