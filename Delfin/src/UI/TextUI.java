@@ -43,7 +43,7 @@ public class TextUI {
         while(true)
         try {
             
-            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
             String dob = scanner.nextLine();
             LocalDate localDate = LocalDate.parse(dob, formatter);
              return localDate;
@@ -55,7 +55,10 @@ public class TextUI {
         }
         
         
+        
     }
+    
+    
     
     public static String getEmail() {
         String email = scanner.nextLine();
