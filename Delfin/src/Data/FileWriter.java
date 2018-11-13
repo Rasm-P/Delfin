@@ -21,13 +21,13 @@ import java.io.UnsupportedEncodingException;
  */
 public class FileWriter {
 
-    public static void writeFile() throws FileNotFoundException, UnsupportedEncodingException
+    public static void writeFile(Swimmers swim) throws FileNotFoundException, UnsupportedEncodingException
     {
         try
         {
             PrintStream output = new PrintStream(new FileOutputStream("delfiner2.txt", true)); 
-            Swimmers swim = TextUIMain.setSwimmer();
-            output.print(swim.toString());
+            
+            output.print(swim);
         } catch (IOException ex)
         {
             System.out.println("Fejl i fil, kontakt din systemadministrator");
