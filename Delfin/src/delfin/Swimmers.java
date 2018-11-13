@@ -9,6 +9,7 @@ import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -19,13 +20,13 @@ import java.util.Date;
 public class Swimmers {
     
     private String name;
-    private Date dob;
+    private LocalDate dob;
     private String email;
     private boolean status;
     private boolean pro; 
     private boolean payment;
 
-    public Swimmers(String name, Date dob, String email, boolean status, boolean pro, boolean payment)
+    public Swimmers(String name, LocalDate dob, String email, boolean status, boolean pro, boolean payment)
     {
         this.name = name;
         this.dob = dob;
@@ -45,12 +46,12 @@ public class Swimmers {
         this.name = name;
     }
 
-    public Date getDob()
+    public LocalDate getDob()
     {
         return dob;
     }
 
-    public void setDob(Date dob)
+    public void setDob(LocalDate dob)
     {
         this.dob = dob;
     }
