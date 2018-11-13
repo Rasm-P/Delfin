@@ -5,18 +5,68 @@
  */
 package UI;
 
+import com.sun.java.util.jar.pack.Attribute.FormatException;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
 /**
  *
  * @author rashe
  */
 public class HelpUI {
+
+    private static Scanner scanner = new Scanner(System.in);
+
     
-        public static boolean status(String s) {
+    public static String checkIsString(String s) {
         
-        if(s.equals("nej"))
+        if(!s.matches("[a-zA-Z]*")) {
+            throw new FormatException();
+        }
+        return s;
+    }
+    public static LocalDate setDob() {
+
+        while (true) {
+            try {
+
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+                String dob = scanner.nextLine();
+                LocalDate localDate = LocalDate.parse(dob, formatter);
+                return localDate;
+
+            } catch (Exception e) {
+
+                System.err.println("Oooops");
+            }
+        }
+    }
+
+   
+
+    public static boolean memberShipStatus(String s) {
+        
+        if (s.equals("nej")) {
             return false;
-          return true;
-}
+        }
+        return true;
+    }
+
+    public static boolean isPro(String s) {
         
+        if (s.equals("nej")) {
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean havePaid(String s) {
         
+        if (s.equals("nej")) {
+            return false;
+        }
+        return true;
+        
+    }
 }

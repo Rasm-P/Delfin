@@ -131,9 +131,9 @@ public class NewMemberGUI extends javax.swing.JFrame {
        String tempname = this.jTextField1.getText();
        String tempEmail = this.jTextField3.getText();
        LocalDate tempDate = LocalDate.parse(this.jTextField2.getText(), formatter);
-       Boolean tempStatus = HelpUI.status(this.jTextField4.getText());
-       Boolean tempPro = HelpUI.status(this.jTextField5.getText());
-       Boolean tempPayment = HelpUI.status(this.jTextField6.getText());
+       Boolean tempStatus = HelpUI.memberShipStatus(this.jTextField4.getText());
+       Boolean tempPro = HelpUI.isPro(this.jTextField5.getText());
+       Boolean tempPayment = HelpUI.havePaid(this.jTextField6.getText());
        Swimmers swim = new Swimmers(tempname, tempDate, tempEmail, tempStatus, tempPro, tempPayment);
         try
         {
