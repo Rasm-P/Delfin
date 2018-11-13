@@ -18,6 +18,6 @@ public class Filereader {
     String outFilename = "C:\\Users\\Rasmus2\\Desktop\\TestIO.txt";
     
     public ArrayList<Swimmers> getSvimmersByName() {
-        
+      return null;  
     }
 }

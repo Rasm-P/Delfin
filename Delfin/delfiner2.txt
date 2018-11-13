@@ -1,0 +1,1 @@
+Swimmers{name=Ditlev, dob=1995-05-08, email=retrete@yahoo.com, status=true, pro=true, payment=true}

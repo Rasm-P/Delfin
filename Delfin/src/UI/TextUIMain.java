@@ -16,11 +16,12 @@ import java.util.Date;
  */
 public class TextUIMain {
     
-    public static void main(String[] args) {
+    public static Swimmers setSwimmer()
+            {
         //Swimmers swimmer1 = new Swimmers
         System.out.println("Navn");
         String name = TextUI.setName();
-        System.out.println("Date of birth(d/MM/yyyy)");
+        System.out.println("Date of birth(yyyy/mm/dd)");
         LocalDate date = TextUI.setDob();
         System.out.println("Email:");
         String mail = TextUI.getEmail();
@@ -32,7 +33,7 @@ public class TextUIMain {
         Boolean payment = TextUI.havePaid();
         Swimmers swimmer = new Swimmers(name, date, mail, status, pro, payment);
         System.out.println(swimmer.toString());
-        
+        return swimmer;
         
     }
     

@@ -5,10 +5,34 @@
  */
 package Data;
 
+import UI.TextUIMain;
+import delfin.Swimmers;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.io.UnsupportedEncodingException;
+
+
+
 /**
  *
  * @author rashe
  */
 public class FileWriter {
+
+    public static void writeFile() throws FileNotFoundException, UnsupportedEncodingException
+    {
+        try
+        {
+            PrintStream output = new PrintStream(new FileOutputStream("delfiner2.txt", true)); 
+            Swimmers swim = TextUIMain.setSwimmer();
+            output.print(swim.toString());
+        } catch (IOException ex)
+        {
+            System.out.println("Fejl i fil, kontakt din systemadministrator");
+        }
+
+    }
     
 }
