@@ -45,13 +45,13 @@ public class DataAccessor {
         while (rs.next()) {
             
             name = rs.getString("name");
-            dob = rs.getDate("dob");
+//            dob = rs.getDate("dob");
             email = rs.getString("email");
             status = rs.getBoolean("status");
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
             
-            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
+//            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
         
         
         }
@@ -89,13 +89,13 @@ public class DataAccessor {
         while (rs.next()) {
             
             name = rs.getString("name");
-            dob = rs.getDate("dob");
+//            dob = rs.getDate("dob");
             email = rs.getString("email");
             status = rs.getBoolean("status");
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
             
-            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
+//            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
         
         
         }
@@ -133,13 +133,13 @@ public class DataAccessor {
         while (rs.next()) {
             
             name = rs.getString("name");
-            dob = rs.getDate("dob");
+//            dob = rs.getDate("dob");
             email = rs.getString("email");
             status = rs.getBoolean("status");
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
             
-            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
+//            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
         
         
         }
@@ -176,13 +176,13 @@ public class DataAccessor {
         while (rs.next()) {
             
             name = rs.getString("name");
-            dob = rs.getDate("dob");
+//            dob = rs.getDate("dob");
             email = rs.getString("email");
             status = rs.getBoolean("status");
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
             
-            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
+//            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
         
         
         }
@@ -220,13 +220,13 @@ public class DataAccessor {
         while (rs.next()) {
             
             name = rs.getString("name");
-            dob = rs.getDate("dob");
+//            dob = rs.getDate("dob");
             email = rs.getString("email");
             status = rs.getBoolean("status");
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
             
-            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
+//            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
         
         
         }
@@ -264,13 +264,13 @@ public class DataAccessor {
         while (rs.next()) {
             
             name = rs.getString("name");
-            dob = rs.getDate("dob");
+//            dob = rs.getDate("dob");
             email = rs.getString("email");
             status = rs.getBoolean("status");
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
             
-            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
+//            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
         
         
         }
