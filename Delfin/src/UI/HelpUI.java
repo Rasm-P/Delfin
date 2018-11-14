@@ -28,7 +28,7 @@ public class HelpUI {
         return s;
     }
     public static void main(String[] args) {
-        HelpUI.checkIsString("qwe123");
+        HelpUI.checkIsString("qw2e123");
     }
     public static LocalDate setDob() {
 
