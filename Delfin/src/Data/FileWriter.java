@@ -5,7 +5,7 @@
  */
 package Data;
 
-import UI.TextUIMain;
+
 import delfin.Swimmers;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -27,7 +27,7 @@ public class FileWriter {
         {
             PrintStream output = new PrintStream(new FileOutputStream("delfiner2.txt", true)); 
             
-            output.print(swim);
+            output.print(System.lineSeparator() + swim);
         } catch (IOException ex)
         {
             System.out.println("Fejl i fil, kontakt din systemadministrator");

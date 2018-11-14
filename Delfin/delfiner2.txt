@@ -1,1 +1,11 @@
+<<<<<<< HEAD
 Swimmers{name=Ditlev, dob=1995-05-08, email=retrete@yahoo.com, status=true, pro=true, payment=true}Swimmers{name=wr, dob=1997-05-05, email=qwe@thth.com, status=false, pro=false, payment=false}Swimmers{name=qwe, dob=1997-05-05, email=ooo, status=false, pro=false, payment=false}Swimmers{name=Ditlev, dob=1995-03-18, email=rfjsafks@blackmarket.dk, status=true, pro=true, payment=true}Swimmers{name=Ditlev, dob=1995-03-18, email=rfjsafks@blackmarket.dk, status=true, pro=true, payment=true}Swimmers{name=Ditlev, dob=1995-03-18, email=rfjsafks@blackmarket.dk, status=true, pro=true, payment=true}Swimmers{name=Ditlev, dob=1995-03-18, email=rfjsafks@blackmarket.dk, status=true, pro=true, payment=true}Swimmers{name=Ditlev, dob=1995-03-18, email=rfjsafks@blackmarket.dk, status=true, pro=true, payment=true}Swimmers{name=Jhon, dob=2009-12-23, email=hey@gmail.dum, status=true, pro=false, payment=false}
+=======
+
+Swimmers{name=rasmus, dob=1995-07-20, email=rashem, status=true, pro=true, payment=true}
+Swimmers{name= rasmus, dob= 1995-05-05, email= rashem2@hotmail.com, status= true, pro= true, payment= true}
+Swimmers{name= rasmus hemm, dob= 1995-05-05, email= rashem2@hotmail.com, status= true, pro= true, payment= true}
+Swimmers{name= rasmus, dob= 1995-04-04, email= rashem2@hotmail.com, status= true, pro= true, payment= true}
+Swimmers{name= John, dob= 1996-05-05, email= John@johnmail.com, status= true, pro= true, payment= true}
+Swimmers{name= Holger, dob= 1995-05-05, email= Holger@Holgermail.com, status= false, pro= false, payment= true}
+>>>>>>> c9279e8caa714ae5f325c708c3534a25efde9844
