@@ -17,60 +17,68 @@ public class HelpUI {
 
     private static Scanner scanner = new Scanner(System.in);
 
-    
-    public static String checkIsString(String s) {
-        
-         
-        if(!s.matches("[a-zA-Z]*")) {
+    public static String checkIsString(String s, String format)
+    {
+
+        if (!s.matches(format))
+        {
             throw new IllegalArgumentException("OOPS");
-        
+
         }
         return s;
     }
-    public static void main(String[] args) {
-        HelpUI.checkIsString("qw2e123");
-    }
-    public static LocalDate setDob() {
 
-        while (true) {
-            try {
 
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-                String dob = scanner.nextLine();
-                LocalDate localDate = LocalDate.parse(dob, formatter);
-                return localDate;
 
-            } catch (Exception e) {
+    public static LocalDate setDob(String s)
+    {
 
-                System.err.println("Oooops");
-            }
+        try
+        {
+
+            DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            String dob = s;
+            LocalDate localDate = LocalDate.parse(dob, formatter);
+            return localDate;
+
+        } catch (Exception e)
+        {
+
+            System.err.println("Oooops");
+
         }
+        return null;
     }
 
-   
+    public static boolean memberShipStatus(String s)
+    {
 
-    public static boolean memberShipStatus(String s) {
-        
-        if (s.equals("nej")) {
+        if (s.equals("nej"))
+        {
             return false;
         }
         return true;
     }
 
-    public static boolean isPro(String s) {
-        
-        if (s.equals("nej")) {
+    public static boolean isPro(String s)
+    {
+
+        if (s.equals("nej"))
+        {
             return false;
         }
         return true;
     }
 
-    public static boolean havePaid(String s) {
-        
-        if (s.equals("nej")) {
+    public static boolean havePaid(String s)
+    {
+
+        if (s.equals("nej"))
+        {
             return false;
         }
         return true;
-        
+
     }
+
 }

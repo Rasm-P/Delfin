@@ -9,3 +9,5 @@ Swimmers{name= rasmus, dob= 1995-04-04, email= rashem2@hotmail.com, status= true
 Swimmers{name= John, dob= 1996-05-05, email= John@johnmail.com, status= true, pro= true, payment= true}
 Swimmers{name= Holger, dob= 1995-05-05, email= Holger@Holgermail.com, status= false, pro= false, payment= true}
 >>>>>>> c9279e8caa714ae5f325c708c3534a25efde9844
+
+Rasmus, 1995-04-04, rashem2@hotmail.com, true, true, true
