@@ -202,16 +202,9 @@ public class NewMemberGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
     {//GEN-HEADEREND:event_jButton1ActionPerformed
-<<<<<<< HEAD
-       DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy/MM/dd");
-       String tempname = this.jTextField1.getText();
-       String tempEmail = this.jTextField3.getText();
-       LocalDate tempDate = LocalDate.parse(this.jTextField2.getText(), formatter);
-       Boolean tempStatus = HelpUI.status(this.jTextField4.getText());
-       Boolean tempPro = HelpUI.status(this.jTextField5.getText());
-       Boolean tempPayment = HelpUI.status(this.jTextField6.getText());
-       Swimmers swim = new Swimmers(tempname, tempDate, tempEmail, tempStatus, tempPro, tempPayment);
-=======
+
+
+       
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String tempname = this.jTextField1.getText();
         String tempEmail = this.jTextField7.getText();
@@ -229,7 +222,6 @@ public class NewMemberGUI extends javax.swing.JFrame {
 
         Swimmers swim = new Swimmers(tempname, tempDate, tempEmail, tempStatus,
                 tempPro, tempPayment);
->>>>>>> c9279e8caa714ae5f325c708c3534a25efde9844
         try
         {
             FileWriter.writeFile(swim);
