@@ -58,6 +58,26 @@ public class Calculator {
         int yearNow = Integer.parseInt(year);
         return yearNow;
     }
+    public static int ageMonth() {
+        return 2;
+    }
+    public static void main(String[] args) throws ParseException {
+        LocalDate dateX = LocalDate.of(1992, 05, 05);
+        Swimmers swimmer = new Swimmers("Hans", dateX, "qweqwe", true, true, true);
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = sdf.parse("1995-05-05");
+        Date date1 = sdf.parse("2005-01-07");
+        LocalDate now = LocalDate.now();
+        System.out.println(Math.abs(swimmer.getDob().getYear()-now.getYear()));
+        System.out.println(Math.abs(swimmer.getDob().getDayOfMonth()-now.getDayOfMonth()));
+        System.out.println(Math.abs(swimmer.getDob().getMonthValue()-now.getMonthValue()));
+        
+        long diff = Math.abs(date.getYear()-date1.getYear());
+        long diff1 = Math.abs(date1.getDate()-date.getDate());
+        long diff2 = Math.abs(date.getMonth()-date1.getMonth());
+        System.out.println(diff + " " + diff1 + " " + diff2);
+    }
     
+  
    
 }
