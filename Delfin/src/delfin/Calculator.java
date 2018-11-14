@@ -20,36 +20,44 @@ import java.util.logging.SimpleFormatter;
  * @author Rasmus2
  */
 public class Calculator {
+    private static int senior = 1600;
+    private static double seniorDiscount = 1600*0.75;
+    private static int junior = 1000;
+    private static int passive = 500;
     
-    /*Age < 18 = 1000
-    Age > 18 = 1600 && age < 60
-    Age > 60 = 1600*0,75
-    Status deaktiv = 500;
-    Swimmers swimmer;
-    
-    public int calculator() {
+    public static double swimmerCalculator(Swimmers swimmer) {
+            
         if(swimmer.isStatus()==false)
-            return 500;
-        if(swimmer.isStatus()==true && swimmer.getDob().atTime(LocalDate))
+            return passive;
+        if(Calculator.ageInYears(swimmer) < 18)
+            return junior;
+        if(Calculator.ageInYears(swimmer) > 60)
+             return seniorDiscount;
+        if(Calculator.ageInYears(swimmer) < 60)
+            return senior;
         
-        //Udregn kontigent for et givent medlem
+        return 0.0;
+    
     }
-    public int calculator() {
-        //Udregn kontigent for alle i klubben
-    } */
-    public static void main(String[] args) throws ParseException {
-        Swimmers swim = new Swimmers("Hans", ("1996-05-05"), "John@hotmail.com", true, true, true);
-        Calendar cal = Calendar.getInstance();
-        System.out.println(cal);
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        Date date1 = sdf.parse("1995-05-05");
-        Date date2 = sdf.parse("1977-06-01");
-        LocalDate local = LocalDate.of(1996, Month.MARCH, 05);
-        System.out.println(local);
-        System.out.println(swim.toString());
-        
-                //LocalDate localDate = LocalDate.parse(dob, formatter);
+       
+    public static int ageInYears(Swimmers swimmer) {
+        LocalDate date = swimmer.getDob();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy LLLL dd");
+        String formattedString = date.format(formatter);
+        String age = formattedString.substring(0, 4);
+        int yearsOld = Integer.parseInt(age);
+        int year = (Calculator.yearNow());
+        return year - yearsOld;
         
     }
+    public static int yearNow() {
+        LocalDate now = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy LLLL dd");
+        String formattedString = now.format(formatter);
+        String year = formattedString.substring(0, 4);
+        int yearNow = Integer.parseInt(year);
+        return yearNow;
+    }
+    
    
 }
