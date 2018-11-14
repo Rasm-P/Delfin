@@ -1,0 +1,6 @@
+James Targaryen, targaryen@hotmail.com, 1990-05-26, Herlevgade 8, ja, ja, ja 
+Oliver Wood, karstartk@hotmail.com, 1981-09-14, Hogwarts road 1, ja, ja, ja 
+Peter Karstark, Karstark@hotmail.com, 1975-04-14, Winterfell Gade 2, nej, nej, ja
+Steve Olesen, Olesen@hotmail.com, 1999-6-21, Amagerbrogade 222, ja, nej, nej
+Troels Petersen, troels.petersen@blackmarkentrading.com, 1979-9-12, nej, nej, nej 
+Carl Brandon, Brandon@hotmail.com, 1989-12-1, Ordrupgade 22B, ja, ja, ja 

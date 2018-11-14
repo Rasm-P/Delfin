@@ -5,6 +5,10 @@
  */
 package delfin;
 
+import Data.FileWriter;
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
+
 /**
  *
  * @author rashe
@@ -14,9 +18,10 @@ public class Delfin {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args)
+    public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException
     {
         
+       
     }
     
 }
