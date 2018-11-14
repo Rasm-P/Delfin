@@ -94,7 +94,7 @@ public class Swimmers {
     
     @Override
     public String toString() {
-        return "Swimmers{" + "name= " + name + ", dob= " + dob + ", email= " + email + ", status= " + status + ", pro= " + pro + ", payment= " + payment + '}';
+        return name + ", " + dob + ", "+ email + ", "+ status + ", " + pro + ", " + payment ;
     }
      
 }
