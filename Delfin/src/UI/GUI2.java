@@ -71,6 +71,7 @@ public class GUI2 extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
+        jButton48 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -209,11 +210,6 @@ public class GUI2 extends javax.swing.JFrame {
         jPanel10.setLayout(jPanel10Layout);
         jPanel10Layout.setHorizontalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel10Layout.createSequentialGroup()
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton37)
-                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
                 .addGap(36, 36, 36)
                 .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -226,6 +222,11 @@ public class GUI2 extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(38, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel10Layout.createSequentialGroup()
+                .addComponent(jLabel5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton37)
+                .addContainerGap())
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -466,6 +467,13 @@ public class GUI2 extends javax.swing.JFrame {
 
         jLabel2.setText("Database information Medlemmer:");
 
+        jButton48.setText("Add new member");
+        jButton48.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton48ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
@@ -473,7 +481,6 @@ public class GUI2 extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
                     .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jButton1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -485,10 +492,13 @@ public class GUI2 extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton5)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton6))
+                        .addComponent(jButton6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton48))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1234, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1234, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel2))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -498,14 +508,15 @@ public class GUI2 extends javax.swing.JFrame {
                 .addComponent(jLabel3)
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(13, 13, 13)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2)
                     .addComponent(jButton3)
                     .addComponent(jButton4)
                     .addComponent(jButton5)
-                    .addComponent(jButton6))
+                    .addComponent(jButton6)
+                    .addComponent(jButton48))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel2)
                 .addGap(18, 18, 18)
@@ -855,6 +866,12 @@ public class GUI2 extends javax.swing.JFrame {
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);        
         jPanel11.setVisible(false);
+        
+        if (jPanel10.isVisible() && jPanel3.isVisible()) {
+            jButton48.setVisible(true);
+        } else {
+            jButton48.setVisible(false);
+        }
     }//GEN-LAST:event_jButton7ActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed
@@ -900,6 +917,12 @@ public class GUI2 extends javax.swing.JFrame {
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);
         jPanel11.setVisible(false);
+        
+        if (jPanel10.isVisible() && jPanel3.isVisible()) {
+            jButton48.setVisible(true);
+        } else {
+            jButton48.setVisible(false);
+        }
     }//GEN-LAST:event_jButton36ActionPerformed
 
     private void jButton38ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton38ActionPerformed
@@ -918,6 +941,12 @@ public class GUI2 extends javax.swing.JFrame {
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);
         jPanel11.setVisible(false);
+        
+        if (jPanel10.isVisible() && jPanel3.isVisible()) {
+            jButton48.setVisible(true);
+        } else {
+            jButton48.setVisible(false);
+        }
     }//GEN-LAST:event_jButton41ActionPerformed
 
     private void jButton42ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton42ActionPerformed
@@ -959,6 +988,12 @@ public class GUI2 extends javax.swing.JFrame {
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);
         jPanel11.setVisible(false);
+        
+        if (jPanel10.isVisible() && jPanel3.isVisible()) {
+            jButton48.setVisible(true);
+        } else {
+            jButton48.setVisible(false);
+        }
     }//GEN-LAST:event_jButton43ActionPerformed
 
     private void jButton46ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton46ActionPerformed
@@ -973,6 +1008,12 @@ public class GUI2 extends javax.swing.JFrame {
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);
         jPanel11.setVisible(false);
+        
+        if (jPanel10.isVisible() && jPanel3.isVisible()) {
+            jButton48.setVisible(true);
+        } else {
+            jButton48.setVisible(false);
+        }
     }//GEN-LAST:event_jButton46ActionPerformed
 
     private void jButton47ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton47ActionPerformed
@@ -987,6 +1028,12 @@ public class GUI2 extends javax.swing.JFrame {
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);
         jPanel11.setVisible(false);
+        
+        if (jPanel10.isVisible() && jPanel3.isVisible()) {
+            jButton48.setVisible(true);
+        } else {
+            jButton48.setVisible(false);
+        }
     }//GEN-LAST:event_jButton47ActionPerformed
 
     private void jButton37ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton37ActionPerformed
@@ -1030,6 +1077,11 @@ public class GUI2 extends javax.swing.JFrame {
         jPanel7.setVisible(false);
         jPanel11.setVisible(true);
     }//GEN-LAST:event_jButton40ActionPerformed
+
+    private void jButton48ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton48ActionPerformed
+        NewMemberGUI itemloader = new NewMemberGUI();
+        itemloader.setVisible(true);
+    }//GEN-LAST:event_jButton48ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1112,6 +1164,7 @@ public class GUI2 extends javax.swing.JFrame {
     private javax.swing.JButton jButton45;
     private javax.swing.JButton jButton46;
     private javax.swing.JButton jButton47;
+    private javax.swing.JButton jButton48;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
