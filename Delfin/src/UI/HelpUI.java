@@ -5,15 +5,21 @@
  */
 package UI;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Scanner;
+
 /**
  *
  * @author rashe
  */
 public class HelpUI {
+
+    private static Scanner scanner = new Scanner(System.in);
+
     
-        public static boolean status(String s) {
+    public static String checkIsString(String s) {
         
-<<<<<<< HEAD
          
         if(!s.matches("[a-zA-Z]*")) {
             throw new IllegalArgumentException("OOPS");
@@ -54,12 +60,17 @@ public class HelpUI {
     public static boolean isPro(String s) {
         
         if (s.equals("nej")) {
-=======
-        if(s.equals("nej"))
->>>>>>> 544af3be0edd17fd0207dfc8790c8af0097ce110
             return false;
-          return true;
-}
+        }
+        return true;
+    }
+
+    public static boolean havePaid(String s) {
         
+        if (s.equals("nej")) {
+            return false;
+        }
+        return true;
         
+    }
 }
