@@ -3,3 +3,5 @@ Swimmers{name=rasmus, dob=1995-07-20, email=rashem, status=true, pro=true, payme
 Swimmers{name= rasmus, dob= 1995-05-05, email= rashem2@hotmail.com, status= true, pro= true, payment= true}
 Swimmers{name= rasmus hemm, dob= 1995-05-05, email= rashem2@hotmail.com, status= true, pro= true, payment= true}
 Swimmers{name= rasmus, dob= 1995-04-04, email= rashem2@hotmail.com, status= true, pro= true, payment= true}
+Swimmers{name= John, dob= 1996-05-05, email= John@johnmail.com, status= true, pro= true, payment= true}
+Swimmers{name= Holger, dob= 1995-05-05, email= Holger@Holgermail.com, status= false, pro= false, payment= true}
