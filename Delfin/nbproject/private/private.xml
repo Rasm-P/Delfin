@@ -6,6 +6,11 @@
         <group/>
 =======
         <group>
+<<<<<<< HEAD
+            <file>file:/C:/Users/Rasmus2/Documents/GitHub/Delfin/Delfin/src/UI/GUI1.java</file>
+            <file>file:/C:/Users/Rasmus2/Documents/GitHub/Delfin/Delfin/src/Data/Filereader.java</file>
+            <file>file:/C:/Users/Rasmus2/Documents/GitHub/Delfin/Delfin/src/UI/GUI2.java</file>
+=======
             <file>file:/Users/Rumle/Documents/GitHub/Delfin/Delfin/src/UI/GUI2.java</file>
             <file>file:/Users/Rumle/Documents/GitHub/Delfin/Delfin/src/delfin/Swimmers.java</file>
             <file>file:/Users/Rumle/Documents/GitHub/Delfin/Delfin/src/Data/Filereader.java</file>
@@ -21,6 +26,7 @@
             <file>file:/Users/Rumle/Documents/GitHub/Delfin/Delfin/src/Images/Capture2.PNG</file>
             <file>file:/Users/Rumle/Documents/GitHub/Delfin/Delfin/src/UI/GUI1.java</file>
             <file>file:/Users/Rumle/Documents/GitHub/Delfin/Delfin/src/delfin/Coach.java</file>
+>>>>>>> c9279e8caa714ae5f325c708c3534a25efde9844
         </group>
 >>>>>>> d2a498c7fb53af3eb773b30a26c167627108c8cd
     </open-files>
