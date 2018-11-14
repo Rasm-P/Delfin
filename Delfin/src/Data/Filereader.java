@@ -26,8 +26,7 @@ import java.util.List;
 public class Filereader {
 
     private static final boolean DEBUG = true;
-    String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner.txt";
-    //String outFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner.txt";
+    String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
 
     public ArrayList<String[]> getSwimmersByName() {
         try {
