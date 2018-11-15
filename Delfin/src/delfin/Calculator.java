@@ -9,6 +9,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.Month;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
@@ -25,41 +26,24 @@ public class Calculator {
     private static int junior = 1000;
     private static int passive = 500;
     
-    public static double swimmerCalculator(Swimmer swimmer) {
-            
+    public static double calculatorPriceMember(Swimmer swimmer) {
+        int age = (Period.between(swimmer.getDob(), LocalDate.now()).getYears());
+        
         if(swimmer.isStatus()==false)
             return passive;
-        if(Calculator.ageInYears(swimmer) < 18)
+        
+        if(age < 18)
             return junior;
-        if(Calculator.ageInYears(swimmer) > 60)
-             return seniorDiscount;
-        if(Calculator.ageInYears(swimmer) < 60)
+        
+        if(age >= 18 && age < 61)
             return senior;
         
+        if(age > 60)
+            return seniorDiscount;
+            
         return 0.0;
-    
-    }
-       
-    public static int ageInYears(Swimmer swimmer) {
-        LocalDate date = swimmer.getDob();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy LLLL dd");
-        String formattedString = date.format(formatter);
-        String age = formattedString.substring(0, 4);
-        int yearsOld = Integer.parseInt(age);
-        int year = (Calculator.yearNow());
-        return year - yearsOld;
         
+            }
     }
-    public static int yearNow() {
-        LocalDate now = LocalDate.now();
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy LLLL dd");
-        String formattedString = now.format(formatter);
-        String year = formattedString.substring(0, 4);
-        int yearNow = Integer.parseInt(year);
-        return yearNow;
-   
-    
-}
-    
-}
+
 
