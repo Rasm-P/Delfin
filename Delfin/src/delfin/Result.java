@@ -11,21 +11,21 @@ package delfin;
  */
 public class Result {
     
-    private Swimmers swimmer;
+    private Swimmer swimmer;
     private Competition comp;
 
-    public Result(Swimmers swimmer, Competition comp)
+    public Result(Swimmer swimmer, Competition comp)
     {
         this.swimmer = swimmer;
         this.comp = comp;
     }
 
-    public Swimmers getSwimmer()
+    public Swimmer getSwimmer()
     {
         return swimmer;
     }
 
-    public void setSwimmer(Swimmers swimmer)
+    public void setSwimmer(Swimmer swimmer)
     {
         this.swimmer = swimmer;
     }

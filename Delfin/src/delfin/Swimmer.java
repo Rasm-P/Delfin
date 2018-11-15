@@ -13,7 +13,7 @@ import java.time.LocalDate;
  *
  * @author rashe
  */
-public class Swimmers {
+public class Swimmer {
     
     private String name;
     private LocalDate dob;
@@ -22,7 +22,7 @@ public class Swimmers {
     private boolean pro; 
     private boolean payment;
 
-    public Swimmers(String name, LocalDate dob, String email, boolean status, boolean pro, boolean payment)
+    public Swimmer(String name, LocalDate dob, String email, boolean status, boolean pro, boolean payment)
     {
         this.name = name;
         this.dob = dob;

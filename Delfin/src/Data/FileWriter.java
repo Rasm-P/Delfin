@@ -6,7 +6,7 @@
 package Data;
 
 
-import delfin.Swimmers;
+import delfin.Swimmer;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -21,7 +21,7 @@ import java.io.UnsupportedEncodingException;
  */
 public class FileWriter {
 
-    public static void writeFile(Swimmers swim) throws FileNotFoundException, UnsupportedEncodingException
+    public static void writeFile(Swimmer swim) throws FileNotFoundException, UnsupportedEncodingException
     {
         try
         {

@@ -5,7 +5,7 @@
  */
 package Data;
 
-import delfin.Swimmers;
+import delfin.Swimmer;
 import java.awt.Point;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
