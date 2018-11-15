@@ -7,17 +7,26 @@ package Data;
 
 import delfin.Swimmers;
 import java.awt.Point;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.PrintWriter;
+import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -47,5 +56,14 @@ public class Filereader {
             }
         }
         return null;
+    }
+
+    public void removeSwimmer(String str) throws IOException {
+
+        File file = new File(inFilename);
+        List<String> out = Files.lines(file.toPath())
+                .filter(line -> !line.contains(str))
+                .collect(Collectors.toList());
+        Files.write(file.toPath(), out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
     }
 }

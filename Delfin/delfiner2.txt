@@ -1,2 +1,5 @@
-Ole, 1998-12-12, hey@gmai.com, true, true, true
-Jhon, 2001-02-12, Jhon@gmail.com, false, false, true
+John, 2001-02-12, Jhon@gmail.com, false, false, true
+Anders, 2000-06-06, prae@gmail.com, false, true, false
+Ole, 2000-08-05, sdfs@gmail.com, false, true, false
+Allan, 1987-03-02, allan@gmail.com, true, true, true
+Adam, 1999-02-06, adam.gmail.com, false, true, true
