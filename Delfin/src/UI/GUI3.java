@@ -5,9 +5,11 @@
  */
 package UI;
 
+import Data.Controller;
 import Data.Filereader;
 import java.awt.Color;
 import java.util.ArrayList;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -19,10 +21,14 @@ public class GUI3 extends javax.swing.JFrame {
     /**
      * Creates new form GUI
      */
-    DefaultTableModel model;
+    //DefaultTableModel model;
+    Controller con = new Controller();
     public GUI3() {
         initComponents();
         getContentPane().setBackground(Color.white);
+        
+        con.readTextFile();
+        /*
         model = (DefaultTableModel)jTable1.getModel();
         
         ArrayList<String[]> swimmers = new ArrayList();
@@ -34,6 +40,7 @@ public class GUI3 extends javax.swing.JFrame {
             String[] strings = swimmers.get(i);
             model.insertRow(model.getRowCount(), new Object[]{strings[0],strings[1],strings[2],strings[3],strings[4], strings[5]});
         }
+        */
     }
 
     /**
@@ -1048,4 +1055,8 @@ public class GUI3 extends javax.swing.JFrame {
     private javax.swing.JTable jTable4;
     private javax.swing.JTable jTable5;
     // End of variables declaration//GEN-END:variables
+
+    public JTable getjTable1() {
+        return jTable1;
+    }
 }
