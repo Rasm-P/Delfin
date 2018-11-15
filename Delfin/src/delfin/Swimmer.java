@@ -7,6 +7,7 @@ package delfin;
 
 
 import java.time.LocalDate;
+import java.time.Period;
 
 
 /**
@@ -96,5 +97,22 @@ public class Swimmer {
     public String toString() {
         return name + ", " + dob + ", "+ email + ", "+ status + ", " + pro + ", " + payment ;
     }
-     
+    
+    public static double calculatorPriceMember(Swimmer swimmer) {
+        int age = (Period.between(swimmer.getDob(), LocalDate.now()).getYears());
+        
+        if(swimmer.isStatus()==false)
+            return Calculator.getPassive();
+        
+        if(age < 18)
+            return Calculator.getJunior();
+        
+        if(age >= 18 && age < 61)
+            return Calculator.getSenior();
+        
+        if(age > 60)
+            return Calculator.getSeniorDiscount();
+            
+        return 0.0;
+    }
 }
