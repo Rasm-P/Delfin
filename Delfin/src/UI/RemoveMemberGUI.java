@@ -5,19 +5,8 @@
  */
 package UI;
 
-import Data.FileWriter;
-import Data.Filereader;
-import delfin.Swimmer;
+import Data.Controller;
 import java.awt.Color;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -28,23 +17,12 @@ public class RemoveMemberGUI extends javax.swing.JFrame {
     /**
      * Creates new form NewMemberGUI
      */
-    DefaultTableModel model;
-
+    
     public RemoveMemberGUI() {
         initComponents();
         getContentPane().setBackground(Color.white);
-
-        model = (DefaultTableModel) jTable1.getModel();
-
-        ArrayList<String[]> swimmers = new ArrayList();
-
-        Filereader fr = new Filereader();
-        swimmers = fr.getSwimmersByName();
-
-        for (int i = 0; i < swimmers.size(); i++) {
-            String[] strings = swimmers.get(i);
-            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[2], strings[3], strings[4], strings[5]});
-        }
+        Controller con = new Controller();
+        con.readTextFile(jTable1);
     }
 
     /**
@@ -141,27 +119,10 @@ public class RemoveMemberGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
     {//GEN-HEADEREND:event_jButton1ActionPerformed
-
-        ArrayList<String[]> swimmers = new ArrayList();
-        String str;
-        
-        Filereader fr = new Filereader();
-        swimmers = fr.getSwimmersByName();
-
-        try {
-            for (int i = 0; i < swimmers.size(); i++) {
-                String[] strings = swimmers.get(i);
-                if (strings[0].contains(jTextField1.getText())) {
-                    str = String.join(", ", strings);
-                    fr.removeSwimmer(str);
-                } 
-            }
-        } catch (IOException ex) {
-            Logger.getLogger(RemoveMemberGUI.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        Controller con = new Controller();
+        con.compareMembers(jTextField1);
         
         RemoveMemberGUI.this.setVisible(false);
-
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextField1ActionPerformed

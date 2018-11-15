@@ -12,7 +12,6 @@ import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.logging.Level;
 import javax.swing.JOptionPane;
 
 /**

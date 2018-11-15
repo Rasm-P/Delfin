@@ -6,8 +6,13 @@
 package Data;
 
 import UI.GUI3;
+import UI.RemoveMemberGUI;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JTable;
+import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -32,5 +37,25 @@ public class Controller {
         
         return jTable1;
         
+    }
+    
+    public void compareMembers(JTextField jTextField1) {
+        ArrayList<String[]> swimmers = new ArrayList();
+        String str;
+        
+        Filereader fr = new Filereader();
+        swimmers = fr.getSwimmersByName();
+
+        try {
+            for (int i = 0; i < swimmers.size(); i++) {
+                String[] strings = swimmers.get(i);
+                if (strings[0].contains(jTextField1.getText())) {
+                    str = String.join(", ", strings);
+                    fr.removeSwimmer(str);
+                } 
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(RemoveMemberGUI.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }
