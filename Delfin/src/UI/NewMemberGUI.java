@@ -15,7 +15,6 @@ import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
 import javax.swing.JOptionPane;
 
-
 /**
  *
  * @author rashe
@@ -190,8 +189,6 @@ public class NewMemberGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-
-    
     private void clearTextFields()
     {
 
@@ -201,7 +198,6 @@ public class NewMemberGUI extends javax.swing.JFrame {
         this.jTextField9.setText("");
         this.jTextField10.setText("");
         this.jTextField11.setText("");
-        
 
     }
 
@@ -234,7 +230,6 @@ public class NewMemberGUI extends javax.swing.JFrame {
         this.clearTextFields();
 
         NewMemberGUI.this.setVisible(false);
-
 
         try
         {
