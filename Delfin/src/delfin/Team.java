@@ -5,9 +5,9 @@ import java.util.ArrayList;
 public class Team {
     private String TeamID;
     private String Name;
-    ArrayList<Swimmers> members = new ArrayList();
+    ArrayList<Swimmer> members = new ArrayList();
 
-    public Team(String team_id, String teamName, ArrayList<Swimmers> members) {
+    public Team(String team_id, String teamName, ArrayList<Swimmer> members) {
         this.TeamID = TeamID;
         this.Name = teamName;
         this.members = members;
@@ -29,11 +29,11 @@ public class Team {
         this.Name = Name;
     }
 
-    public ArrayList<Swimmers> getMembers() {
+    public ArrayList<Swimmer> getMembers() {
         return members;
     }
 
-    public void setMembers(ArrayList<Swimmers> members) {
+    public void setMembers(ArrayList<Swimmer> members) {
         this.members = members;
     }
     

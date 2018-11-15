@@ -7,7 +7,7 @@ package UI;
 
 import Data.FileWriter;
 import Data.Filereader;
-import delfin.Swimmers;
+import delfin.Swimmer;
 import java.awt.Color;
 import java.io.FileNotFoundException;
 import java.io.IOException;

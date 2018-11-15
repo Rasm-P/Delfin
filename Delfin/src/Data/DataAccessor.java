@@ -6,7 +6,7 @@
 package Data;
 
 import delfin.DBConnector;
-import delfin.Swimmers;
+import delfin.Swimmer;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -23,7 +23,7 @@ public class DataAccessor {
      DataAccessor(DBConnector connector) {
         this.connector = connector;
      }
-     public ArrayList<Swimmers> getSvimmersByName() {
+     public ArrayList<Swimmer> getSvimmersByName() {
         //throw new UnsupportedOperationException("Not supported yet.");
         try{
         String query = "Select * from delfin.svimmers Order By 'name';";
@@ -40,7 +40,7 @@ public class DataAccessor {
         boolean payment = true;
         
         
-        ArrayList<Swimmers> swimmers = new ArrayList();
+        ArrayList<Swimmer> swimmers = new ArrayList();
 
         while (rs.next()) {
             
@@ -51,7 +51,7 @@ public class DataAccessor {
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
             
-//            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
+//            swimmers.add(new Swimmer(name, dob, email, status, pro, payment));
         
         
         }
@@ -67,7 +67,7 @@ public class DataAccessor {
     
     
     
-    public ArrayList<Swimmers> getSvimmersByDob() {
+    public ArrayList<Swimmer> getSvimmersByDob() {
         //throw new UnsupportedOperationException("Not supported yet.");
         try{
         String query = "Select * from delfin.svimmers Order By 'dob';";
@@ -84,7 +84,7 @@ public class DataAccessor {
         boolean payment = true;
         
         
-        ArrayList<Swimmers> swimmers = new ArrayList();
+        ArrayList<Swimmer> swimmers = new ArrayList();
 
         while (rs.next()) {
             
@@ -95,7 +95,7 @@ public class DataAccessor {
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
             
-//            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
+//            swimmers.add(new Swimmer(name, dob, email, status, pro, payment));
         
         
         }
@@ -111,7 +111,7 @@ public class DataAccessor {
     
     
     
-    public ArrayList<Swimmers> getSvimmersByEmail() {
+    public ArrayList<Swimmer> getSvimmersByEmail() {
         //throw new UnsupportedOperationException("Not supported yet.");
         try{
         String query = "Select * from delfin.svimmers Order By 'email';";
@@ -128,7 +128,7 @@ public class DataAccessor {
         boolean payment = true;
         
         
-        ArrayList<Swimmers> swimmers = new ArrayList();
+        ArrayList<Swimmer> swimmers = new ArrayList();
 
         while (rs.next()) {
             
@@ -139,7 +139,7 @@ public class DataAccessor {
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
             
-//            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
+//            swimmers.add(new Swimmer(name, dob, email, status, pro, payment));
         
         
         }
@@ -154,7 +154,7 @@ public class DataAccessor {
     
     
     
-    public ArrayList<Swimmers> getSvimmersByStatus() {
+    public ArrayList<Swimmer> getSvimmersByStatus() {
         //throw new UnsupportedOperationException("Not supported yet.");
         try{
         String query = "Select * from delfin.svimmers Order By 'status';";
@@ -171,7 +171,7 @@ public class DataAccessor {
         boolean payment = true;
         
         
-        ArrayList<Swimmers> swimmers = new ArrayList();
+        ArrayList<Swimmer> swimmers = new ArrayList();
 
         while (rs.next()) {
             
@@ -182,7 +182,7 @@ public class DataAccessor {
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
             
-//            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
+//            swimmers.add(new Swimmer(name, dob, email, status, pro, payment));
         
         
         }
@@ -198,7 +198,7 @@ public class DataAccessor {
     
     
     
-    public ArrayList<Swimmers> getSvimmersByPro() {
+    public ArrayList<Swimmer> getSvimmersByPro() {
         //throw new UnsupportedOperationException("Not supported yet.");
         try{
         String query = "Select * from delfin.svimmers Order By 'pro';";
@@ -215,7 +215,7 @@ public class DataAccessor {
         boolean payment = true;
         
         
-        ArrayList<Swimmers> swimmers = new ArrayList();
+        ArrayList<Swimmer> swimmers = new ArrayList();
 
         while (rs.next()) {
             
@@ -226,7 +226,7 @@ public class DataAccessor {
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
             
-//            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
+//            swimmers.add(new Swimmer(name, dob, email, status, pro, payment));
         
         
         }
@@ -242,7 +242,7 @@ public class DataAccessor {
     
     
     
-    public ArrayList<Swimmers> getSvimmersByPayment() {
+    public ArrayList<Swimmer> getSvimmersByPayment() {
         //throw new UnsupportedOperationException("Not supported yet.");
         try{
         String query = "Select * from delfin.svimmers Order By 'payment';";
@@ -259,7 +259,7 @@ public class DataAccessor {
         boolean payment = true;
         
         
-        ArrayList<Swimmers> swimmers = new ArrayList();
+        ArrayList<Swimmer> swimmers = new ArrayList();
 
         while (rs.next()) {
             
@@ -270,7 +270,7 @@ public class DataAccessor {
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
             
-//            swimmers.add(new Swimmers(name, dob, email, status, pro, payment));
+//            swimmers.add(new Swimmer(name, dob, email, status, pro, payment));
         
         
         }

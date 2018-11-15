@@ -25,7 +25,7 @@ public class Calculator {
     private static int junior = 1000;
     private static int passive = 500;
     
-    public static double swimmerCalculator(Swimmers swimmer) {
+    public static double swimmerCalculator(Swimmer swimmer) {
             
         if(swimmer.isStatus()==false)
             return passive;
@@ -40,7 +40,7 @@ public class Calculator {
     
     }
        
-    public static int ageInYears(Swimmers swimmer) {
+    public static int ageInYears(Swimmer swimmer) {
         LocalDate date = swimmer.getDob();
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy LLLL dd");
         String formattedString = date.format(formatter);
