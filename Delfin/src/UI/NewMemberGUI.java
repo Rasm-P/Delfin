@@ -12,7 +12,12 @@ import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+<<<<<<< HEAD
+import java.util.logging.Level;
+import java.util.logging.Logger;
+=======
 import javax.swing.JOptionPane;
+>>>>>>> 72ea205de4b8293e77bc5600fd82d2735501e438
 
 /**
  *
@@ -188,15 +193,37 @@ public class NewMemberGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
+    {//GEN-HEADEREND:event_jButton1ActionPerformed
+
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        String tempname = this.jTextField1.getText();
+        String tempEmail = this.jTextField7.getText();
+        LocalDate tempDate = LocalDate.parse(this.jTextField8.getText(), formatter);
+        Boolean tempStatus = HelpUI.memberShipStatus(this.jTextField9.getText());
+        Boolean tempPro = HelpUI.isPro(this.jTextField10.getText());
+        Boolean tempPayment = HelpUI.havePaid(this.jTextField11.getText());
+
+=======
     
     private void clearTextFields()
     {
+>>>>>>> 72ea205de4b8293e77bc5600fd82d2735501e438
         this.jTextField1.setText("");
         this.jTextField7.setText("");
         this.jTextField8.setText("");
         this.jTextField9.setText("");
         this.jTextField10.setText("");
         this.jTextField11.setText("");
+<<<<<<< HEAD
+
+        Swimmers swim = new Swimmers(tempname, tempDate, tempEmail, tempStatus,
+                tempPro, tempPayment);
+        
+        NewMemberGUI.this.setVisible(false);
+        
+=======
     }
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
@@ -229,6 +256,7 @@ public class NewMemberGUI extends javax.swing.JFrame {
 
         NewMemberGUI.this.setVisible(false);
 
+>>>>>>> 72ea205de4b8293e77bc5600fd82d2735501e438
         try
         {
             FileWriter.writeFile(swim);
