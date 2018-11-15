@@ -16,9 +16,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Controller {
     
-    public void readTextFile(JTable jTable1) {
-        GUI3 gui = new GUI3();
-        
+    public JTable readTextFile(JTable jTable1) {
         DefaultTableModel model;
         model = (DefaultTableModel)jTable1.getModel();
         
@@ -31,5 +29,8 @@ public class Controller {
             String[] strings = swimmers.get(i);
             model.insertRow(model.getRowCount(), new Object[]{strings[0],strings[1],strings[2],strings[3],strings[4], strings[5]});
         }
+        
+        return jTable1;
+        
     }
 }
