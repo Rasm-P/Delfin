@@ -5,7 +5,6 @@
  */
 package Data;
 
-import UI.GUI3;
 import UI.RemoveMemberGUI;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -24,6 +23,7 @@ public class Controller {
     public JTable readTextFile(JTable jTable1) {
         DefaultTableModel model;
         model = (DefaultTableModel)jTable1.getModel();
+        model.setRowCount(0);
         
         ArrayList<String[]> swimmers = new ArrayList();
 
