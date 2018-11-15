@@ -22,12 +22,11 @@ public class GUI3 extends javax.swing.JFrame {
      * Creates new form GUI
      */
     //DefaultTableModel model;
-    Controller con = new Controller();
     public GUI3() {
         initComponents();
         getContentPane().setBackground(Color.white);
-        
-        con.readTextFile();
+        Controller con = new Controller();
+        con.readTextFile(jTable1);
         /*
         model = (DefaultTableModel)jTable1.getModel();
         
@@ -1056,7 +1055,4 @@ public class GUI3 extends javax.swing.JFrame {
     private javax.swing.JTable jTable5;
     // End of variables declaration//GEN-END:variables
 
-    public JTable getjTable1() {
-        return jTable1;
-    }
 }

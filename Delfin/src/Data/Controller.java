@@ -7,6 +7,7 @@ package Data;
 
 import UI.GUI3;
 import java.util.ArrayList;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -15,11 +16,11 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Controller {
     
-    public void readTextFile() {
+    public void readTextFile(JTable jTable1) {
         GUI3 gui = new GUI3();
         
         DefaultTableModel model;
-        model = (DefaultTableModel)gui.getjTable1().getModel();
+        model = (DefaultTableModel)jTable1.getModel();
         
         ArrayList<String[]> swimmers = new ArrayList();
 
