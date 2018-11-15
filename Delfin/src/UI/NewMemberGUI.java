@@ -14,6 +14,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -24,8 +25,7 @@ public class NewMemberGUI extends javax.swing.JFrame {
     /**
      * Creates new form NewMemberGUI
      */
-    public NewMemberGUI()
-    {
+    public NewMemberGUI() {
         initComponents();
         getContentPane().setBackground(Color.white);
     }
@@ -191,35 +191,42 @@ public class NewMemberGUI extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
     {//GEN-HEADEREND:event_jButton1ActionPerformed
-
-        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        String tempname = this.jTextField1.getText();
-        String tempEmail = this.jTextField7.getText();
-        LocalDate tempDate = LocalDate.parse(this.jTextField8.getText(), formatter);
-        Boolean tempStatus = HelpUI.memberShipStatus(this.jTextField9.getText());
-        Boolean tempPro = HelpUI.isPro(this.jTextField10.getText());
-        Boolean tempPayment = HelpUI.havePaid(this.jTextField11.getText());
-
+            DateTimeFormatter formatter ;
+            String tempname ;
+            String tempEmail;
+            LocalDate tempDate;
+            Boolean tempStatus;
+            Boolean tempPro;
+            Boolean tempPayment ;
+        
+        try {
+             formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+             tempname = this.jTextField1.getText();
+            tempEmail = this.jTextField7.getText();
+            tempDate = LocalDate.parse(this.jTextField8.getText(), formatter);
+             tempStatus = HelpUI.memberShipStatus(this.jTextField9.getText());
+             tempPro = HelpUI.isPro(this.jTextField10.getText());
+             tempPayment = HelpUI.havePaid(this.jTextField11.getText());
+        }
+            catch (Exception ex)
+            {
+                JOptionPane.showMessageDialog(rootPane, ex.getMessage());
+            }
+        Swimmers swim = new Swimmers(tempname, tempDate, tempEmail, tempStatus,
+                tempPro, tempPayment);
         this.jTextField1.setText("");
         this.jTextField7.setText("");
         this.jTextField8.setText("");
         this.jTextField9.setText("");
         this.jTextField10.setText("");
         this.jTextField11.setText("");
-
-        Swimmers swim = new Swimmers(tempname, tempDate, tempEmail, tempStatus,
-                tempPro, tempPayment);
-        
         NewMemberGUI.this.setVisible(false);
-        
-        try
-        {
+
+        try {
             FileWriter.writeFile(swim);
-        } catch (FileNotFoundException ex)
-        {
+        } catch (FileNotFoundException ex) {
             System.out.println("Error!");
-        } catch (UnsupportedEncodingException ex)
-        {
+        } catch (UnsupportedEncodingException ex) {
             System.out.println("Error!");
         }
 
@@ -259,42 +266,33 @@ public class NewMemberGUI extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try
-        {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
-            {
-                if ("Nimbus".equals(info.getName()))
-                {
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex)
-        {
+        } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(NewMemberGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex)
-        {
+        } catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(NewMemberGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex)
-        {
+        } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(NewMemberGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex)
-        {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(NewMemberGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run()
-            {
+            public void run() {
                 new NewMemberGUI().setVisible(true);
             }
         });
