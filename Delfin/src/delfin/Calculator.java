@@ -57,9 +57,9 @@ public class Calculator {
         String year = formattedString.substring(0, 4);
         int yearNow = Integer.parseInt(year);
         return yearNow;
-    }
-    public static int ageMonth() {
-        return 2;
-    }
+   
     
 }
+    
+}
+
