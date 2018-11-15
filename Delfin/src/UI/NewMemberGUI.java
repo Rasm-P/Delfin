@@ -208,7 +208,7 @@ public class NewMemberGUI extends javax.swing.JFrame {
         Boolean tempStatus = null;
         Boolean tempPro = null;
         Boolean tempPayment = null;
-
+//try
         try
         {
             formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
