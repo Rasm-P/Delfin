@@ -6,11 +6,7 @@
 package UI;
 
 import Data.Controller;
-import Data.Filereader;
 import java.awt.Color;
-import java.util.ArrayList;
-import javax.swing.JTable;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -21,25 +17,11 @@ public class GUI3 extends javax.swing.JFrame {
     /**
      * Creates new form GUI
      */
-    //DefaultTableModel model;
     public GUI3() {
         initComponents();
         getContentPane().setBackground(Color.white);
         Controller con = new Controller();
         con.readTextFile(jTable1);
-        /*
-        model = (DefaultTableModel)jTable1.getModel();
-        
-        ArrayList<String[]> swimmers = new ArrayList();
-
-        Filereader fr = new Filereader();
-        swimmers = fr.getSwimmersByName();
-
-        for (int i = 0; i < swimmers.size(); i++) {
-            String[] strings = swimmers.get(i);
-            model.insertRow(model.getRowCount(), new Object[]{strings[0],strings[1],strings[2],strings[3],strings[4], strings[5]});
-        }
-        */
     }
 
     /**
