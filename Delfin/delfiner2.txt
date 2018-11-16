@@ -1,5 +1,3 @@
-John, 2001-02-12, Jhon@gmail.com, false, false, true
-Ole, 1999-05-02, ole@gmail.com, true, false, false
 Allan, 2000-03-04, allan@gmail.com, false, false, true
 
 Emil, 1998-03-03, emil@gmail.com, true, true, true

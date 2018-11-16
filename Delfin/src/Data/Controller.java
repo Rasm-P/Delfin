@@ -10,9 +10,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -20,24 +17,14 @@ import javax.swing.table.DefaultTableModel;
  */
 public class Controller {
     
-    public JTable readTextFile(JTable jTable1) {
-        DefaultTableModel model;
-        model = (DefaultTableModel)jTable1.getModel();
-        model.setRowCount(0);
-        
+    public ArrayList<String[]> readTextFile() {
         ArrayList<String[]> swimmers = new ArrayList();
 
         Filereader fr = new Filereader();
-        swimmers = fr.getSwimmersByName();
-
-        for (int i = 0; i < swimmers.size(); i++) {
-            String[] strings = swimmers.get(i);
-            model.insertRow(model.getRowCount(), new Object[]{strings[0],strings[1],strings[2],strings[3],strings[4], strings[5]});
-        }
-        return jTable1;
+        return swimmers = fr.getSwimmersByName();
     }
     
-    public void compareMembers(JTextField jTextField1) {
+    public void compareMembers(String member) {
         ArrayList<String[]> swimmers = new ArrayList();
         String str;
         
@@ -47,7 +34,7 @@ public class Controller {
         try {
             for (int i = 0; i < swimmers.size(); i++) {
                 String[] strings = swimmers.get(i);
-                if (strings[0].equals(jTextField1.getText())) {
+                if (strings[0].equals(member)) {
                     str = String.join(", ", strings);
                     fr.removeSwimmer(str);
                 } 
