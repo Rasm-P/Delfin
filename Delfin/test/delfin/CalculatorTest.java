@@ -5,6 +5,7 @@
  */
 package delfin;
 
+import java.io.FileReader;
 import java.time.LocalDate;
 import org.junit.After;
 import org.junit.AfterClass;
@@ -26,12 +27,10 @@ public class CalculatorTest {
      * Test of swimmerCalculator method, of class Calculator.
      */
     @Test
-    public void testSwimmerCalculator() {
-     Calculator instance = new Calculator();
+    public void testswimmerPriceMember() {
      LocalDate date = LocalDate.of(1998, 02, 02);
      Swimmer lars = new Swimmer("Lars", date, "lars@gmail", true, true, true);
-     
-     double result = instance.swimmerCalculator(lars);
+     double result = Swimmer.calculatorPriceMember(lars);
      assertEquals(1600, result, 0.0);
     }
 
@@ -39,24 +38,17 @@ public class CalculatorTest {
      * Test of ageInYears method, of class Calculator.
      */
     @Test
-    public void testAgeInYears() {
-     Calculator instance = new Calculator();
+    public void testswimmerPriceMember2()
+    {
      LocalDate date = LocalDate.of(1998, 02, 02);
-     Swimmer lars = new Swimmer("Lars", date, "lars@gmail", true, true, true);
+     Swimmer lars = new Swimmer("Lars", date, "lars@gmail", false, true, true);
+     double result = Swimmer.calculatorPriceMember(lars);
+     assertEquals(500, result, 0.0);
      
-     double result = instance.ageInYears(lars);
-     assertEquals(20, result, 0.0);
+        
     }
+    
 
-    /**
-     * Test of yearNow method, of class Calculator.
-     */
-    @Test
-    public void testYearNow() {
-     Calculator instance = new Calculator ();
-     
-     int result = instance.yearNow();
-     assertEquals(2018, result, 0.0);
-    }
+    
     
 }
