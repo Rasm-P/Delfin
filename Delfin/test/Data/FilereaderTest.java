@@ -28,8 +28,9 @@ public class FilereaderTest {
      */
     @Before 
     public void initialize() throws FileNotFoundException, UnsupportedEncodingException {
+        String inFilename = "C:\\Users\\rashe\\Documents\\GitHub\\Delfin\\Test.txt";
         Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
-        FileWriter.writeFile(swim);
+        FileWriter.writeFile(swim, inFilename );
     }
     /**
      * Test of getSwimmersByName method, of class Filereader.
@@ -40,7 +41,8 @@ public class FilereaderTest {
         Filereader instance = new Filereader();
         ArrayList expResult = null;
         int exp = 27;
-        ArrayList result = instance.getSwimmersByName();
+        String inFilename = "C:\\Users\\rashe\\Documents\\GitHub\\Delfin\\Test.txt";
+        ArrayList result = instance.getSwimmersByName(inFilename);
         assertNotNull(result);
         assertEquals(exp, result.size());
 
@@ -52,11 +54,12 @@ public class FilereaderTest {
     @Test
     public void testRemoveSwimmer() throws Exception {
         System.out.println("removeSwimmer");
+        String inFilename = "C:\\Users\\rashe\\Documents\\GitHub\\Delfin\\Test.txt";
         String str = "Ole, 1999-05-02, ole@gmail.com, true, false, false";
         Filereader instance = new Filereader();
-        instance.removeSwimmer(str);
+        instance.removeSwimmer(str, inFilename);
         int exp = 24;
-        ArrayList result = instance.getSwimmersByName();
+        ArrayList result = instance.getSwimmersByName(inFilename);
         assertNotNull(result);
         assertEquals(exp, result.size());
     }
@@ -67,12 +70,13 @@ public class FilereaderTest {
     @Test
     public void testAddSwimmer() throws Exception {
         System.out.println("addSwimmer");
+        String inFilename = "C:\\Users\\rashe\\Documents\\GitHub\\Delfin\\Test.txt";
         Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
         FileWriter instance = new FileWriter();
-        instance.writeFile(swim);
+        instance.writeFile(swim, inFilename);
         Filereader instance2 = new Filereader();
         int exp = 26;
-        ArrayList result = instance2.getSwimmersByName();
+        ArrayList result = instance2.getSwimmersByName(inFilename);
         assertNotNull(result);
         assertEquals(exp, result.size());
     }

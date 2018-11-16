@@ -18,25 +18,27 @@ import java.util.logging.Logger;
 public class Controller {
     
     public ArrayList<String[]> readTextFile() {
+        String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
         ArrayList<String[]> swimmers = new ArrayList();
 
         Filereader fr = new Filereader();
-        return swimmers = fr.getSwimmersByName();
+        return swimmers = fr.getSwimmersByName(inFilename);
     }
     
     public void compareMembers(String member) {
         ArrayList<String[]> swimmers = new ArrayList();
         String str;
-        
+        String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
         Filereader fr = new Filereader();
-        swimmers = fr.getSwimmersByName();
+        swimmers = fr.getSwimmersByName(inFilename);
 
         try {
+            
             for (int i = 0; i < swimmers.size(); i++) {
                 String[] strings = swimmers.get(i);
                 if (strings[0].equals(member)) {
                     str = String.join(", ", strings);
-                    fr.removeSwimmer(str);
+                    fr.removeSwimmer(str, inFilename);
                 } 
             }
         } catch (IOException ex) {
