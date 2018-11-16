@@ -512,8 +512,6 @@
                           <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
                           <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
                               <Group type="102" attributes="0">
-                                  <Component id="jButton49" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jButton48" min="-2" max="-2" attributes="0"/>
                                   <EmptySpace type="separate" max="-2" attributes="0"/>
                                   <Component id="jButton50" min="-2" max="-2" attributes="0"/>
@@ -535,7 +533,6 @@
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="jButton48" alignment="3" min="-2" max="-2" attributes="0"/>
-                          <Component id="jButton49" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton50" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jButton51" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
@@ -626,11 +623,6 @@
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton48ActionPerformed"/>
               </Events>
-            </Component>
-            <Component class="javax.swing.JButton" name="jButton49">
-              <Properties>
-                <Property name="text" type="java.lang.String" value="jButton1"/>
-              </Properties>
             </Component>
             <Component class="javax.swing.JButton" name="jButton50">
               <Properties>

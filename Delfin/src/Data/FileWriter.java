@@ -32,7 +32,6 @@ public class FileWriter {
         {
             System.out.println("Fejl i fil, kontakt din systemadministrator");
         }
-
     }
     
 }

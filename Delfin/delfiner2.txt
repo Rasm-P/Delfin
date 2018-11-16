@@ -1,3 +1,28 @@
 John, 2001-02-12, Jhon@gmail.com, false, false, true
-Allan, 1987-03-02, allan@gmail.com, true, true, true
-Adam, 1999-02-06, adam.gmail.com, false, true, true
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Allan, 2000-03-04, allan@gmail.com, false, false, true
+
+Emil, 1998-03-03, emil@gmail.com, true, true, true
+
+Rasmus, 1998-06-03, rasmus@gmail.com, true, true, false
+Brian, 1988-04-08, brian@gmail.com, false, true, true
+Klaus, 1989-02-08, klaus@gmail.com, true, true, true
+Bo, 1999-01-06, boib@gmail.com, false, false, true
+Ib, 1988-09-02, idfs@gmail.com, true, false, false
+Stine, 1999-08-02, stine@gmail.com, true, false, true
+Tine, 1979-05-02, tine@gmail.com, false, true, false
+Henrik, 1989-12-12, henik@gmail.com, true, false, true
+Anna, 1993-04-08, anna.gmail.com, true, true, true
+Freja, 1995-02-08, freja@gmailcom, true, false, false
+Wiliam, 1994-12-27, wiliam@gmail.com, true, false, false
+Oscar, 1999-05-12, oscar@gmail.com, true, true, true
+Lucas, 1997-03-17, luas@gmail.com, true, true, true
+Victor, 1990-05-19, victor@gmail.com, true, true, true
+Aksel, 1997-09-12, aksel@gmail.com, true, false, true
+Hannah, 1999-05-09, hannah@gmail.com, true, false, true
+Nanna, 1998-04-08, nanna@gmail.com, false, false, true
+Naja, 1999-09-10, naja@gmail.com, true, false, true
+Magnus, 1995-03-14, magnus@gmail.com, false, false, true
+Felix, 1999-07-18, feix@gmail.com, true, true, true
+Eva, 1990-04-18, eva@gmail.com, true, false, false
+Alfred, 1988-03-15, alfred@gmail.com, true, false, true

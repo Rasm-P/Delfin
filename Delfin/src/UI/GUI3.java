@@ -68,7 +68,6 @@ public class GUI3 extends javax.swing.JFrame {
         jTable1 = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         jButton48 = new javax.swing.JButton();
-        jButton49 = new javax.swing.JButton();
         jButton50 = new javax.swing.JButton();
         jButton51 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
@@ -447,8 +446,6 @@ public class GUI3 extends javax.swing.JFrame {
             }
         });
 
-        jButton49.setText("jButton1");
-
         jButton50.setText("Fjern en medlem");
         jButton50.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -474,8 +471,6 @@ public class GUI3 extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(jPanel3Layout.createSequentialGroup()
-                            .addComponent(jButton49)
-                            .addGap(18, 18, 18)
                             .addComponent(jButton48)
                             .addGap(18, 18, 18)
                             .addComponent(jButton50)
@@ -492,7 +487,6 @@ public class GUI3 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton48)
-                    .addComponent(jButton49)
                     .addComponent(jButton50)
                     .addComponent(jButton51))
                 .addGap(13, 13, 13)
@@ -1058,7 +1052,6 @@ public class GUI3 extends javax.swing.JFrame {
     private javax.swing.JButton jButton46;
     private javax.swing.JButton jButton47;
     private javax.swing.JButton jButton48;
-    private javax.swing.JButton jButton49;
     private javax.swing.JButton jButton50;
     private javax.swing.JButton jButton51;
     private javax.swing.JButton jButton52;

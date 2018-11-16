@@ -34,9 +34,7 @@ public class Controller {
             String[] strings = swimmers.get(i);
             model.insertRow(model.getRowCount(), new Object[]{strings[0],strings[1],strings[2],strings[3],strings[4], strings[5]});
         }
-        
         return jTable1;
-        
     }
     
     public void compareMembers(JTextField jTextField1) {
@@ -49,7 +47,7 @@ public class Controller {
         try {
             for (int i = 0; i < swimmers.size(); i++) {
                 String[] strings = swimmers.get(i);
-                if (strings[0].contains(jTextField1.getText())) {
+                if (strings[0].equals(jTextField1.getText())) {
                     str = String.join(", ", strings);
                     fr.removeSwimmer(str);
                 } 

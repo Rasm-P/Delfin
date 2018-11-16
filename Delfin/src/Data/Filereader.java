@@ -16,6 +16,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.ObjectInputStream;
+import java.io.PrintStream;
 import java.io.PrintWriter;
 import java.nio.channels.FileChannel;
 import java.nio.charset.Charset;
@@ -24,6 +25,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -36,7 +38,7 @@ public class Filereader {
 
     private static final boolean DEBUG = true;
     String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
-
+    
     public ArrayList<String[]> getSwimmersByName() {
         try {
             ArrayList<String[]> swimmers = new ArrayList();
@@ -46,8 +48,10 @@ public class Filereader {
             Path path = Paths.get(inFilename);
             List<String> lines = Files.readAllLines(path, cs);
             for (String line : lines) {
+                if (!line.equals("")) {
                 String[] swim = line.split(splitBy);
                 swimmers.add(swim);
+                }
             }
             return swimmers;
         } catch (IOException ex) {
@@ -59,11 +63,8 @@ public class Filereader {
     }
 
     public void removeSwimmer(String str) throws IOException {
-
         File file = new File(inFilename);
-        List<String> out = Files.lines(file.toPath())
-                .filter(line -> !line.contains(str))
-                .collect(Collectors.toList());
+        List<String> out = Files.lines(file.toPath()).filter(line -> !line.contains(str)).collect(Collectors.toList());
         Files.write(file.toPath(), out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
     }
 }
