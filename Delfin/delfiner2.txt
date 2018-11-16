@@ -1,5 +1,4 @@
 Allan, 2000-03-04, allan@gmail.com, false, false, true
-
 Emil, 1998-03-03, emil@gmail.com, true, true, true
 
 Rasmus, 1998-06-03, rasmus@gmail.com, true, true, false
@@ -24,3 +23,12 @@ Magnus, 1995-03-14, magnus@gmail.com, false, false, true
 Felix, 1999-07-18, feix@gmail.com, true, true, true
 Eva, 1990-04-18, eva@gmail.com, true, false, false
 Alfred, 1988-03-15, alfred@gmail.com, true, false, true
+
+
+
+
+
+
+
+
+
