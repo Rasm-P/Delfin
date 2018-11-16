@@ -7,6 +7,8 @@ package UI;
 
 import Data.Controller;
 import java.awt.Color;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -21,7 +23,15 @@ public class GUI3 extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(Color.white);
         Controller con = new Controller();
-        con.readTextFile(jTable1);
+        ArrayList<String[]> swimmers = con.readTextFile();
+        
+        DefaultTableModel model;
+        model = (DefaultTableModel)jTable1.getModel();
+        model.setRowCount(0);
+        for (int i = 0; i < swimmers.size(); i++) {
+            String[] strings = swimmers.get(i);
+            model.insertRow(model.getRowCount(), new Object[]{strings[0],strings[1],strings[2],strings[3],strings[4], strings[5]});
+        }
     }
 
     /**
@@ -983,7 +993,15 @@ public class GUI3 extends javax.swing.JFrame {
 
     private void jButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51ActionPerformed
         Controller con = new Controller();
-        con.readTextFile(jTable1);
+        ArrayList<String[]> swimmers = con.readTextFile();
+        
+        DefaultTableModel model;
+        model = (DefaultTableModel)jTable1.getModel();
+        model.setRowCount(0);
+        for (int i = 0; i < swimmers.size(); i++) {
+            String[] strings = swimmers.get(i);
+            model.insertRow(model.getRowCount(), new Object[]{strings[0],strings[1],strings[2],strings[3],strings[4], strings[5]});
+        }
     }//GEN-LAST:event_jButton51ActionPerformed
 
     private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed

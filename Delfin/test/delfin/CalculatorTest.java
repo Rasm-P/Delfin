@@ -5,12 +5,7 @@
  */
 package delfin;
 
-import java.io.FileReader;
 import java.time.LocalDate;
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -45,10 +40,6 @@ public class CalculatorTest {
      double result = Swimmer.calculatorPriceMember(lars);
      assertEquals(500, result, 0.0);
      
-        
     }
-    
-
-    
     
 }
