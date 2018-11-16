@@ -102,16 +102,16 @@ public class Swimmer {
         int age = (Period.between(swimmer.getDob(), LocalDate.now()).getYears());
         
         if(swimmer.isStatus()==false)
-            return Calculator.getPassive();
+            return Calculator.getPassivePrice();
         
         if(age < 18)
-            return Calculator.getJunior();
+            return Calculator.getJuniorPrice();
         
         if(age >= 18 && age < 61)
-            return Calculator.getSenior();
+            return Calculator.getSeniorPrice();
         
         if(age > 60)
-            return Calculator.getSeniorDiscount();
+            return Calculator.getSeniorDiscountPrice();
             
         return 0.0;
     }

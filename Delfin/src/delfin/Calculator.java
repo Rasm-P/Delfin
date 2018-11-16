@@ -12,28 +12,27 @@ package delfin;
  * @author Rasmus2
  */
 public class Calculator {
-    private static int senior = 1600;
-    private static double seniorDiscount = 1600*0.75;
-    private static int junior = 1000;
-    private static int passive = 500;
+    private static double seniorPrice = 1600;
+    private static double seniorDiscountPrice = 1600*0.75;
+    private static double juniorPrice = 1000;
+    private static double passivePrice = 500;
 
-    public static int getSenior() {
-        return senior;
+    public static double getSeniorPrice() {
+        return seniorPrice;
     }
 
-    public static double getSeniorDiscount() {
-        return seniorDiscount;
+    public static double getSeniorDiscountPrice() {
+        return seniorDiscountPrice;
     }
 
-    public static int getJunior() {
-        return junior;
+    public static double getJuniorPrice() {
+        return juniorPrice;
     }
 
-    public static int getPassive() {
-        return passive;
+    public static double getPassivePrice() {
+        return passivePrice;
     }
-    
-    
+
         
             }
     
