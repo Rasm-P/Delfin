@@ -45,4 +45,5 @@ public class Controller {
             Logger.getLogger(RemoveMemberGUI.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+   
 }
