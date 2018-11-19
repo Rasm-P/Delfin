@@ -9,3 +9,5 @@
 *.properties
 *.xml
 /Delfin/dist/
+Delfin/src/Data/Filereader.java
+Delfin/test/Data/FilereaderTest.java

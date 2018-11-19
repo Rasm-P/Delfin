@@ -4,6 +4,23 @@ Pedro, 1996-05-02, hot@hotmail.com, true, true, true
 Ava cramp, 1993-05-02, cramp@ava.com, true, true, true
 
 Morten Kastberg, 1994-05-05, morten@rackcity.net, true, true, true
+<<<<<<< HEAD
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+Ole, 1999-05-02, ole@gmail.com, true, false, false
+=======
 
 
 
@@ -13,6 +30,10 @@ Morten Kastberg, 1994-05-05, morten@rackcity.net, true, true, true
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 32c2149f6938ce0b825dae2683f92f47de91a829
+>>>>>>> 5baff059b8aeb2d0e4c298432620fed02f624b30
 Ole, 1999-05-02, ole@gmail.com, true, false, false
