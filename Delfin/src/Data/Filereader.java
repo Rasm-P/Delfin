@@ -33,12 +33,12 @@ public class Filereader {
        inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/delfiner2.txt";
       // inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
 
-<<<<<<< HEAD
+
         inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
         //inFilename = "/home/zzar/Documents/Delfin/Delfin/delfiner2.txt";
-=======
+
        
->>>>>>> 69e7035cc56e7d0d31dfd7b5d0aa1705b8ad0418
+
 
         try
         {
@@ -84,14 +84,14 @@ public class Filereader {
     public void removeSwimmer(String str, String inFilename) throws IOException
     {
 
-<<<<<<< HEAD
+
         inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
         //inFilename = "/home/zzar/Documents/Delfin/Delfin/delfiner2.txt";
-=======
+
        // inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfin2.txt";
         inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/delfiner2.txt";
         
->>>>>>> 69e7035cc56e7d0d31dfd7b5d0aa1705b8ad0418
+
 
         File file = new File(inFilename);
         List<String> out = Files.lines(file.toPath()).filter(line -> !line.contains(str)).collect(Collectors.toList());
