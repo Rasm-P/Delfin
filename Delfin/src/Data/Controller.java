@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 public class Controller {
     
     public ArrayList<String[]> readTextFile() {
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/delfin2.txt";
+        String inFilename = "/Users/Rumle/Documents/GitHub/Delfin/Delfin/delfiner2.txt";
         ArrayList<String[]> swimmers = new ArrayList();
 
         Filereader fr = new Filereader();
@@ -28,7 +28,7 @@ public class Controller {
     public void compareMembers(String member) {
         ArrayList<String[]> swimmers = new ArrayList();
         String str;
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/delfin2.txt";
+        String inFilename = "/Users/Rumle/Documents/GitHub/Delfin/Delfin/delfiner2.txt";
         Filereader fr = new Filereader();
         swimmers = fr.getSwimmersByName(inFilename);
 
