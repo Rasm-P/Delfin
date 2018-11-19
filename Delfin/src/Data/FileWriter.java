@@ -20,7 +20,7 @@ public class FileWriter {
 
     public static void writeFile(Swimmer swim, String file) throws FileNotFoundException, UnsupportedEncodingException
     {
-        file = "delfin2.txt";
+        file = "delfiner2.txt";
         try
         {
             PrintStream output = new PrintStream(new FileOutputStream(file, true));

@@ -47,6 +47,11 @@ public class Controller {
     }
 
 
+
+
+    
+    
+
     public ArrayList<String[]> getResults()
     {
         ArrayList<String[]> results;
@@ -56,4 +61,9 @@ public class Controller {
         return results = fr.getResults(inFilename);
     }
 
+
 }
+
+   
+
+
