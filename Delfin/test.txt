@@ -23,12 +23,3 @@ Magnus, 1995-03-14, magnus@gmail.com, false, false, true
 Felix, 1999-07-18, feix@gmail.com, true, true, true
 Eva, 1990-04-18, eva@gmail.com, true, false, false
 Alfred, 1988-03-15, alfred@gmail.com, true, false, true
-
-
-
-
-
-
-
-
-

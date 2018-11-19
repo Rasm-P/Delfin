@@ -5,6 +5,8 @@
  */
 package delfin;
 
+import java.sql.Time;
+
 /**
  *
  * @author rashe
@@ -13,11 +15,22 @@ public class Result {
     
     private Swimmer swimmer;
     private Competition comp;
-
-    public Result(Swimmer swimmer, Competition comp)
+    private int time;
+    public Result(Swimmer swimmer, Competition comp, int time)
     {
         this.swimmer = swimmer;
         this.comp = comp;
+        this.time = time;
+    }
+
+    public int getTime()
+    {
+        return time;
+    }
+
+    public void setTime(int time)
+    {
+        this.time = time;
     }
 
     public Swimmer getSwimmer()
@@ -42,7 +55,7 @@ public class Result {
 
     @Override
     public String toString() {
-        return "Result{" + "swimmer=" + swimmer + ", comp=" + comp + '}';
+        return swimmer + ", " + comp + ", " + time;
     }
     
 }

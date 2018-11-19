@@ -5,17 +5,9 @@
  */
 package UI;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
-import java.time.Month;
 import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeParseException;
-import java.util.Calendar;
 import java.util.Scanner;
-import java.util.Date;
-import java.util.InputMismatchException;
 /**
  *
  * @author Ditlev

@@ -1,3 +1,11 @@
 /Delfin/build/
 *.properties
 *.xml
+*.xml
+*.properties
+*.xml
+*.properties
+*.xml
+*.properties
+*.xml
+/Delfin/dist/

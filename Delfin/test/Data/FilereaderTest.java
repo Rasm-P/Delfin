@@ -5,9 +5,14 @@
  */
 package Data;
 
+import delfin.Swimmer;
+import java.io.FileNotFoundException;
+import java.io.UnsupportedEncodingException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 
 /**
  *
@@ -19,6 +24,15 @@ public class FilereaderTest {
     }
 
     /**
+     *
+     */
+    @Before 
+    public void initialize() throws FileNotFoundException, UnsupportedEncodingException {
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/test.txt";
+        Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
+        FileWriter.writeFile(swim, inFilename );
+    }
+    /**
      * Test of getSwimmersByName method, of class Filereader.
      */
     @Test
@@ -26,8 +40,9 @@ public class FilereaderTest {
         System.out.println("getSwimmersByName");
         Filereader instance = new Filereader();
         ArrayList expResult = null;
-        int exp = 26;
-        ArrayList result = instance.getSwimmersByName();
+        int exp = 27;
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/test.txt";
+        ArrayList result = instance.getSwimmersByName(inFilename);
         assertNotNull(result);
         assertEquals(exp, result.size());
 
@@ -36,17 +51,33 @@ public class FilereaderTest {
     /**
      * Test of removeSwimmer method, of class Filereader.
      */
-    //@Ignore
     @Test
     public void testRemoveSwimmer() throws Exception {
         System.out.println("removeSwimmer");
+        String inFileName = "/home/zzar/Documents/Delfin/Delfin/test.txt";
         String str = "Ole, 1999-05-02, ole@gmail.com, true, false, false";
         Filereader instance = new Filereader();
-        instance.removeSwimmer(str);
-        int exp = 25;
-        ArrayList result = instance.getSwimmersByName();
+        instance.removeSwimmer(str, inFileName);
+        int exp = 24;
+        ArrayList result = instance.getSwimmersByName(inFileName);
         assertNotNull(result);
         assertEquals(exp, result.size());
     }
     
+    /**
+     * Test of removeSwimmer method, of class Filereader.
+     */
+    @Test
+    public void testAddSwimmer() throws Exception {
+        System.out.println("addSwimmer");
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/test.txt";
+        Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
+        FileWriter instance = new FileWriter();
+        instance.writeFile(swim, inFilename);
+        Filereader instance2 = new Filereader();
+        int exp = 26;
+        ArrayList result = instance2.getSwimmersByName(inFilename);
+        assertNotNull(result);
+        assertEquals(exp, result.size());
+    }
 }
