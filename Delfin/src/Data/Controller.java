@@ -19,7 +19,11 @@ public class Controller {
 
     public ArrayList<String[]> readTextFile() {
         //String inFilename = "/home/zzar/Documents/Delfin/Delfin/delfiner2.txt";
+<<<<<<< HEAD
         String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
+=======
+        String inFilename = "C:\Users\Rasmus2\Documents\GitHub\Delfin\Delfin\delfiner2.txt";
+>>>>>>> 69e7035cc56e7d0d31dfd7b5d0aa1705b8ad0418
         ArrayList<String[]> swimmers = new ArrayList();
 
         Filereader fr = new Filereader();
@@ -30,11 +34,14 @@ public class Controller {
         ArrayList<String[]> swimmers = new ArrayList();
         String str;
         String inFilename = "/home/zzar/Documents/Delfin/Delfin/delfiner2.txt";
+<<<<<<< HEAD
         //String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
+=======
+        //String inFilename = "C:\Users\Rasmus2\Documents\GitHub\Delfin\Delfin\delfiner2.txt";
+>>>>>>> 69e7035cc56e7d0d31dfd7b5d0aa1705b8ad0418
         Filereader fr = new Filereader();
         swimmers = fr.getSwimmersByName(inFilename);
-
-        try {
+try {
 
             for (int i = 0; i < swimmers.size(); i++) {
                 String[] strings = swimmers.get(i);
@@ -59,11 +66,14 @@ public class Controller {
         ArrayList<String[]> results;
         results = new ArrayList();
         String inFilename = "/home/zzar/Documents/Delfin/Delfin/results.txt";
+<<<<<<< HEAD
         //String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\results.txt";
+=======
+        //String inFilename = "C:\Users\Rasmus2\Documents\GitHub\Delfin\Delfin\results.txt";
+>>>>>>> 69e7035cc56e7d0d31dfd7b5d0aa1705b8ad0418
         Filereader fr = new Filereader();
         return results = fr.getResults(inFilename);
     }
-
 
 }
 

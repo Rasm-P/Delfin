@@ -239,7 +239,8 @@ public class NewMemberGUI extends javax.swing.JFrame {
 
         try
         {
-            String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
+           // String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
+            String inFilename= "/home/zzar/Documents/Delfin/Delfin/Delfin/delfiner2.txt";
             FileWriter.writeFile(swim, inFilename);
         } catch (FileNotFoundException ex)
         {
