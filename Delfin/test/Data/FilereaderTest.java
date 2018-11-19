@@ -19,19 +19,20 @@ import org.junit.Before;
  * @author Rumle
  */
 public class FilereaderTest {
-    
+
     public FilereaderTest() {
     }
 
     /**
      *
      */
-    @Before 
+    @Before
     public void initialize() throws FileNotFoundException, UnsupportedEncodingException {
         String inFilename = "/home/zzar/Documents/Delfin/Delfin/test.txt";
         Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
-        FileWriter.writeFile(swim, inFilename );
+        FileWriter.writeFile(swim, inFilename);
     }
+
     /**
      * Test of getSwimmersByName method, of class Filereader.
      */
@@ -63,7 +64,7 @@ public class FilereaderTest {
         assertNotNull(result);
         assertEquals(exp, result.size());
     }
-    
+
     /**
      * Test of removeSwimmer method, of class Filereader.
      */
@@ -80,4 +81,21 @@ public class FilereaderTest {
         assertNotNull(result);
         assertEquals(exp, result.size());
     }
+    /**
+     * Test of removeSwimmer method, of class Filereader.
+     */
+    @Test
+    public void testGetResult() throws Exception {
+        System.out.println("addSwimmer");
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Results.txt";
+        Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
+        FileWriter instance = new FileWriter();
+//        instance.writeFile(swim, inFilename);
+        Filereader instance2 = new Filereader();
+        int exp = 1;
+        ArrayList result = instance2.getResults(inFilename);
+        assertNotNull(result);
+        assertEquals(exp, result.size());
+    }
+
 }

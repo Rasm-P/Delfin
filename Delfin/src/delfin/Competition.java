@@ -19,7 +19,7 @@ public class Competition {
     private String disciplin;
     private ArrayList<Result> placements;
 
-    public Competition(String comName, double time, int placement, String disciplin, ArrayList<Result> placements) throws IllegalAccessException
+    public Competition(String comName, double time, int placement, String disciplin) throws IllegalAccessException
     {
         if (comName == null || time < 0 || placement < 0 || disciplin == null || placements.size() < 0)
         {
@@ -32,5 +32,46 @@ public class Competition {
         this.disciplin = disciplin;
         this.placements = placements;
     }
+
+    public String getComName() {
+        return comName;
+    }
+
+    public void setComName(String comName) {
+        this.comName = comName;
+    }
+
+    public double getTime() {
+        return time;
+    }
+
+    public void setTime(double time) {
+        this.time = time;
+    }
+
+    public int getPlacement() {
+        return placement;
+    }
+
+    public void setPlacement(int placement) {
+        this.placement = placement;
+    }
+
+    public String getDisciplin() {
+        return disciplin;
+    }
+
+    public void setDisciplin(String disciplin) {
+        this.disciplin = disciplin;
+    }
+
+    public ArrayList<Result> getPlacements() {
+        return placements;
+    }
+
+    public void setPlacements(ArrayList<Result> placements) {
+        this.placements = placements;
+    }
+    
 
 }

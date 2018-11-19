@@ -64,9 +64,9 @@ public class Filereader {
     }
 
     
-    public ArrayList<String[]> getResults()
+    public ArrayList<String[]> getResults(String inFIlename)
     {
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/delfin2.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Results.txt";
         try
         {
             ArrayList<String[]> results = new ArrayList();
