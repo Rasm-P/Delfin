@@ -30,8 +30,8 @@ public class Filereader {
 
     public ArrayList<String[]> getSwimmersByName(String inFilename)
     {
-
-       inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
+       inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/delfiner2.txt";
+      // inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
 
        
 
@@ -79,8 +79,8 @@ public class Filereader {
     public void removeSwimmer(String str, String inFilename) throws IOException
     {
 
-        inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfin2.txt";
-
+       // inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfin2.txt";
+        inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/delfiner2.txt";
         
 
         File file = new File(inFilename);
@@ -94,8 +94,8 @@ public class Filereader {
 
 //        String inFilename = "/Users/Rumle/Documents/GitHub/Delfin/Delfin/delfiner2.txt";
         
-
-        String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\Results.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/delfiner2.txt";
+        //String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\Results.txt";
         try
         {
             ArrayList<String[]> results = new ArrayList();
@@ -124,7 +124,8 @@ public class Filereader {
     }
         public ArrayList<String[]> getTeams(String inFilename)
     {
-        inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\Teams.txt";
+        //inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\Teams.txt";
+         inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/delfiner2.txt";
         try
         {
             ArrayList<String[]> teams = new ArrayList();

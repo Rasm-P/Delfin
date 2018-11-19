@@ -21,7 +21,7 @@ public class Controller {
 
         //String inFilename = "/Users/Rumle/Documents/GitHub/Delfin/Delfin/delfiner2.txt";
 
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/delfiner2.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/delfiner2.txt";
 
         ArrayList<String[]> swimmers = new ArrayList();
 
@@ -35,7 +35,7 @@ public class Controller {
 
       //  String inFilename = "/Users/Rumle/Documents/GitHub/Delfin/Delfin/delfiner2.txt";
 
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/delfiner2.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/delfiner2.txt";
 
         Filereader fr = new Filereader();
         swimmers = fr.getSwimmersByName(inFilename);
@@ -64,7 +64,7 @@ public class Controller {
     {
         ArrayList<String[]> results;
         results = new ArrayList();
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/results.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/delfiner2.txt";
         Filereader fr = new Filereader();
         return results = fr.getResults(inFilename);
     }

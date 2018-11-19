@@ -28,7 +28,7 @@ public class FilereaderTest {
      */
     @Before
     public void initialize() throws FileNotFoundException, UnsupportedEncodingException {
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/test.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/test.txt";
         Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
         FileWriter.writeFile(swim, inFilename);
     }
@@ -42,7 +42,7 @@ public class FilereaderTest {
         Filereader instance = new Filereader();
         ArrayList expResult = null;
         int exp = 27;
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/test.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/test.txt";
         ArrayList result = instance.getSwimmersByName(inFilename);
         assertNotNull(result);
         assertEquals(exp, result.size());
@@ -55,7 +55,7 @@ public class FilereaderTest {
     @Test
     public void testRemoveSwimmer() throws Exception {
         System.out.println("removeSwimmer");
-        String inFileName = "/home/zzar/Documents/Delfin/Delfin/test.txt";
+        String inFileName = "/home/zzar/Documents/Delfin/Delfin/Delfin/test.txt";
         String str = "Ole, 1999-05-02, ole@gmail.com, true, false, false";
         Filereader instance = new Filereader();
         instance.removeSwimmer(str, inFileName);
@@ -71,7 +71,7 @@ public class FilereaderTest {
     @Test
     public void testAddSwimmer() throws Exception {
         System.out.println("addSwimmer");
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/test.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/test.txt";
         Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
         FileWriter instance = new FileWriter();
         instance.writeFile(swim, inFilename);
@@ -87,7 +87,7 @@ public class FilereaderTest {
     @Test
     public void testGetResult() throws Exception {
         System.out.println("GetSwimmer");
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Results.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/test.txt";
         Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
         FileWriter instance = new FileWriter();
 //        instance.writeFile(swim, inFilename);
