@@ -93,4 +93,33 @@ public class Filereader {
         }
         return null;
     }
+        public ArrayList<String[]> getTeams(String inFilename)
+    {
+        inFilename = "/home/zzar/Documents/Delfin/Delfin/Teams.txt";
+        try
+        {
+            ArrayList<String[]> teams = new ArrayList();
+            String splitBy = ", ";
+
+            Charset cs = Charset.forName("UTF-8");
+            Path path = Paths.get(inFilename);
+            List<String> lines = Files.readAllLines(path, cs);
+            for (String line : lines)
+            {
+                if (!line.equals(""))
+                {
+                    String[] swim = line.split(splitBy);
+                    teams.add(swim);
+                }
+            }
+            return teams;
+        } catch (IOException ex)
+        {
+            if (DEBUG)
+            {
+                ex.printStackTrace();
+            }
+        }
+        return null;
+    }
 }

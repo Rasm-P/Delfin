@@ -1,0 +1,4 @@
+Hold 1, Brystswømning,
+Hold 2, Rygsvømning,
+Hold 3, Crawl,
+Hold 4, Butterfly,
