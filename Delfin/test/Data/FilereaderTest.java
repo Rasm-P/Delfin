@@ -28,7 +28,7 @@ public class FilereaderTest {
      */
     @Before 
     public void initialize() throws FileNotFoundException, UnsupportedEncodingException {
-        String inFilename = "C:\\Users\\rashe\\Documents\\GitHub\\Delfin\\Test.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/test.txt";
         Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
         FileWriter.writeFile(swim, inFilename );
     }
@@ -41,7 +41,7 @@ public class FilereaderTest {
         Filereader instance = new Filereader();
         ArrayList expResult = null;
         int exp = 27;
-        String inFilename = "C:\\Users\\rashe\\Documents\\GitHub\\Delfin\\Test.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/test.txt";
         ArrayList result = instance.getSwimmersByName(inFilename);
         assertNotNull(result);
         assertEquals(exp, result.size());
@@ -54,12 +54,12 @@ public class FilereaderTest {
     @Test
     public void testRemoveSwimmer() throws Exception {
         System.out.println("removeSwimmer");
-        String inFilename = "C:\\Users\\rashe\\Documents\\GitHub\\Delfin\\Test.txt";
+        String inFileName = "/home/zzar/Documents/Delfin/Delfin/test.txt";
         String str = "Ole, 1999-05-02, ole@gmail.com, true, false, false";
         Filereader instance = new Filereader();
-        instance.removeSwimmer(str, inFilename);
+        instance.removeSwimmer(str, inFileName);
         int exp = 24;
-        ArrayList result = instance.getSwimmersByName(inFilename);
+        ArrayList result = instance.getSwimmersByName(inFileName);
         assertNotNull(result);
         assertEquals(exp, result.size());
     }
@@ -70,7 +70,7 @@ public class FilereaderTest {
     @Test
     public void testAddSwimmer() throws Exception {
         System.out.println("addSwimmer");
-        String inFilename = "C:\\Users\\rashe\\Documents\\GitHub\\Delfin\\Test.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/test.txt";
         Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
         FileWriter instance = new FileWriter();
         instance.writeFile(swim, inFilename);

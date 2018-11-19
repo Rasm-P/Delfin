@@ -14,13 +14,9 @@ import java.io.UnsupportedEncodingException;
  */
 public class Delfin {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) throws FileNotFoundException, UnsupportedEncodingException
-    {
+    public static void main(String[] args) {
         
-       
     }
+
     
 }

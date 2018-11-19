@@ -27,7 +27,7 @@ public class Filereader {
 
     public ArrayList<String[]> getSwimmersByName(String inFilename)
     {
-        inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
+        inFilename = "/home/zzar/Documents/Delfin/Delfin/delfin2.txt";
         try
         {
             ArrayList<String[]> swimmers = new ArrayList();
@@ -57,7 +57,7 @@ public class Filereader {
 
     public void removeSwimmer(String str, String inFilename) throws IOException
     {
-        inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
+        inFilename = "/home/zzar/Documents/Delfin/Delfin/delfin2.txt";
         File file = new File(inFilename);
         List<String> out = Files.lines(file.toPath()).filter(line -> !line.contains(str)).collect(Collectors.toList());
         Files.write(file.toPath(), out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
@@ -66,7 +66,7 @@ public class Filereader {
     
     public ArrayList<String[]> getResults()
     {
-        String inFilename = "C:\\Users\\rashe\\Documents\\GitHub\\Results";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/delfin2.txt";
         try
         {
             ArrayList<String[]> results = new ArrayList();
