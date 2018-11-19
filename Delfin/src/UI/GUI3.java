@@ -6,6 +6,7 @@
 package UI;
 
 import Data.Controller;
+import delfin.Swimmer;
 import java.awt.Color;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
@@ -31,6 +32,13 @@ public class GUI3 extends javax.swing.JFrame {
         for (int i = 0; i < swimmers.size(); i++) {
             String[] strings = swimmers.get(i);
             model.insertRow(model.getRowCount(), new Object[]{strings[0],strings[1],strings[2],strings[3],strings[4], strings[5]});
+        }
+        
+        model = (DefaultTableModel)jTable3.getModel();
+        model.setRowCount(0);
+        for (int i = 0; i < swimmers.size(); i++) {
+            String[] strings = swimmers.get(i);
+            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[5], Swimmer.calculatorPriceMember(strings[0])});
         }
     }
 
