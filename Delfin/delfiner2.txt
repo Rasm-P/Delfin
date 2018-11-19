@@ -1,5 +1,4 @@
 Allan, 2000-03-04, allan@gmail.com, false, false, true
-Emil, 1998-03-03, emil@gmail.com, true, true, true
 
 Klaus, 1989-02-08, klaus@gmail.com, true, true, true
 Bo, 1999-01-06, boib@gmail.com, false, false, true
@@ -32,3 +31,5 @@ Alfred, 1988-03-15, alfred@gmail.com, true, false, true
 
 Bob, 1999-03-03, bob@gmail.com, true, true, true
 Sille, 2004-04-05, sille@gmail.com, true, true, true
+
+Emil, 1999-04-07, emil.gmail.com, false, true, true
