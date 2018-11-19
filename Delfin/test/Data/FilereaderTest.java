@@ -86,7 +86,7 @@ public class FilereaderTest {
      */
     @Test
     public void testGetResult() throws Exception {
-        System.out.println("addSwimmer");
+        System.out.println("GetSwimmer");
         String inFilename = "/home/zzar/Documents/Delfin/Delfin/Results.txt";
         Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
         FileWriter instance = new FileWriter();

@@ -16,11 +16,13 @@ public class Result {
     private Swimmer swimmer;
     private Competition comp;
     private int time;
-    public Result(Swimmer swimmer, Competition comp, int time)
+    private int placement;
+    public Result(Swimmer swimmer, Competition comp, int time, int placement)
     {
         this.swimmer = swimmer;
         this.comp = comp;
         this.time = time;
+        this.placement = placement;
     }
 
     public int getTime()

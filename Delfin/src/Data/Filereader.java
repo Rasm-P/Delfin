@@ -79,8 +79,8 @@ public class Filereader {
             {
                 if (!line.equals(""))
                 {
-                    String[] swim = line.split(splitBy);
-                    results.add(swim);
+                    String[] result = line.split(splitBy);
+                    results.add(result);
                 }
             }
             return results;
