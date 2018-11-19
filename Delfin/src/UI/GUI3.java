@@ -536,15 +536,23 @@ public class GUI3 extends javax.swing.JFrame {
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Name", "Date of birth", "eMail", "Stævne", "Tid", "Placering", "Deciplin"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, true, false, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane2.setViewportView(jTable2);
 
         jLabel4.setText("Database information Svømmeresultater:");
@@ -625,6 +633,11 @@ public class GUI3 extends javax.swing.JFrame {
         jLabel10.setText("Kontingenter");
 
         jButton53.setText("Refresh");
+        jButton53.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton53ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
@@ -1037,8 +1050,37 @@ public class GUI3 extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton51ActionPerformed
 
     private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
-        // TODO add your handling code here:
+        Controller con = new Controller();
+        ArrayList<String[]> results = con.getResults();
+        
+        DefaultTableModel model;
+        model = (DefaultTableModel)jTable2.getModel();
+        model.setRowCount(0);
+        for (int i = 0; i < results.size(); i++) {
+            String[] strings = results.get(i);
+            model.insertRow(model.getRowCount(), new Object[]{strings[0],strings[1],strings[2], strings[6], strings[7], strings[8], strings[9]});
+        }
     }//GEN-LAST:event_jButton52ActionPerformed
+
+    private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
+        Controller con = new Controller();
+        Filereader file = new Filereader();
+        ArrayList<String[]> swimmers = con.readTextFile();
+        ArrayList<Swimmer> swim = file.swimmerToObject(swimmers);
+        
+        DefaultTableModel model;
+        model = (DefaultTableModel)jTable3.getModel();
+        model.setRowCount(0);
+        for (int i = 0; i < swimmers.size(); i++) {
+            String[] strings = swimmers.get(i);
+            Swimmer swimmer = swim.get(i);
+            if (Boolean.parseBoolean(strings[5]) == false) {
+                model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[5], "Restance"});
+            } else {
+            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[5], Swimmer.calculatorPriceMember(swimmer)});
+        }
+        }
+    }//GEN-LAST:event_jButton53ActionPerformed
 
     /**
      * @param args the command line arguments
