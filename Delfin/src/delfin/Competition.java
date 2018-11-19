@@ -19,7 +19,7 @@ public class Competition {
     private String disciplin;
     private ArrayList<Result> placements;
 
-    public Competition(String comName, double time, int placement, String disciplin) throws IllegalAccessException
+    public Competition(String comName, double time, String disciplin) throws IllegalAccessException
     {
         if (comName == null || time < 0 || placement < 0 || disciplin == null || placements.size() < 0)
         {
