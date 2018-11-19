@@ -5,6 +5,7 @@
  */
 package Data;
 
+import delfin.Swimmer;
 import java.io.File;
 import java.io.IOException;
 import java.nio.charset.Charset;
@@ -12,6 +13,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,7 +30,7 @@ public class Filereader {
 
     public ArrayList<String[]> getSwimmersByName(String inFilename)
     {
-        inFilename = "/home/zzar/Documents/Delfin/Delfin/delfin2.txt";
+        inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
         try
         {
             ArrayList<String[]> swimmers = new ArrayList();
@@ -54,10 +57,24 @@ public class Filereader {
         }
         return null;
     }
-
+    
+    public ArrayList<Swimmer> swimmerToObject(ArrayList<String[]> swimmers) {
+        ArrayList<Swimmer> swim = new ArrayList<>();
+        
+        for (int i = 0; i < swimmers.size(); i++) {
+            String[] strings = swimmers.get(i);
+        
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+            
+        Swimmer swimmer = new Swimmer(strings[0], LocalDate.parse(strings[1], formatter), strings[2], Boolean.parseBoolean(strings[3]), Boolean.parseBoolean(strings[4]), Boolean.parseBoolean(strings[5]));
+        swim.add(swimmer);
+        }
+        return swim;
+    }
+    
     public void removeSwimmer(String str, String inFilename) throws IOException
     {
-        inFilename = "/home/zzar/Documents/Delfin/Delfin/delfin2.txt";
+        inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfin2.txt";
         File file = new File(inFilename);
         List<String> out = Files.lines(file.toPath()).filter(line -> !line.contains(str)).collect(Collectors.toList());
         Files.write(file.toPath(), out, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
@@ -66,7 +83,7 @@ public class Filereader {
     
     public ArrayList<String[]> getResults(String inFIlename)
     {
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Results.txt";
+        String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\Results.txt";
         try
         {
             ArrayList<String[]> results = new ArrayList();
@@ -95,7 +112,7 @@ public class Filereader {
     }
         public ArrayList<String[]> getTeams(String inFilename)
     {
-        inFilename = "/home/zzar/Documents/Delfin/Delfin/Teams.txt";
+        inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\Teams.txt";
         try
         {
             ArrayList<String[]> teams = new ArrayList();

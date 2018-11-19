@@ -6,6 +6,7 @@
 package UI;
 
 import Data.Controller;
+import Data.Filereader;
 import delfin.Swimmer;
 import java.awt.Color;
 import java.util.ArrayList;
@@ -24,7 +25,10 @@ public class GUI3 extends javax.swing.JFrame {
         initComponents();
         getContentPane().setBackground(Color.white);
         Controller con = new Controller();
+        Filereader file = new Filereader();
+        ArrayList<String[]> results = con.getResults();
         ArrayList<String[]> swimmers = con.readTextFile();
+        ArrayList<Swimmer> swim = file.swimmerToObject(swimmers);
         
         DefaultTableModel model;
         model = (DefaultTableModel)jTable1.getModel();
@@ -38,7 +42,19 @@ public class GUI3 extends javax.swing.JFrame {
         model.setRowCount(0);
         for (int i = 0; i < swimmers.size(); i++) {
             String[] strings = swimmers.get(i);
-            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[5], Swimmer.calculatorPriceMember(strings[0])});
+            Swimmer swimmer = swim.get(i);
+            if (Boolean.parseBoolean(strings[5]) == false) {
+                model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[5], "Restance"});
+            } else {
+            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[5], Swimmer.calculatorPriceMember(swimmer)});
+        }
+        }
+        
+        model = (DefaultTableModel)jTable2.getModel();
+        model.setRowCount(0);
+        for (int i = 0; i < results.size(); i++) {
+            String[] strings = results.get(i);
+            model.insertRow(model.getRowCount(), new Object[]{strings[0],strings[1],strings[2], strings[6], strings[7], strings[8], strings[9]});
         }
     }
 
@@ -589,9 +605,17 @@ public class GUI3 extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Name", "Date of birth", "Paid", "Payment/Restance"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane3.setViewportView(jTable3);
 
         jLabel8.setText("Database information Kontingenter:");

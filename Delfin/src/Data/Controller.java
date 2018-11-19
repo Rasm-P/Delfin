@@ -16,24 +16,24 @@ import java.util.logging.Logger;
  * @author Rasmus2
  */
 public class Controller {
-    
+
     public ArrayList<String[]> readTextFile() {
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/delfin2.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/delfiner2.txt";
         ArrayList<String[]> swimmers = new ArrayList();
 
         Filereader fr = new Filereader();
         return swimmers = fr.getSwimmersByName(inFilename);
     }
-    
+
     public void compareMembers(String member) {
         ArrayList<String[]> swimmers = new ArrayList();
         String str;
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/delfin2.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/delfiner2.txt";
         Filereader fr = new Filereader();
         swimmers = fr.getSwimmersByName(inFilename);
 
         try {
-            
+
             for (int i = 0; i < swimmers.size(); i++) {
                 String[] strings = swimmers.get(i);
                 if (strings[0].equals(member)) {
@@ -45,5 +45,15 @@ public class Controller {
             Logger.getLogger(RemoveMemberGUI.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-   
+
+
+    public ArrayList<String[]> getResults()
+    {
+        ArrayList<String[]> results;
+        results = new ArrayList();
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/results.txt";
+        Filereader fr = new Filereader();
+        return results = fr.getResults(inFilename);
+    }
+
 }
