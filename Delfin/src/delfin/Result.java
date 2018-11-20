@@ -14,20 +14,23 @@ import java.sql.Time;
 public class Result {
     
     private Swimmer swimmer;
-    private Competition comp;
-    private int time;
+    private String comp;
+    private double time;
     private int placement;
-    public Result(Swimmer swimmer, Competition comp, int time, int placement)
+    private String disiplin;
+    public Result(Swimmer swimmer, String comp, double time, int placement, String disiplin)
     {
         this.swimmer = swimmer;
         this.comp = comp;
         this.time = time;
         this.placement = placement;
+        this.disiplin = disiplin;
+        
     }
 
     public int getTime()
     {
-        return time;
+        return (int) time;
     }
 
     public void setTime(int time)
@@ -45,19 +48,19 @@ public class Result {
         this.swimmer = swimmer;
     }
 
-    public Competition getComp()
+    public String getComp()
     {
         return comp;
     }
 
     public void setComp(Competition comp)
     {
-        this.comp = comp;
+        
     }
 
     @Override
     public String toString() {
-        return swimmer + ", " + comp + ", " + time;
+        return swimmer.getName() +", " + swimmer.getEmail()+ ", "+ swimmer.getDob()+ ", " + comp + ", " + time + ", " + placement + ", " + disiplin;
     }
     
 }

@@ -6,3 +6,5 @@ Stine, 1999-08-02, stine@gmail.com, true, false, true, Herlev open, 05.50, 3, ry
 Tine, 1979-05-02, tine@gmail.com, false, true, false, Holte open, 14.15, 3, rygcrawl
 Henrik, 1989-12-12, henik@gmail.com, true, false, true, Herlev open, 06.50, 5, rygcrawl
 Anna, 1993-04-08, anna.gmail.com, true, true, true, EM i Sverige, 10.36, 4, brystsvømning
+
+

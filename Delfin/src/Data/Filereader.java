@@ -141,7 +141,7 @@ public Swimmer seachSwimmer(ArrayList<Swimmer> swimmers, String name) {
             for (int i = 0; i < swimmers.size(); i++) {
                 Swimmer swim = swimmers.get(i);
                 if (swim.getName().equals(name)) {
-                    swims = swim;
+                        return swims = swim;
                 } 
             }
         return swims;
