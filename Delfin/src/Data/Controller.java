@@ -18,7 +18,7 @@ import java.util.logging.Logger;
 public class Controller {
 
     public ArrayList<String[]> readTextFile() {
-        //String inFilename = "/home/zzar/Documents/Delfin/Delfin/delfiner2.txt";
+        String inFilename = "/home/zzar/Documents/Delfin/Delfin/delfiner2.txt";
 
       //  String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
 
