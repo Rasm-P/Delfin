@@ -8,7 +8,10 @@ package UI;
 import Data.Controller;
 import Data.Filereader;
 import delfin.Swimmer;
+import delfin.Team;
 import java.awt.Color;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
 
@@ -56,6 +59,35 @@ public class GUI3 extends javax.swing.JFrame {
             String[] strings = results.get(i);
             model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[2], strings[6], strings[7], strings[8], strings[9]});
         }
+        
+        
+        //Adds competitive members to teams based on their age
+        ArrayList<Swimmer> swimmersJunior = new ArrayList<>();
+        ArrayList<Swimmer> swimmersSenior = new ArrayList<>();
+        Team konkurrencesvømmerJunior = new Team("Junior", "konkurrencesvømmerJunior", swimmersJunior);
+        Team konkurrencesvømmerSenior = new Team("Senior", "konkurrencesvømmerSenior", swimmersSenior);
+        for (int i = 0; i < swim.size(); i++) {
+            Swimmer swims = swim.get(i);
+            int age = (Period.between(swims.getDob(), LocalDate.now()).getYears());
+            if(age < 18 && swims.isPro() == true)
+                konkurrencesvømmerJunior.addMembers(swims);
+            if(age >= 18 && swims.isPro() == true)
+                konkurrencesvømmerSenior.addMembers(swims);
+        }  
+        model = (DefaultTableModel) jTable4.getModel();
+        model.setRowCount(0);
+            if (jComboBox1.getSelectedItem().equals("Konkurrencesvømmer Junior")) {
+                for (int i = 0; i < konkurrencesvømmerJunior.getMembers().size(); i++) {
+                        Swimmer swimmer = konkurrencesvømmerJunior.getMembers().get(i);
+                model.insertRow(model.getRowCount(), new Object[]{swimmer.getName(), swimmer.getDob(), swimmer.isStatus(), swimmer.isPro()});                
+                }
+            }    
+            if (jComboBox1.getSelectedItem().equals("Konkurrencesvømmer Senior")) {
+                for (int i = 0; i < konkurrencesvømmerSenior.getMembers().size(); i++) {
+                        Swimmer swimmer = konkurrencesvømmerSenior.getMembers().get(i);
+                model.insertRow(model.getRowCount(), new Object[]{swimmer.getName(), swimmer.getDob(), swimmer.isStatus(), swimmer.isPro()}); 
+                }
+            }
     }
 
     /**
@@ -125,6 +157,7 @@ public class GUI3 extends javax.swing.JFrame {
         jButton29 = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         jButton54 = new javax.swing.JButton();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jPanel7 = new javax.swing.JPanel();
         jScrollPane5 = new javax.swing.JScrollPane();
         jTable5 = new javax.swing.JTable();
@@ -684,18 +717,33 @@ public class GUI3 extends javax.swing.JFrame {
                 {null, null, null, null}
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Name", "Date of birth", "Status", "Konkurrencesvømmer"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane4.setViewportView(jTable4);
 
         jLabel11.setText("Database information Svømmedecipliner:");
 
-        jButton29.setText("jButton1");
+        jButton29.setText("Tilføj til hold");
 
         jLabel13.setText("Svømmedecipliner");
 
         jButton54.setText("Refresh");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Konkurrencesvømmer Senior", "Konkurrencesvømmer Junior" }));
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -703,15 +751,16 @@ public class GUI3 extends javax.swing.JFrame {
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel6Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addComponent(jButton29)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton54))
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel13)
-                        .addComponent(jLabel11)
-                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 1234, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel11)
+                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 1234, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(35, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
@@ -722,7 +771,8 @@ public class GUI3 extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton29)
-                    .addComponent(jButton54))
+                    .addComponent(jButton54)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel11)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -1082,6 +1132,42 @@ public class GUI3 extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton53ActionPerformed
 
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+        Controller con = new Controller();
+        Filereader file = new Filereader();
+        ArrayList<String[]> swimmers = con.readTextFile();
+        ArrayList<Swimmer> swim = file.swimmerToObject(swimmers);
+        
+        ArrayList<Swimmer> swimmersJunior = new ArrayList<>();
+        ArrayList<Swimmer> swimmersSenior = new ArrayList<>();
+        Team konkurrencesvømmerJunior = new Team("Junior", "konkurrencesvømmerJunior", swimmersJunior);
+        Team konkurrencesvømmerSenior = new Team("Senior", "konkurrencesvømmerSenior", swimmersSenior);
+        for (int i = 0; i < swim.size(); i++) {
+            Swimmer swims = swim.get(i);
+            int age = (Period.between(swims.getDob(), LocalDate.now()).getYears());
+            if(age < 18 && swims.isPro() == true)
+                konkurrencesvømmerJunior.addMembers(swims);
+            if(age >= 18 && swims.isPro() == true)
+                konkurrencesvømmerSenior.addMembers(swims);
+        }    
+        
+        DefaultTableModel model;
+        model = (DefaultTableModel) jTable4.getModel();
+        model.setRowCount(0);
+            if (jComboBox1.getSelectedItem().equals("Konkurrencesvømmer Junior")) {
+                for (int i = 0; i < konkurrencesvømmerJunior.getMembers().size(); i++) {
+                        Swimmer swimmer = konkurrencesvømmerJunior.getMembers().get(i);
+                model.insertRow(model.getRowCount(), new Object[]{swimmer.getName(), swimmer.getDob(), swimmer.isStatus(), swimmer.isPro()});                
+                }
+            }    
+            if (jComboBox1.getSelectedItem().equals("Konkurrencesvømmer Senior")) {
+                for (int i = 0; i < konkurrencesvømmerSenior.getMembers().size(); i++) {
+                        Swimmer swimmer = konkurrencesvømmerSenior.getMembers().get(i);
+                model.insertRow(model.getRowCount(), new Object[]{swimmer.getName(), swimmer.getDob(), swimmer.isStatus(), swimmer.isPro()}); 
+                }
+            }
+    }//GEN-LAST:event_jComboBox1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1153,6 +1239,7 @@ public class GUI3 extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

@@ -5,6 +5,7 @@
  */
 package Data;
 
+import delfin.Calculator;
 import delfin.Swimmer;
 import java.io.File;
 import java.io.IOException;
@@ -14,6 +15,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.time.LocalDate;
+import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -128,5 +130,17 @@ public class Filereader {
         }
         return null;
     }
-
+    
+    public Swimmer seachSwimmer(ArrayList<Swimmer> swimmers, String name) {
+        Swimmer swims = null;
+            for (int i = 0; i < swimmers.size(); i++) {
+                Swimmer swim = swimmers.get(i);
+                if (swim.getName().equals(name)) {
+                    swims = swim;
+                } 
+            }
+        return swims;
+    }
+    
 }
+

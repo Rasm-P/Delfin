@@ -37,6 +37,10 @@ public class Team {
         this.members = members;
     }
     
+    public void addMembers(Swimmer member) {
+        members.add(member);
+    }
+    
     @Override
     public String toString() {
         return "Team{" + "teamID=" + TeamID + ", teamName=" + Name + ", users=" + members + '}';
