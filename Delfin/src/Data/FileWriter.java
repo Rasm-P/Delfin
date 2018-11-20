@@ -5,6 +5,7 @@
  */
 package Data;
 
+import delfin.Result;
 import delfin.Swimmer;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -26,6 +27,20 @@ public class FileWriter {
             PrintStream output = new PrintStream(new FileOutputStream(file, true));
 
             output.print(System.lineSeparator() + swim);
+        } catch (IOException ex)
+        {
+            System.out.println("Fejl i fil, kontakt din systemadministrator");
+        }
+    }
+    
+        public static void writeResult(Result result, String file) throws FileNotFoundException, UnsupportedEncodingException
+    {
+        file = "Results.txt";
+        try
+        {
+            PrintStream output = new PrintStream(new FileOutputStream(file, true));
+            
+            output.print(System.lineSeparator() + result);
         } catch (IOException ex)
         {
             System.out.println("Fejl i fil, kontakt din systemadministrator");
