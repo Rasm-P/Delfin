@@ -33,3 +33,22 @@ Bob, 1999-03-03, bob@gmail.com, true, true, true
 Sille, 2004-04-05, sille@gmail.com, true, true, true
 
 Emil, 1999-04-07, emil.gmail.com, false, true, true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Ole, 1999-05-02, ole@gmail.com, true, false, false

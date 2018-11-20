@@ -28,9 +28,9 @@ public class FilereaderTest {
      */
     @Before
     public void initialize() throws FileNotFoundException, UnsupportedEncodingException {
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/test.txt";
-        Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
-        FileWriter.writeFile(swim, inFilename);
+      String Filename = "test.txt";
+      Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
+      FileWriter.writeFile(swim, Filename);
     }
 
     /**
@@ -87,15 +87,23 @@ public class FilereaderTest {
     @Test
     public void testGetResult() throws Exception {
         System.out.println("GetSwimmer");
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/test.txt";
-        Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
-        FileWriter instance = new FileWriter();
-//        instance.writeFile(swim, inFilename);
+        String Filename2 = "Results.txt";
         Filereader instance2 = new Filereader();
-        int exp = 1;
-        ArrayList result = instance2.getResults(inFilename);
+        int exp = 8;
+        ArrayList result = instance2.getResults(Filename2);
         assertNotNull(result);
         assertEquals(exp, result.size());
+    }
+    
+    @Test
+    public void testSeachSwimmer()
+    {
+        System.out.println("Test Seach Swimmer");
+        String Filename3 = "test.txt";
+        Filereader instance = new Filereader();
+        Swimmer swimmer = instance.seachSwimmer(instance.getSwimmersByName(Filename3), "Rasmus");
+        Swimmer exp = new Swimmer("Rasmus", LocalDate.of(1998, 06, 03), "rasmus@gmail.com", true, true, false);
+        assertEquals(exp, swimmer);
     }
 
 }
