@@ -29,16 +29,16 @@ public class GUI3 extends javax.swing.JFrame {
         ArrayList<String[]> results = con.getResults();
         ArrayList<String[]> swimmers = con.readTextFile();
         ArrayList<Swimmer> swim = file.swimmerToObject(swimmers);
-        
+
         DefaultTableModel model;
-        model = (DefaultTableModel)jTable1.getModel();
+        model = (DefaultTableModel) jTable1.getModel();
         model.setRowCount(0);
         for (int i = 0; i < swimmers.size(); i++) {
             String[] strings = swimmers.get(i);
-            model.insertRow(model.getRowCount(), new Object[]{strings[0],strings[1],strings[2],strings[3],strings[4], strings[5]});
+            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[2], strings[3], strings[4], strings[5]});
         }
-        
-        model = (DefaultTableModel)jTable3.getModel();
+
+        model = (DefaultTableModel) jTable3.getModel();
         model.setRowCount(0);
         for (int i = 0; i < swimmers.size(); i++) {
             String[] strings = swimmers.get(i);
@@ -46,15 +46,15 @@ public class GUI3 extends javax.swing.JFrame {
             if (Boolean.parseBoolean(strings[5]) == false) {
                 model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[5], "Restance"});
             } else {
-            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[5], Swimmer.calculatorPriceMember(swimmer)});
+                model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[5], Swimmer.calculatorPriceMember(swimmer)});
+            }
         }
-        }
-        
-        model = (DefaultTableModel)jTable2.getModel();
+
+        model = (DefaultTableModel) jTable2.getModel();
         model.setRowCount(0);
         for (int i = 0; i < results.size(); i++) {
             String[] strings = results.get(i);
-            model.insertRow(model.getRowCount(), new Object[]{strings[0],strings[1],strings[2], strings[6], strings[7], strings[8], strings[9]});
+            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[2], strings[6], strings[7], strings[8], strings[9]});
         }
     }
 
@@ -800,9 +800,9 @@ public class GUI3 extends javax.swing.JFrame {
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);
-        jPanel7.setVisible(false);        
+        jPanel7.setVisible(false);
         jPanel11.setVisible(false);
-        
+
         if (jPanel10.isVisible() && jPanel3.isVisible()) {
             jButton48.setVisible(true);
             jButton50.setVisible(true);
@@ -855,7 +855,7 @@ public class GUI3 extends javax.swing.JFrame {
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);
         jPanel11.setVisible(false);
-        
+
         if (jPanel10.isVisible() && jPanel3.isVisible()) {
             jButton48.setVisible(true);
             jButton50.setVisible(true);
@@ -881,7 +881,7 @@ public class GUI3 extends javax.swing.JFrame {
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);
         jPanel11.setVisible(false);
-        
+
         if (jPanel10.isVisible() && jPanel3.isVisible()) {
             jButton48.setVisible(true);
             jButton50.setVisible(true);
@@ -923,14 +923,14 @@ public class GUI3 extends javax.swing.JFrame {
         jPanel10.setVisible(false);
         jPanel9.setVisible(false);
         jPanel8.setVisible(true);
-        
+
         jPanel3.setVisible(true);
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);
         jPanel11.setVisible(false);
-        
+
         if (jPanel10.isVisible() && jPanel3.isVisible()) {
             jButton48.setVisible(true);
             jButton50.setVisible(true);
@@ -945,14 +945,14 @@ public class GUI3 extends javax.swing.JFrame {
         jPanel10.setVisible(true);
         jPanel9.setVisible(false);
         jPanel8.setVisible(false);
-        
+
         jPanel3.setVisible(true);
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);
         jPanel11.setVisible(false);
-        
+
         if (jPanel10.isVisible() && jPanel3.isVisible()) {
             jButton48.setVisible(true);
             jButton50.setVisible(true);
@@ -967,14 +967,14 @@ public class GUI3 extends javax.swing.JFrame {
         jPanel10.setVisible(false);
         jPanel9.setVisible(true);
         jPanel8.setVisible(false);
-        
+
         jPanel3.setVisible(true);
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
         jPanel6.setVisible(false);
         jPanel7.setVisible(false);
         jPanel11.setVisible(false);
-        
+
         if (jPanel10.isVisible() && jPanel3.isVisible()) {
             jButton48.setVisible(true);
             jButton50.setVisible(true);
@@ -989,7 +989,7 @@ public class GUI3 extends javax.swing.JFrame {
         jPanel10.setVisible(false);
         jPanel9.setVisible(false);
         jPanel8.setVisible(false);
-        
+
         jPanel3.setVisible(false);
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
@@ -1003,7 +1003,7 @@ public class GUI3 extends javax.swing.JFrame {
         jPanel10.setVisible(false);
         jPanel9.setVisible(false);
         jPanel8.setVisible(false);
-        
+
         jPanel3.setVisible(false);
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
@@ -1017,7 +1017,7 @@ public class GUI3 extends javax.swing.JFrame {
         jPanel10.setVisible(false);
         jPanel9.setVisible(false);
         jPanel8.setVisible(false);
-        
+
         jPanel3.setVisible(false);
         jPanel4.setVisible(false);
         jPanel5.setVisible(false);
@@ -1039,26 +1039,26 @@ public class GUI3 extends javax.swing.JFrame {
     private void jButton51ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton51ActionPerformed
         Controller con = new Controller();
         ArrayList<String[]> swimmers = con.readTextFile();
-        
+
         DefaultTableModel model;
-        model = (DefaultTableModel)jTable1.getModel();
+        model = (DefaultTableModel) jTable1.getModel();
         model.setRowCount(0);
         for (int i = 0; i < swimmers.size(); i++) {
             String[] strings = swimmers.get(i);
-            model.insertRow(model.getRowCount(), new Object[]{strings[0],strings[1],strings[2],strings[3],strings[4], strings[5]});
+            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[2], strings[3], strings[4], strings[5]});
         }
     }//GEN-LAST:event_jButton51ActionPerformed
 
     private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
         Controller con = new Controller();
         ArrayList<String[]> results = con.getResults();
-        
+
         DefaultTableModel model;
-        model = (DefaultTableModel)jTable2.getModel();
+        model = (DefaultTableModel) jTable2.getModel();
         model.setRowCount(0);
         for (int i = 0; i < results.size(); i++) {
             String[] strings = results.get(i);
-            model.insertRow(model.getRowCount(), new Object[]{strings[0],strings[1],strings[2], strings[6], strings[7], strings[8], strings[9]});
+            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[2], strings[6], strings[7], strings[8], strings[9]});
         }
     }//GEN-LAST:event_jButton52ActionPerformed
 
@@ -1067,9 +1067,9 @@ public class GUI3 extends javax.swing.JFrame {
         Filereader file = new Filereader();
         ArrayList<String[]> swimmers = con.readTextFile();
         ArrayList<Swimmer> swim = file.swimmerToObject(swimmers);
-        
+
         DefaultTableModel model;
-        model = (DefaultTableModel)jTable3.getModel();
+        model = (DefaultTableModel) jTable3.getModel();
         model.setRowCount(0);
         for (int i = 0; i < swimmers.size(); i++) {
             String[] strings = swimmers.get(i);
@@ -1077,8 +1077,8 @@ public class GUI3 extends javax.swing.JFrame {
             if (Boolean.parseBoolean(strings[5]) == false) {
                 model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[5], "Restance"});
             } else {
-            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[5], Swimmer.calculatorPriceMember(swimmer)});
-        }
+                model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[5], Swimmer.calculatorPriceMember(swimmer)});
+            }
         }
     }//GEN-LAST:event_jButton53ActionPerformed
 

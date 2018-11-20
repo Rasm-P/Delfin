@@ -3,6 +3,7 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
             <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/UI/GUI3.java</file>
             <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/Data/Controller.java</file>
             <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/Data/DataAccessor.java</file>
@@ -13,6 +14,13 @@
             <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/UI/NewMemberGUI.java</file>
             <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/Data/Filereader.java</file>
             <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/Data/FileWriter.java</file>
+=======
+            <file>file:/C:/Users/Rasmus2/Documents/GitHub/Delfin/Delfin/src/Data/Controller.java</file>
+            <file>file:/C:/Users/Rasmus2/Documents/GitHub/Delfin/Delfin/test/Data/FilereaderTest.java</file>
+            <file>file:/C:/Users/Rasmus2/Documents/GitHub/Delfin/Delfin/src/Data/FileWriter.java</file>
+            <file>file:/C:/Users/Rasmus2/Documents/GitHub/Delfin/Delfin/src/Data/Filereader.java</file>
+            <file>file:/C:/Users/Rasmus2/Documents/GitHub/Delfin/Delfin/src/UI/GUI3.java</file>
+>>>>>>> b626fb83283ddbf6cb019b1c545eb4179244cbc3
         </group>
     </open-files>
 </project-private>
