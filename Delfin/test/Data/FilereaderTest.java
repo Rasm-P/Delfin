@@ -28,9 +28,9 @@ public class FilereaderTest {
      */
     @Before
     public void initialize() throws FileNotFoundException, UnsupportedEncodingException {
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/test.txt";
-        Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
-        FileWriter.writeFile(swim, inFilename);
+      String Filename = "test.txt";
+      Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
+      FileWriter.writeFile(swim, Filename);
     }
 
     /**
@@ -87,12 +87,9 @@ public class FilereaderTest {
     @Test
     public void testGetResult() throws Exception {
         System.out.println("GetSwimmer");
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/test.txt";
-        Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", true, false, false);
-        FileWriter instance = new FileWriter();
-//        instance.writeFile(swim, inFilename);
+        String inFilename = "Results.txt";
         Filereader instance2 = new Filereader();
-        int exp = 1;
+        int exp = 8;
         ArrayList result = instance2.getResults(inFilename);
         assertNotNull(result);
         assertEquals(exp, result.size());
