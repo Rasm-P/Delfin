@@ -87,10 +87,10 @@ public class FilereaderTest {
     @Test
     public void testGetResult() throws Exception {
         System.out.println("GetSwimmer");
-        String inFilename = "Results.txt";
+        String Filename2 = "Results.txt";
         Filereader instance2 = new Filereader();
         int exp = 8;
-        ArrayList result = instance2.getResults(inFilename);
+        ArrayList result = instance2.getResults(Filename2);
         assertNotNull(result);
         assertEquals(exp, result.size());
     }
