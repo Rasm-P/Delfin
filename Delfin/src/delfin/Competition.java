@@ -23,7 +23,7 @@ public class Competition {
     {
         if (comName == null || time < 0 || placement < 0 || disciplin == null || placements.size() < 0)
         {
-            throw new IllegalAccessException("Noob");
+            throw new IllegalAccessException("Input was wrong!");
         }
 
         this.comName = comName;

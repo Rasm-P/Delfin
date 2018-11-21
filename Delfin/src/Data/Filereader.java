@@ -28,12 +28,10 @@ import java.util.stream.Collectors;
 public class Filereader {
 
     private static final boolean DEBUG = true;
-    // String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
 
     public ArrayList<String[]> getSwimmersByName(String inFilename) {
 
-        //inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
-        inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/delfiner2.txt";
+        inFilename = "delfiner2.txt";
 
         try {
             ArrayList<String[]> swimmers = new ArrayList();
@@ -73,8 +71,7 @@ public class Filereader {
 
     public void removeSwimmer(String str, String inFilename) throws IOException {
 
-        //inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\delfiner2.txt";
-        inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/delfiner2.txt";
+        inFilename = "delfiner2.txt";
 
         File file = new File(inFilename);
         List<String> out = Files.lines(file.toPath()).filter(line -> !line.contains(str)).collect(Collectors.toList());
@@ -82,8 +79,8 @@ public class Filereader {
     }
 
     public ArrayList<String[]> getResults(String inFIlename) {
-        //String inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\Results.txt";
-        String inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/Results.txt";
+
+        String inFilename = "Results.txt";
         try {
             ArrayList<String[]> results = new ArrayList();
             String splitBy = ", ";
@@ -107,8 +104,8 @@ public class Filereader {
     }
 
     public ArrayList<String[]> getTeams(String inFilename) {
-        // inFilename = "C:\\Users\\Rasmus2\\Documents\\GitHub\\Delfin\\Delfin\\Teams.txt";
-        inFilename = "/home/zzar/Documents/Delfin/Delfin/Delfin/Teams.txt";
+
+        inFilename = "Teams.txt";
         try {
             ArrayList<String[]> teams = new ArrayList();
             String splitBy = ", ";
@@ -130,6 +127,7 @@ public class Filereader {
         }
         return null;
     }
+<<<<<<< HEAD
 
     public Swimmer seachSwimmer(ArrayList<Swimmer> swimmers, String name) {
         Swimmer swim = null;
@@ -138,6 +136,19 @@ public class Filereader {
             if (swimmers.get(i).getName().equals(name)) {
                 swim = swimmers.get(i);
                 return swim;
+=======
+    
+    public ArrayList<Swimmer>
+
+    public Swimmer seachSwimmer(ArrayList<Swimmer> swimmers, String name) {
+
+        Swimmer swims = null;
+            for (int i = 0; i < swimmers.size(); i++) {
+                Swimmer swim = swimmers.get(i);
+                if (swim.getName().equals(name)) {
+                        return swims = swim;
+                } 
+>>>>>>> 7de33a96e43da55da831befa96b229fdd52158fc
             }
         }
         return swim;
