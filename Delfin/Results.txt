@@ -5,3 +5,10 @@ Henrik, 1989-12-12, henik@gmail.com, rygcrawl, true, false, true, Herlev, 50.50,
 Henrik, 1989-12-12, henik@gmail.com, rygcrawl, true, false, true, DM, 15.15, 2, crawl
 Pedro, 1995-03-12, pedro@gmail.com, crawl, true, true, true, VM, 26.26, 1, crawl
 Lucas, 1997-03-17, luas@gmail.com, rygcrawl, true, true, true, Herlev open, 25.25, 2, butterfly
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false, DM, 15.15, 2, crawl
+Sille, 2004-04-05, sille@gmail.com, rygcrawl, true, true, true, EM, 56.2, 1, rygcrawl
+Elma, 2004-03-05, elma@gmail.com, crawl, true, true, false, EM, 40.42, 1, crawl
+Erik, 1939-01-11, erik@gmail.com, crawl, true, false, false, Herlev open, 25.55, 2, crawl
+Rasmus, 1995-03-18, rasmus@gmail.com, crawl, true, true, true, Købehavn open, 45.55, 2, crawl
+Ditlev, 1999-10-15, ditlev@bandit1.labs.overthewire.com, crawl, true, true, true, København, 33.55, 2, crawl
+Helmer, 1985-01-14, helmer@bitcoinforfree.io.net.com, butterfly, true, true, true, EM, 45.33, 4, butterfly

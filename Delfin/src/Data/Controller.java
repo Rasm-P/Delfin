@@ -8,7 +8,9 @@ package Data;
 import UI.RemoveMemberGUI;
 import UI.RemoveResult;
 import delfin.Result;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -102,6 +104,5 @@ public class Controller {
         }
     }
     
-   
 
 }

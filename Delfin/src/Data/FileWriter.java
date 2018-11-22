@@ -45,7 +45,7 @@ public class FileWriter {
      *
      */
     public static void writeResult(Result result, String file) throws FileNotFoundException, UnsupportedEncodingException {
-        
+        file = "Results.txt";
         try {
             PrintStream output = new PrintStream(new FileOutputStream(file, true));
 
