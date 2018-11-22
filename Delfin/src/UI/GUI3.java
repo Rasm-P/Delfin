@@ -1264,7 +1264,8 @@ public class GUI3 extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBox3ActionPerformed
 
     private void jButton18ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton18ActionPerformed
-        // TODO add your handling code here:
+        RemoveResult itemloader = new RemoveResult();
+        itemloader.setVisible(true);
     }//GEN-LAST:event_jButton18ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
