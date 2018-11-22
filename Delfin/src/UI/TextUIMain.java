@@ -26,12 +26,14 @@ public class TextUIMain {
         System.out.println("Email:");
         String mail = TextUI.getEmail();
         System.out.println("Medlemsskabsstatus");
+        String deciplin = TextUI.getDeciplin();
+        System.out.println("Medlemsdeciplin");
         Boolean status = TextUI.status();
         System.out.println("konkurrencesvømmer");
         Boolean pro = TextUI.isPro();
         System.out.println("Har betalt");
         Boolean payment = TextUI.havePaid();
-        Swimmer swimmer = new Swimmer(name, date, mail, status, pro, payment);
+        Swimmer swimmer = new Swimmer(name, date, mail, deciplin, status, pro, payment);
         System.out.println(swimmer.toString());
         return swimmer;
         

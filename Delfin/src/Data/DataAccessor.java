@@ -35,6 +35,7 @@ public class DataAccessor {
         String name = "";
         //Date dob = 1998-01-01;
         String email = "";
+        String deciplin = "";
         boolean status = true;
         boolean pro = true;
         boolean payment = true;
@@ -47,6 +48,7 @@ public class DataAccessor {
             name = rs.getString("name");
 //            dob = rs.getDate("dob");
             email = rs.getString("email");
+            deciplin = rs.getString("deciplin");
             status = rs.getBoolean("status");
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
@@ -79,6 +81,7 @@ public class DataAccessor {
         String name = "";
         //Date dob = 1998-01-01;
         String email = "";
+        String deciplin = "";
         boolean status = true;
         boolean pro = true;
         boolean payment = true;
@@ -91,6 +94,7 @@ public class DataAccessor {
             name = rs.getString("name");
 //            dob = rs.getDate("dob");
             email = rs.getString("email");
+            deciplin = rs.getString("deciplin");
             status = rs.getBoolean("status");
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
@@ -123,6 +127,7 @@ public class DataAccessor {
         String name = "";
         //Date dob = 1998-01-01;
         String email = "";
+        String deciplin = "";
         boolean status = true;
         boolean pro = true;
         boolean payment = true;
@@ -135,6 +140,7 @@ public class DataAccessor {
             name = rs.getString("name");
 //            dob = rs.getDate("dob");
             email = rs.getString("email");
+            deciplin = rs.getString("deciplin");
             status = rs.getBoolean("status");
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
@@ -166,6 +172,7 @@ public class DataAccessor {
         String name = "";
         //Date dob = 1998-01-01;
         String email = "";
+        String deciplin = "";
         boolean status = true;
         boolean pro = true;
         boolean payment = true;
@@ -178,6 +185,7 @@ public class DataAccessor {
             name = rs.getString("name");
 //            dob = rs.getDate("dob");
             email = rs.getString("email");
+            deciplin = rs.getString("deciplin");
             status = rs.getBoolean("status");
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
@@ -210,6 +218,7 @@ public class DataAccessor {
         String name = "";
         //Date dob = 1998-01-01;
         String email = "";
+        String deciplin = "";
         boolean status = true;
         boolean pro = true;
         boolean payment = true;
@@ -222,6 +231,7 @@ public class DataAccessor {
             name = rs.getString("name");
 //            dob = rs.getDate("dob");
             email = rs.getString("email");
+            deciplin = rs.getString("deciplin");
             status = rs.getBoolean("status");
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");
@@ -254,6 +264,7 @@ public class DataAccessor {
         String name = "";
         //Date dob = 1998-01-01;
         String email = "";
+        String deciplin = "";
         boolean status = true;
         boolean pro = true;
         boolean payment = true;
@@ -266,6 +277,7 @@ public class DataAccessor {
             name = rs.getString("name");
 //            dob = rs.getDate("dob");
             email = rs.getString("email");
+            deciplin = rs.getString("deciplin");
             status = rs.getBoolean("status");
             pro = rs.getBoolean("pro");
             payment = rs.getBoolean("payment");

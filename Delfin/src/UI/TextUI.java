@@ -53,6 +53,12 @@ public class TextUI {
         String email = scanner.nextLine();
         return email;
     }
+    
+        public static String getDeciplin() {
+        String deciplin = scanner.nextLine();
+        return deciplin;
+    }
+    
     public static boolean status() {
         String status = scanner.nextLine();
         if(status.equals("nej"))

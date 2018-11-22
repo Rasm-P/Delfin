@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
  *
  * @author rashe
  */
-public class RemoveMemberGUI extends javax.swing.JFrame {
+public class RemoveResult extends javax.swing.JFrame {
 
     /**
      * Creates new form NewMemberGUI
@@ -23,23 +23,23 @@ public class RemoveMemberGUI extends javax.swing.JFrame {
     Controller con = new Controller();
     ArrayList<String[]> swimmers = con.readTextFile();
     */
-    private void setRemovedMember() {
+    private void setRemovedResult() {
         Controller con = new Controller();
-        ArrayList<String[]> swimmers = con.readTextFile();
-        
+        ArrayList<String[]> results = con.getResults();
         DefaultTableModel model;
+
         model = (DefaultTableModel) jTable1.getModel();
         model.setRowCount(0);
-        for (int i = 0; i < swimmers.size(); i++) {
-            String[] strings = swimmers.get(i);
-            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[2], strings[3], strings[4], strings[5], strings[6]});
+        for (int i = 0; i < results.size(); i++) {
+            String[] strings = results.get(i);
+            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[2], strings[7], strings[8], strings[9], strings[10]});
         }
     }
 
-    public RemoveMemberGUI() {
+    public RemoveResult() {
         initComponents();
         getContentPane().setBackground(Color.white);
-        setRemovedMember();
+        setRemovedResult();
 
         /*
         DefaultTableModel model;
@@ -96,15 +96,22 @@ public class RemoveMemberGUI extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Name", "eMail", "Date of birth", "Status", "Konkurancesvømmer", "Payment"
+                "Name", "Date of birth", "eMail", "Stævne", "Tid", "Placering", "Deciplin"
             }
         ) {
             Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
+                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.Object.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
                 return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
         jScrollPane1.setViewportView(jTable1);
@@ -168,7 +175,7 @@ public class RemoveMemberGUI extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
     {//GEN-HEADEREND:event_jButton1ActionPerformed
         Controller con = new Controller();
-        con.compareMembers(jTextField1.getText());
+        con.compareResults(jTextField1.getText());
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextField1ActionPerformed
@@ -177,7 +184,7 @@ public class RemoveMemberGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
-        setRemovedMember();
+        setRemovedResult();
 
         /*
         Controller con = new Controller();
@@ -194,7 +201,7 @@ public class RemoveMemberGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton53ActionPerformed
 
     private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
-        RemoveMemberGUI.this.setVisible(false);
+        RemoveResult.this.setVisible(false);
     }//GEN-LAST:event_jButton54ActionPerformed
 
     /**
@@ -214,21 +221,23 @@ public class RemoveMemberGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RemoveMemberGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RemoveResult.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RemoveMemberGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RemoveResult.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RemoveMemberGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RemoveResult.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RemoveMemberGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RemoveResult.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RemoveMemberGUI().setVisible(true);
+                new RemoveResult().setVisible(true);
             }
         });
     }
