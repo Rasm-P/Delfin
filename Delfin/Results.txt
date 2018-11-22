@@ -9,8 +9,6 @@ Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false, DM, 15.15, 2, craw
 Sille, 2004-04-05, sille@gmail.com, rygcrawl, true, true, true, EM, 56.2, 1, rygcrawl
 Elma, 2004-03-05, elma@gmail.com, crawl, true, true, false, EM, 40.42, 1, crawl
 Erik, 1939-01-11, erik@gmail.com, crawl, true, false, false, Herlev open, 25.55, 2, crawl
-Rasmus, 1995-03-18, rasmus@gmail.com, crawl, true, true, true, Købehavn open, 45.55, 2, crawl
-Ditlev, 1999-10-15, ditlev@bandit1.labs.overthewire.com, crawl, true, true, true, København, 33.55, 2, crawl
+Rasmus, 1995-03-18, rasmus@gmail.com, crawl, true, true, true, Koebehavn open, 45.55, 2, crawl
+Ditlev, 1999-10-15, ditlev@bandit1.labs.overthewire.com, crawl, true, true, true, Koebenhavn, 33.55, 2, crawl
 Helmer, 1985-01-14, helmer@bitcoinforfree.io.net.com, butterfly, true, true, true, EM, 45.33, 4, butterfly
-
-Lise, 2004-03-09, lise@gmail.com, crawl, true, true, true, DM, 12.03, 1, crawl

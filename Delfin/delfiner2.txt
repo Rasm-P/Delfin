@@ -38,7 +38,4 @@ Gitte, 2000-03-11, Skrrt@swerve.co.uk, butterfly, false, false, false
 Mads, 1988-10-12, mads@gmail.com, crawl, true, true, true
 Yikes, 1995-09-04, big@yikes.ru, brystsvoemning, false, true, false
 Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
-
-
 Pedro, 1995-03-12, pedro@gmail.com, crawl, true, true, true
-

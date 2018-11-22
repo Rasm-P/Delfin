@@ -204,19 +204,19 @@ public class GUI3 extends javax.swing.JFrame {
 
         for (int i = 0; i < results.size(); i++) {
             String[] strings = results.get(i);
-            if (strings[10].equals("butterfly") && butterflyTop.size() < 5) {
+            if (strings[10].equals("butterfly")) {
                 topFive swimmer = new topFive(strings[0], strings[1], Double.parseDouble(strings[8]), strings[10]);
                 butterflyTop.add(swimmer);
             }
-            if (strings[10].equals("crawl") && crawlTop.size() < 5) {
+            if (strings[10].equals("crawl")) {
                 topFive swimmer = new topFive(strings[0], strings[1], Double.parseDouble(strings[8]), strings[10]);
                 crawlTop.add(swimmer);
             }
-            if (strings[10].equals("rygcrawl") && rygcrawlTop.size() < 5) {
+            if (strings[10].equals("rygcrawl")) {
                 topFive swimmer = new topFive(strings[0], strings[1], Double.parseDouble(strings[8]), strings[10]);
                 rygcrawlTop.add(swimmer);
             }
-            if (strings[10].equals("brystsvoemning") && brystsvoemningTop.size() < 5) {
+            if (strings[10].equals("brystsvoemning")) {
                 topFive swimmer = new topFive(strings[0], strings[1], Double.parseDouble(strings[8]), strings[10]);
                 brystsvoemningTop.add(swimmer);
             }
@@ -232,25 +232,33 @@ public class GUI3 extends javax.swing.JFrame {
         if (jComboBox2.getSelectedItem().equals("Butterfly")) {
             for (int i = 0; i < butterflyTop.size(); i++) {
                 topFive strings = butterflyTop.get(i);
+                if (model.getRowCount() < 5) {
                 model.insertRow(model.getRowCount(), new Object[]{strings.getName(), strings.getEmail(), strings.getTime(), strings.getDeciplin()});
+                }
             }
         }
         if (jComboBox2.getSelectedItem().equals("Crawl")) {
             for (int i = 0; i < crawlTop.size(); i++) {
                 topFive strings = crawlTop.get(i);
+                if (model.getRowCount() < 5) {
                 model.insertRow(model.getRowCount(), new Object[]{strings.getName(), strings.getEmail(), strings.getTime(), strings.getDeciplin()});
-            }
+                }
+            }    
         }
         if (jComboBox2.getSelectedItem().equals("Rygrawl")) {
             for (int i = 0; i < rygcrawlTop.size(); i++) {
                 topFive strings = rygcrawlTop.get(i);
+                if (model.getRowCount() < 5) {
                 model.insertRow(model.getRowCount(), new Object[]{strings.getName(), strings.getEmail(), strings.getTime(), strings.getDeciplin()});
+                }
             }
         }
         if (jComboBox2.getSelectedItem().equals("Brystsvoemning")) {
             for (int i = 0; i < brystsvoemningTop.size(); i++) {
                 topFive strings = brystsvoemningTop.get(i);
+                if (model.getRowCount() < 5) {
                 model.insertRow(model.getRowCount(), new Object[]{strings.getName(), strings.getEmail(), strings.getTime(), strings.getDeciplin()});
+                }
             }
         }
 
