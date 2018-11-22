@@ -4,22 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/UI/GUI3.java</file>
-            <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/delfin/Competition.java</file>
-            <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/delfin/topFive.java</file>
-            <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/delfin/LoginEncryption.java</file>
-            <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/delfin/Swimmer.java</file>
-            <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/UI/RemoveResult.java</file>
+            <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/test/Data/FilereaderTest.java</file>
             <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/UI/HelpUI.java</file>
             <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/UI/NewMemberGUI.java</file>
             <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/Data/Filereader.java</file>
             <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/Data/FileWriter.java</file>
-            <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/Data/Controller.java</file>
-            <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/test/Data/FilereaderTest.java</file>
-            <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/UI/RemoveMemberGUI.java</file>
-            <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/delfin/Result.java</file>
-            <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/UI/AddResult.java</file>
-            <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/delfin/Calculator.java</file>
-            <file>file:/home/zzar/Documents/Delfin/Delfin/Delfin/src/delfin/Team.java</file>
         </group>
     </open-files>
 </project-private>

@@ -95,18 +95,5 @@ public class FilereaderTest {
         assertEquals(exp, result.size());
     }
 
-    /**
-     * Test of removeSwimmer method, of class Filereader.
-     */
-    @Test
-    public void testGetResult() throws Exception {
-        System.out.println("GetSwimmer");
-        String Filename2 = "ResultsTest.txt";
-        Filereader instance2 = new Filereader();
-        int exp = 7;
-        ArrayList result = instance2.getResults(Filename2);
-        assertNotNull(result);
-        assertEquals(exp, result.size());
-    }
 
 }
