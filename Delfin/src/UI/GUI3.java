@@ -24,6 +24,10 @@ import javax.swing.table.DefaultTableModel;
  */
 public class GUI3 extends javax.swing.JFrame {
 
+ /**
+ * Refreshes the table containing members by setting the row count to 0 and reading the file again.
+ * 
+*/
     private void setMemberTable() {
         Controller con = new Controller();
         ArrayList<String[]> swimmers = con.readTextFile();
@@ -37,6 +41,10 @@ public class GUI3 extends javax.swing.JFrame {
         }
     }
 
+ /**
+ * Refreshes the table containing results by setting the row count to 0 and reading the file again.
+ * 
+*/
     private void setSvømmeresultater() {
         Controller con = new Controller();
         ArrayList<String[]> results = con.getResults();
@@ -50,6 +58,12 @@ public class GUI3 extends javax.swing.JFrame {
         }
     }
 
+ /**
+ * Refreshes the table containing members and subscribtions by setting the row count to 0 and reading the file again.
+ * If a member has not paid their subscribtion their status is set to delinquent.
+ * The members can be sorted by their subscription status.
+ * 
+*/
     private void setKontingent() {
         Controller con = new Controller();
         Filereader file = new Filereader();
@@ -90,7 +104,9 @@ public class GUI3 extends javax.swing.JFrame {
             }
         }
     }
-
+/**
+ *  Makes a team object for each member with the specific teams disciplin
+ */
     private void setHold() {
         Controller con = new Controller();
         Filereader file = new Filereader();
@@ -172,6 +188,10 @@ public class GUI3 extends javax.swing.JFrame {
         }
     }
 
+    /**
+     * Creates a list of the top five fastest result times for each of the swimming disciplins.
+     * 
+     */
     private void setKonkurance() {
         Controller con = new Controller();
         ArrayList<String[]> results = con.getResults();

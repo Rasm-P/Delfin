@@ -104,6 +104,10 @@ public class Swimmer {
         return name + ", " + dob + ", "+ email + ", " + deciplin + ", " + status + ", " + pro + ", " + payment;
     }
     
+ /**
+ * Calculates the yearly price a member is required to pay to retain their membership based on the apropriate factors.
+ * 
+*/
     public static double calculatorPriceMember(Swimmer swimmer) {
         int age = (Period.between(swimmer.getDob(), LocalDate.now()).getYears());
         

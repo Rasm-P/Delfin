@@ -17,6 +17,10 @@ import javax.swing.table.DefaultTableModel;
 public class RemoveResult extends javax.swing.JFrame {
 
    
+     /**
+ * Removes result from the array.
+ * 
+*/
     private void setRemovedResult() {
         Controller con = new Controller();
         ArrayList<String[]> results = con.getResults();

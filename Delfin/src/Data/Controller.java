@@ -12,9 +12,18 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
+ /**
+ * Controller class. 
+ * Has methods used by GUI
+ * 
+*/
 public class Controller {
 
+ /**
+ * Reads text file containing every member of the club.
+ * Returns a list of the members.
+ * 
+*/
     public ArrayList<String[]> readTextFile() {
         String inFilename = "delfiner2.txt";
         ArrayList<String[]> swimmers = new ArrayList();
@@ -23,6 +32,11 @@ public class Controller {
         return swimmers = fr.getSwimmersByName(inFilename);
     }
 
+ /**
+ * Used to remove a member from the members list and the text file containing mebers.
+ * Compares the existing members in the list to an admin input.
+ * 
+*/
     public void compareMembers(String member) {
         ArrayList<String[]> swimmers = new ArrayList();
         String str;
@@ -43,7 +57,12 @@ public class Controller {
             Logger.getLogger(RemoveMemberGUI.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
-
+    
+ /**
+ * Reads text file containing the times of members. 
+ * Returns a list of times.
+ * 
+*/
     public ArrayList<String[]> getResults()
     {
         ArrayList<String[]> results;
@@ -53,6 +72,11 @@ public class Controller {
         return results = fr.getResults(inFilename);
     }
 
+ /**
+ * Used to remove a result from the results list and the text file containing results.
+ * Compares the name of a member with an existing results in the list to an admin input.
+ * 
+*/
     public void compareResults(String text) {
         ArrayList<String[]> results = new ArrayList();
         String str;

@@ -235,6 +235,11 @@ public class NewMemberGUI extends javax.swing.JFrame {
 
     }
 
+     /**
+ * The necessary constructor parameters to create a new member are taken from text fields containing user input,
+ * and used to create a new member.
+ * 
+*/
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
     {//GEN-HEADEREND:event_jButton1ActionPerformed
         DateTimeFormatter formatter;

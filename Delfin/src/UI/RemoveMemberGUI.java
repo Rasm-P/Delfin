@@ -20,6 +20,10 @@ public class RemoveMemberGUI extends javax.swing.JFrame {
      * Creates new form NewMemberGUI
      */
 
+ /**
+ * Removes member from the array.
+ * 
+*/
     private void setRemovedMember() {
         Controller con = new Controller();
         ArrayList<String[]> swimmers = con.readTextFile();
