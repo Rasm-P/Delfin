@@ -32,9 +32,6 @@ public class Calculator {
     public static double getPassivePrice() {
         return passivePrice;
     }
-
-        
-            }
     
-
+}
 

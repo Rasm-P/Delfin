@@ -39,7 +39,6 @@ public class RemoveResult extends javax.swing.JFrame {
         getContentPane().setBackground(Color.white);
         setRemovedResult();
 
-       
     }
 
     /**

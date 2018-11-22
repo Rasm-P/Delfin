@@ -48,10 +48,6 @@ public class Result {
         return comp;
     }
 
-    public void setComp(Competition comp) {
-
-    }
-
     @Override
     public String toString() {
         return swimmer.getName() + ", " + swimmer.getDob() + ", " + swimmer.getEmail() + ", " + swimmer.getDeciplin() + ", " + swimmer.isStatus() + ", " + swimmer.isPro() + ", " + swimmer.isPayment() + ", " + comp + ", " + time + ", " + placement + ", " + disiplin;
