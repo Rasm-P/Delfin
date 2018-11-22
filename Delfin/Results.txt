@@ -4,3 +4,7 @@ Ib, 1988-09-02, idfs@gmail.com, rygcrawl, true, false, false, Herlev, 50.43, 2, 
 Stine, 1999-08-02, stine@gmail.com, rygcrawl, true, false, true, Herlev, 50.50, 3, brystsvoemning
 Tine, 1979-05-02, tine@gmail.com, rygcrawl, false, true, false, Holte, 14.15, 3, butterfly
 Henrik, 1989-12-12, henik@gmail.com, rygcrawl, true, false, true, Herlev, 50.50, 5, butterfly
+
+Henrik, 1989-12-12, henik@gmail.com, rygcrawl, true, false, true, DM, 15.15, 2, crawl
+
+Henrik, 1989-12-12, henik@gmail.com, rygcrawl, true, false, true, EM, 15.5, 1, crawl

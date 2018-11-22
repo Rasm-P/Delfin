@@ -13,7 +13,6 @@ import delfin.Swimmer;
 import java.awt.Color;
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
-import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
@@ -221,6 +220,7 @@ public class AddResult extends javax.swing.JFrame {
         {
             JOptionPane.showMessageDialog(rootPane, ex.getMessage());
         }
+       
         
         Controller con = new Controller();
         Filereader file = new Filereader();
@@ -229,7 +229,7 @@ public class AddResult extends javax.swing.JFrame {
         ArrayList<Swimmer> swim = file.swimmerToObject(swimmers);
         
          Swimmer person = file.seachSwimmer(swim, tempname);
-         Result NewResult = new Result(person, tempStævne, tempTime, tempPlacering, tempDisciplin);
+         Result NewResult = new Result(person, tempStævne, tempTime, tempPlacering, tempDisciplin.toLowerCase());
 
         this.clearTextFields();
 

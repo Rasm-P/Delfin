@@ -1,11 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Data;
 
-import delfin.Calculator;
 import delfin.Swimmer;
 import java.io.File;
 import java.io.IOException;
@@ -16,7 +11,6 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.time.LocalDate;
-import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
@@ -63,8 +57,9 @@ public class Filereader {
             String[] strings = swimmers.get(i);
 
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-
+            
             Swimmer swimmer = new Swimmer(strings[0], LocalDate.parse(strings[1], formatter), strings[2], strings[3], Boolean.parseBoolean(strings[4]), Boolean.parseBoolean(strings[5]), Boolean.parseBoolean(strings[6]));
+
             swim.add(swimmer);
         }
         return swim;
@@ -150,4 +145,8 @@ public class Filereader {
         Files.write(file.toPath(), out, StandardCharsets.ISO_8859_1, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
     }
 
+
 }
+
+
+

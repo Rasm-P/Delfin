@@ -16,13 +16,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class RemoveResult extends javax.swing.JFrame {
 
-    /**
-     * Creates new form NewMemberGUI
-     */
-    /*
-    Controller con = new Controller();
-    ArrayList<String[]> swimmers = con.readTextFile();
-    */
+   
     private void setRemovedResult() {
         Controller con = new Controller();
         ArrayList<String[]> results = con.getResults();
@@ -41,15 +35,7 @@ public class RemoveResult extends javax.swing.JFrame {
         getContentPane().setBackground(Color.white);
         setRemovedResult();
 
-        /*
-        DefaultTableModel model;
-        model = (DefaultTableModel) jTable1.getModel();
-        model.setRowCount(0);
-        for (int i = 0; i < swimmers.size(); i++) {
-            String[] strings = swimmers.get(i);
-            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[2], strings[3], strings[4], strings[5]});
-        }
-         */
+       
     }
 
     /**
@@ -186,18 +172,6 @@ public class RemoveResult extends javax.swing.JFrame {
     private void jButton53ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton53ActionPerformed
         setRemovedResult();
 
-        /*
-        Controller con = new Controller();
-        ArrayList<String[]> swimmers = con.readTextFile();
-
-        DefaultTableModel model;
-        model = (DefaultTableModel) jTable1.getModel();
-        model.setRowCount(0);
-        for (int i = 0; i < swimmers.size(); i++) {
-            String[] strings = swimmers.get(i);
-            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[2], strings[3], strings[4], strings[5]});
-        }
-         */
     }//GEN-LAST:event_jButton53ActionPerformed
 
     private void jButton54ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton54ActionPerformed
