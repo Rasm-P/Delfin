@@ -23,3 +23,25 @@ Magnus, 1995-03-14, magnus@gmail.com, brystsvømning, false, false, true
 Felix, 1999-07-18, feix@gmail.com, butterfly, true, true, true
 Eva, 1990-04-18, eva@gmail.com, butterfly, true, false, false
 Alfred, 1988-03-15, alfred@gmail.com, rygcrawl, true, false, true
+
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+
+
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false

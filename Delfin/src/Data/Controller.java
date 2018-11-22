@@ -7,6 +7,7 @@ package Data;
 
 import UI.RemoveMemberGUI;
 import UI.RemoveResult;
+import delfin.Result;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -100,5 +101,7 @@ public class Controller {
             Logger.getLogger(RemoveResult.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+   
 
 }

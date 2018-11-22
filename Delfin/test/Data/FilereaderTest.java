@@ -7,12 +7,16 @@ package Data;
 
 import delfin.Swimmer;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
+import org.junit.BeforeClass;
 
 /**
  *
@@ -26,11 +30,20 @@ public class FilereaderTest {
     /**
      * Setting test.txt up so the tests work.
      */
-    @Before
-    public void initialize() throws FileNotFoundException, UnsupportedEncodingException {
+    @BeforeClass
+    public static void initialize() throws FileNotFoundException, UnsupportedEncodingException {
         String Filename = "test.txt";
         Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", "rygcrawl", true, false, false);
         FileWriter.writeFile(swim, Filename);
+    }
+
+    @AfterClass
+    public static void after() throws IOException {
+        String Filename = "test.txt";
+        String str = "Ole, 1999-05-02, ole@gmail.com, true, false, false";
+        Filereader instance = new Filereader();
+        instance.removeSwimmer(str, Filename);
+
     }
 
     /**
@@ -40,8 +53,7 @@ public class FilereaderTest {
     public void testGetSwimmersByName() {
         System.out.println("getSwimmersByName");
         Filereader instance = new Filereader();
-        ArrayList expResult = null;
-        int exp = 27;
+        int exp = 41;
         String inFilename = "test.txt";
         ArrayList result = instance.getSwimmersByName(inFilename);
         assertNotNull(result);
@@ -59,7 +71,7 @@ public class FilereaderTest {
         String str = "Ole, 1999-05-02, ole@gmail.com, true, false, false";
         Filereader instance = new Filereader();
         instance.removeSwimmer(str, inFileName);
-        int exp = 24;
+        int exp = 41;
         ArrayList result = instance.getSwimmersByName(inFileName);
         assertNotNull(result);
         assertEquals(exp, result.size());
@@ -76,8 +88,9 @@ public class FilereaderTest {
         FileWriter instance = new FileWriter();
         instance.writeFile(swim, inFilename);
         Filereader instance2 = new Filereader();
-        int exp = 26;
+        int exp = 41;
         ArrayList result = instance2.getSwimmersByName(inFilename);
+
         assertNotNull(result);
         assertEquals(exp, result.size());
     }
@@ -88,9 +101,9 @@ public class FilereaderTest {
     @Test
     public void testGetResult() throws Exception {
         System.out.println("GetSwimmer");
-        String Filename2 = "Results.txt";
+        String Filename2 = "ResultsTest.txt";
         Filereader instance2 = new Filereader();
-        int exp = 8;
+        int exp = 7;
         ArrayList result = instance2.getResults(Filename2);
         assertNotNull(result);
         assertEquals(exp, result.size());

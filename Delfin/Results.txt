@@ -3,3 +3,5 @@ Stine, 1999-08-02, stine@gmail.com, rygcrawl, true, false, true, Herlev, 50.50, 
 Tine, 1979-05-02, tine@gmail.com, rygcrawl, false, true, false, Holte, 14.15, 3, crawl
 Henrik, 1989-12-12, henik@gmail.com, rygcrawl, true, false, true, Herlev, 50.50, 5, rygcrawl
 Henrik, 1989-12-12, henik@gmail.com, rygcrawl, true, false, true, DM, 15.15, 2, crawl
+Pedro, 1995-03-12, pedro@gmail.com, crawl, true, true, true, VM, 26.26, 1, crawl
+Lucas, 1997-03-17, luas@gmail.com, rygcrawl, true, true, true, Herlev open, 25.25, 2, butterfly

@@ -26,14 +26,16 @@ public class FileWriter {
      *
      */
     public static void writeFile(Swimmer swim, String file) throws FileNotFoundException, UnsupportedEncodingException {
-        file = "delfiner2.txt";
+        
         try {
             PrintStream output = new PrintStream(new FileOutputStream(file, true));
 
             output.print(System.lineSeparator() + swim);
+            output.close();
         } catch (IOException ex) {
             System.out.println("Fejl i fil, kontakt din systemadministrator");
         }
+       
     }
 
     /**
@@ -43,11 +45,12 @@ public class FileWriter {
      *
      */
     public static void writeResult(Result result, String file) throws FileNotFoundException, UnsupportedEncodingException {
-        file = "Results.txt";
+        
         try {
             PrintStream output = new PrintStream(new FileOutputStream(file, true));
 
             output.print(System.lineSeparator() + result);
+            output.close();
         } catch (IOException ex) {
             System.out.println("Fejl i fil, kontakt din systemadministrator");
         }

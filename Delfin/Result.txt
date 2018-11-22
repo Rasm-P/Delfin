@@ -1,0 +1,4 @@
+
+Pedro, 1995-03-12, pedro@gmail.com, crawl, true, true, true, DM, 25.25, 2, butterfly
+Peter, 1998-05-03, peter@gmail.com, crawl, true, false, true, DM, 14.14, 1, crawl
+Emil, 1999-04-07, emil.gmail.com, brystsvoemning, false, true, true, EM, 16.16, 2, crawl
