@@ -12,7 +12,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author rashe
+ * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class RemoveMemberGUI extends javax.swing.JFrame {
 

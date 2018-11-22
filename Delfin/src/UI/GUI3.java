@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Rasmus2
+ * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class GUI3 extends javax.swing.JFrame {
 

@@ -7,7 +7,7 @@ package delfin;
 
 /**
  *
- * @author Rasmus2
+ * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class topFive implements Comparable{
     private String name;

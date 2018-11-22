@@ -1,7 +1,10 @@
 package delfin;
 
 import java.util.ArrayList;
-
+/**
+ *
+ * @author Rasmus P, Ditlev, Emil og Rasmus H.
+ */
 public class Team {
     private String TeamID;
     private String Name;

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Dxtlxv Xndxrsxn
+ * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class Competition {
 

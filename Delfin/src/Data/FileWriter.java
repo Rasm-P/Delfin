@@ -15,7 +15,7 @@ import java.io.UnsupportedEncodingException;
 
 /**
  *
- * @author rashe
+ * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class FileWriter {
 

@@ -12,7 +12,7 @@ import java.time.Period;
 
 /**
  *
- * @author rashe
+ * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class Swimmer {
     

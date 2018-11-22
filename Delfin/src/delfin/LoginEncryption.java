@@ -18,7 +18,7 @@ import java.util.List;
 
 /**
  *
- * @author Ditlev
+ * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class LoginEncryption {
 

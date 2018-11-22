@@ -5,12 +5,9 @@
  */
 package delfin;
 
-import java.io.FileNotFoundException;
-import java.io.UnsupportedEncodingException;
-
 /**
  *
- * @author rashe
+ * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class Delfin {
 

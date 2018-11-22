@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author rashe
+ * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class NewMemberGUI extends javax.swing.JFrame {
 

@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 
 /**
  *
- * @author Rasmus2
+ * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class Filereader {
 

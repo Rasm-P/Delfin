@@ -10,7 +10,7 @@ import java.util.Date;
 
 /**
  *
- * @author rashe
+ * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class Coach {
     

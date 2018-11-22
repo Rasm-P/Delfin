@@ -11,7 +11,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author rashe
+ * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class HelpUI {
 

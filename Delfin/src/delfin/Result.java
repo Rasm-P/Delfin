@@ -9,7 +9,7 @@ import java.sql.Time;
 
 /**
  *
- * @author rashe
+ * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class Result {
     
