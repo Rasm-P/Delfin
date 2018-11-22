@@ -1,8 +1,4 @@
-Allan, 2000-03-04, allan@gmail.com, rygcrawl, false, false, true
-Emil, 1998-03-03, emil@gmail.com, rygcrawl, true, true, true
-
-Rasmus, 1998-06-03, rasmus@gmail.com, rygcrawl, true, true, false
-Brian, 1988-04-08, brian@gmail.com, rygcrawl, false, true, true
+Allan, 2000-03-04, allan@gmail.com, crawl, false, false, true
 Klaus, 1989-02-08, klaus@gmail.com, rygcrawl, true, true, true
 Bo, 1999-01-06, boib@gmail.com, crawl, false, false, true
 Ib, 1988-09-02, idfs@gmail.com, crawl, true, false, false
@@ -23,3 +19,8 @@ Magnus, 1995-03-14, magnus@gmail.com, brystsvømning, false, false, true
 Felix, 1999-07-18, feix@gmail.com, butterfly, true, true, true
 Eva, 1990-04-18, eva@gmail.com, butterfly, true, false, false
 Alfred, 1988-03-15, alfred@gmail.com, rygcrawl, true, false, true
+Bob, 1999-03-03, bob@gmail.com, brystsvømning, true, true, true
+Sille, 2004-04-05, sille@gmail.com, rygcrawl, true, true, true
+Emil, 1999-04-07, emil.gmail.com, brystsvømning, false, true, true
+Ole, 1999-05-02, ole@gmail.com, brystsvømning, true, false, false
+Elma, 2004-03-05, elma@gmail.com, crawl, true, true, false

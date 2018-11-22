@@ -19,18 +19,24 @@ public class Swimmer {
     private String name;
     private LocalDate dob;
     private String email;
+    private String deciplin;
     private boolean status;
     private boolean pro; 
     private boolean payment;
 
-    public Swimmer(String name, LocalDate dob, String email, boolean status, boolean pro, boolean payment)
+    public Swimmer(String name, LocalDate dob, String email, String deciplin, boolean status, boolean pro, boolean payment)
     {
         this.name = name;
         this.dob = dob;
         this.email = email;
+        this.deciplin = deciplin;
         this.status = status;
         this.pro = pro;
         this.payment = payment;
+    }
+
+    public String getDeciplin() {
+        return deciplin;
     }
     
     public String getName()
@@ -95,7 +101,7 @@ public class Swimmer {
     
     @Override
     public String toString() {
-        return name + ", " + dob + ", "+ email + ", "+ status + ", " + pro + ", " + payment ;
+        return name + ", " + dob + ", "+ email + ", " + deciplin + ", " + status + ", " + pro + ", " + payment;
     }
     
     public static double calculatorPriceMember(Swimmer swimmer) {

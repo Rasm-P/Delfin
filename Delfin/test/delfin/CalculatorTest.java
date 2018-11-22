@@ -24,7 +24,7 @@ public class CalculatorTest {
     @Test
     public void testswimmerPriceMemberPasive() {
         LocalDate date = LocalDate.of(1998, 02, 02);
-        Swimmer lars = new Swimmer("Lars", date, "lars@gmail", false, true, true);
+        Swimmer lars = new Swimmer("Lars", date, "lars@gmail", "rygcrawl", false, true, true);
         double result = Swimmer.calculatorPriceMember(lars);
         assertEquals(500, result, 0.0);
     }
@@ -35,7 +35,7 @@ public class CalculatorTest {
     @Test
     public void testswimmerPriceMemberJunior() {
         LocalDate date = LocalDate.of(2004, 02, 02);
-        Swimmer lars = new Swimmer("Lars", date, "lars@gmail", true, true, true);
+        Swimmer lars = new Swimmer("Lars", date, "lars@gmail", "rygcrawl", true, true, true);
         double result = Swimmer.calculatorPriceMember(lars);
         assertEquals(1000, result, 0.0);
 
@@ -47,7 +47,7 @@ public class CalculatorTest {
     @Test
     public void testswimmerPriceMemberJuniorPassive() {
         LocalDate date = LocalDate.of(2004, 02, 02);
-        Swimmer lars = new Swimmer("Lars", date, "lars@gmail", false, true, true);
+        Swimmer lars = new Swimmer("Lars", date, "lars@gmail", "rygcrawl", false, true, true);
         double result = Swimmer.calculatorPriceMember(lars);
         assertEquals(500, result, 0.0);
 
@@ -60,14 +60,14 @@ public class CalculatorTest {
     @Test
     public void testswimmerPriceMemberSenior() {
         LocalDate date = LocalDate.of(1990, 02, 02);
-        Swimmer lars = new Swimmer("Lars", date, "lars@gmail", true, true, true);
+        Swimmer lars = new Swimmer("Lars", date, "lars@gmail", "rygcrawl", true, true, true);
         double result = Swimmer.calculatorPriceMember(lars);
         assertEquals(1600, result, 0.0);
     }
      @Test
     public void testswimmerPriceMemberSeniorPassive() {
         LocalDate date = LocalDate.of(1990, 02, 02);
-        Swimmer lars = new Swimmer("Lars", date, "lars@gmail", false, true, true);
+        Swimmer lars = new Swimmer("Lars", date, "lars@gmail", "rygcrawl", false, true, true);
         double result = Swimmer.calculatorPriceMember(lars);
         assertEquals(500, result, 0.0);
     }
@@ -77,7 +77,7 @@ public class CalculatorTest {
     @Test
     public void testswimmerPriceMemberSeniorDiscount() {
         LocalDate date = LocalDate.of(1950, 02, 02);
-        Swimmer lars = new Swimmer("Lars", date, "lars@gmail", true, true, true);
+        Swimmer lars = new Swimmer("Lars", date, "lars@gmail", "rygcrawl", true, true, true);
         double result = Swimmer.calculatorPriceMember(lars);
         assertEquals(1200, result, 0.0);
 
@@ -89,7 +89,7 @@ public class CalculatorTest {
     @Test
     public void testswimmerPriceMemberSeniorDiscountPassive() {
         LocalDate date = LocalDate.of(2004, 02, 02);
-        Swimmer lars = new Swimmer("Lars", date, "lars@gmail", false, true, true);
+        Swimmer lars = new Swimmer("Lars", date, "lars@gmail", "rygcrawl", false, true, true);
         double result = Swimmer.calculatorPriceMember(lars);
         assertEquals(500, result, 0.0);
 

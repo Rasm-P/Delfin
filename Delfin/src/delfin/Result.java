@@ -60,7 +60,7 @@ public class Result {
 
     @Override
     public String toString() {
-        return swimmer.getName() +", " + swimmer.getEmail()+ ", "+ swimmer.getDob()+ ", " + comp + ", " + time + ", " + placement + ", " + disiplin;
+        return swimmer.getName() + ", " + swimmer.getDob() + ", " + swimmer.getEmail() + ", " + swimmer.getDeciplin() + ", " + swimmer.isStatus() + ", " + swimmer.isPro() + ", " + swimmer.isPayment() + ", " + comp + ", " + time + ", " + placement + ", " + disiplin;
     }
     
 }

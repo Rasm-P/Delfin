@@ -62,7 +62,11 @@ public class Filereader {
 
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
+<<<<<<< HEAD
             Swimmer swimmer = new Swimmer(strings[0], LocalDate.parse(strings[1], formatter), strings[2], Boolean.parseBoolean(strings[4]), Boolean.parseBoolean(strings[5]), Boolean.parseBoolean(strings[6]));
+=======
+            Swimmer swimmer = new Swimmer(strings[0], LocalDate.parse(strings[1], formatter), strings[2], strings[3], Boolean.parseBoolean(strings[4]), Boolean.parseBoolean(strings[5]), Boolean.parseBoolean(strings[6]));
+>>>>>>> 06eb36a62b2901e2d2a103ec761f96a71ca3ab5c
             swim.add(swimmer);
         }
         return swim;
@@ -148,4 +152,8 @@ public class Filereader {
         Files.write(file.toPath(), out, StandardCharsets.ISO_8859_1, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
     }
 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 06eb36a62b2901e2d2a103ec761f96a71ca3ab5c

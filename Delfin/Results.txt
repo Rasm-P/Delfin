@@ -1,10 +1,6 @@
-Rasmus, 1998-06-03, rasmus@gmail.com, true, true, false, DM, 15.15, 1, crawl
-Klaus, 1989-02-08, klaus@gmail.com, true, true, true, Holte open, 14.13, 2, rygcrawl
-Bo, 1999-01-06, boib@gmail.com, false, false, true, EM i Sverige, 10.34, 1, brystsvømning
-Ib, 1988-09-02, idfs@gmail.com, true, false, false, Herlev open, 05.43, 2, rygcrawl
-Stine, 1999-08-02, stine@gmail.com, true, false, true, Herlev open, 05.50, 3, rygcrawl
-Tine, 1979-05-02, tine@gmail.com, false, true, false, Holte open, 14.15, 3, rygcrawl
-Henrik, 1989-12-12, henik@gmail.com, true, false, true, Herlev open, 06.50, 5, rygcrawl
-Anna, 1993-04-08, anna.gmail.com, true, true, true, EM i Sverige, 10.36, 4, brystsvømning
-
-
+Klaus, 1989-02-08, klaus@gmail.com, rygcrawl, true, true, true, Holte, 14.13, 2, rygcrawl
+Bo, 1999-01-06, boib@gmail.com, brystsvoemning, false, false, true, EM, 10.34, 1, brystsvoemning
+Ib, 1988-09-02, idfs@gmail.com, rygcrawl, true, false, false, Herlev, 50.43, 2, rygcrawl
+Stine, 1999-08-02, stine@gmail.com, rygcrawl, true, false, true, Herlev, 50.50, 3, brystsvoemning
+Tine, 1979-05-02, tine@gmail.com, rygcrawl, false, true, false, Holte, 14.15, 3, butterfly
+Henrik, 1989-12-12, henik@gmail.com, rygcrawl, true, false, true, Herlev, 50.50, 5, butterfly

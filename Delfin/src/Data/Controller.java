@@ -6,6 +6,7 @@
 package Data;
 
 import UI.RemoveMemberGUI;
+import UI.RemoveResult;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.logging.Level;
@@ -46,8 +47,6 @@ public class Controller {
         }
     }
 
-
-
     public ArrayList<String[]> getResults()
     {
         ArrayList<String[]> results;
@@ -57,8 +56,27 @@ public class Controller {
         return results = fr.getResults(inFilename);
     }
 
-}
+    public void compareResults(String text) {
+        ArrayList<String[]> results = new ArrayList();
+        String str;
+        String inFilename = "Results.txt";
+        Filereader fr = new Filereader();
+        results = fr.getResults(inFilename);
 
-   
+        try {
+
+            for (int i = 0; i < results.size(); i++) {
+                String[] strings = results.get(i);
+                if (strings[0].equals(text)) {
+                    str = String.join(", ", strings);
+                    fr.removeResults(str, inFilename);
+                } 
+            }
+        } catch (IOException ex) {
+            Logger.getLogger(RemoveResult.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+}
 
 

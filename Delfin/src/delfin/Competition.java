@@ -5,6 +5,7 @@
  */
 package delfin;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 /**
@@ -14,23 +15,24 @@ import java.util.ArrayList;
 public class Competition {
 
     private String comName;
-    private double time;
+    private LocalDate time;
     private int placement;
     private String disciplin;
-    private ArrayList<Result> placements;
+    //private ArrayList<Result> placements;
 
-    public Competition(String comName, double time, String disciplin) throws IllegalAccessException
+    public Competition(String comName, LocalDate time, String disciplin) /*throws IllegalAccessException*/ 
     {
-        if (comName == null || time < 0 || placement < 0 || disciplin == null || placements.size() < 0)
+        /*
+        if (comName == null || time < 00-00-00 || placement < 0 || disciplin == null || placements.size() < 0)
         {
             throw new IllegalAccessException("Input was wrong!");
         }
-
+        */
         this.comName = comName;
         this.time = time;
         this.placement = placement;
         this.disciplin = disciplin;
-        this.placements = placements;
+    //    this.placements = placements;
     }
 
     public String getComName() {
@@ -41,11 +43,11 @@ public class Competition {
         this.comName = comName;
     }
 
-    public double getTime() {
+    public LocalDate getTime() {
         return time;
     }
 
-    public void setTime(double time) {
+    public void setTime(LocalDate time) {
         this.time = time;
     }
 
@@ -64,7 +66,7 @@ public class Competition {
     public void setDisciplin(String disciplin) {
         this.disciplin = disciplin;
     }
-
+    /*
     public ArrayList<Result> getPlacements() {
         return placements;
     }
@@ -72,6 +74,10 @@ public class Competition {
     public void setPlacements(ArrayList<Result> placements) {
         this.placements = placements;
     }
-    
+    */
+    @Override
+    public String toString() {
+        return comName + ", " + time + ", " + placement + ", " + disciplin;
+    }
 
 }
