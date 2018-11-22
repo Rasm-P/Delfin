@@ -12,10 +12,7 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-/**
- *
- * @author Rasmus2
- */
+
 public class Controller {
 
     public ArrayList<String[]> readTextFile() {

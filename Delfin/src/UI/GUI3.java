@@ -24,17 +24,6 @@ import javax.swing.table.DefaultTableModel;
  */
 public class GUI3 extends javax.swing.JFrame {
 
-    /**
-     * Creates new form GUI
-     */
-    /*
-    Controller con = new Controller();
-    Filereader file = new Filereader();
-    ArrayList<String[]> results = con.getResults();
-    ArrayList<String[]> swimmers = con.readTextFile();
-    ArrayList<Swimmer> swim = file.swimmerToObject(swimmers);
-    DefaultTableModel model;
-     */
     private void setMemberTable() {
         Controller con = new Controller();
         ArrayList<String[]> swimmers = con.readTextFile();
@@ -256,68 +245,7 @@ public class GUI3 extends javax.swing.JFrame {
         setKontingent();
         setHold();
         setKonkurance();
-        /*
-        Controller con = new Controller();
-        Filereader file = new Filereader();
-        ArrayList<String[]> results = con.getResults();
-        ArrayList<String[]> swimmers = con.readTextFile();
-        ArrayList<Swimmer> swim = file.swimmerToObject(swimmers);
-        DefaultTableModel model;
-        
-         */
-
- /*
-        model = (DefaultTableModel) jTable3.getModel();
-        model.setRowCount(0);
-        for (int i = 0; i < swimmers.size(); i++) {
-            String[] strings = swimmers.get(i);
-            Swimmer swimmer = swim.get(i);
-            if (Boolean.parseBoolean(strings[5]) == false) {
-                model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[5], "Restance"});
-            } else {
-                model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[5], Swimmer.calculatorPriceMember(swimmer)});
-            }
-        }
-         */
- /*
-        model = (DefaultTableModel) jTable2.getModel();
-        model.setRowCount(0);
-        for (int i = 0; i < results.size(); i++) {
-            String[] strings = results.get(i);
-            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[2], strings[6], strings[7], strings[8], strings[9]});
-        }
-         */
-
- /*
-        ArrayList<Swimmer> swimmersJunior = new ArrayList<>();
-        ArrayList<Swimmer> swimmersSenior = new ArrayList<>();
-        Team konkurrencesvømmerJunior = new Team("Junior", "konkurrencesvømmerJunior", swimmersJunior);
-        Team konkurrencesvømmerSenior = new Team("Senior", "konkurrencesvømmerSenior", swimmersSenior);
-        for (int i = 0; i < swim.size(); i++) {
-            Swimmer swims = swim.get(i);
-            int age = (Period.between(swims.getDob(), LocalDate.now()).getYears());
-            if (age < 18 && swims.isPro() == true) {
-                konkurrencesvømmerJunior.addMembers(swims);
-            }
-            if (age >= 18 && swims.isPro() == true) {
-                konkurrencesvømmerSenior.addMembers(swims);
-            }
-        }
-        model = (DefaultTableModel) jTable4.getModel();
-        model.setRowCount(0);
-        if (jComboBox1.getSelectedItem().equals("Konkurrencesvømmer Junior")) {
-            for (int i = 0; i < konkurrencesvømmerJunior.getMembers().size(); i++) {
-                Swimmer swimmer = konkurrencesvømmerJunior.getMembers().get(i);
-                model.insertRow(model.getRowCount(), new Object[]{swimmer.getName(), swimmer.getDob(), swimmer.isStatus(), swimmer.isPro()});
-            }
-        }
-        if (jComboBox1.getSelectedItem().equals("Konkurrencesvømmer Senior")) {
-            for (int i = 0; i < konkurrencesvømmerSenior.getMembers().size(); i++) {
-                Swimmer swimmer = konkurrencesvømmerSenior.getMembers().get(i);
-                model.insertRow(model.getRowCount(), new Object[]{swimmer.getName(), swimmer.getDob(), swimmer.isStatus(), swimmer.isPro()});
-            }
-        }
-         */
+       
     }
 
     /**
@@ -1270,18 +1198,6 @@ public class GUI3 extends javax.swing.JFrame {
         setHold();
         setKonkurance();
 
-        /*
-        Controller con = new Controller();
-        ArrayList<String[]> swimmers = con.readTextFile();
-
-        DefaultTableModel model;
-        model = (DefaultTableModel) jTable1.getModel();
-        model.setRowCount(0);
-        for (int i = 0; i < swimmers.size(); i++) {
-            String[] strings = swimmers.get(i);
-            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[2], strings[3], strings[4], strings[5]});
-        }
-         */
     }//GEN-LAST:event_jButton51ActionPerformed
 
     private void jButton52ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton52ActionPerformed
@@ -1291,18 +1207,7 @@ public class GUI3 extends javax.swing.JFrame {
         setKontingent();
         setHold();
         setKonkurance();
-        /*
-        Controller con = new Controller();
-        ArrayList<String[]> results = con.getResults();
-
-        DefaultTableModel model;
-        model = (DefaultTableModel) jTable2.getModel();
-        model.setRowCount(0);
-        for (int i = 0; i < results.size(); i++) {
-            String[] strings = results.get(i);
-            model.insertRow(model.getRowCount(), new Object[]{strings[0], strings[1], strings[2], strings[6], strings[7], strings[8], strings[9]});
-        }
-         */
+      
     }//GEN-LAST:event_jButton52ActionPerformed
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -1312,43 +1217,7 @@ public class GUI3 extends javax.swing.JFrame {
         setSvømmeresultater();
         setKontingent();
         setKonkurance();
-        /*
-        Controller con = new Controller();
-        Filereader file = new Filereader();
-        ArrayList<String[]> swimmers = con.readTextFile();
-        ArrayList<Swimmer> swim = file.swimmerToObject(swimmers);
-
-        ArrayList<Swimmer> swimmersJunior = new ArrayList<>();
-        ArrayList<Swimmer> swimmersSenior = new ArrayList<>();
-        Team konkurrencesvømmerJunior = new Team("Junior", "konkurrencesvømmerJunior", swimmersJunior);
-        Team konkurrencesvømmerSenior = new Team("Senior", "konkurrencesvømmerSenior", swimmersSenior);
-        for (int i = 0; i < swim.size(); i++) {
-            Swimmer swims = swim.get(i);
-            int age = (Period.between(swims.getDob(), LocalDate.now()).getYears());
-            if (age < 18 && swims.isPro() == true) {
-                konkurrencesvømmerJunior.addMembers(swims);
-            }
-            if (age >= 18 && swims.isPro() == true) {
-                konkurrencesvømmerSenior.addMembers(swims);
-            }
-        }
-
-        DefaultTableModel model;
-        model = (DefaultTableModel) jTable4.getModel();
-        model.setRowCount(0);
-        if (jComboBox1.getSelectedItem().equals("Konkurrencesvømmer Junior")) {
-            for (int i = 0; i < konkurrencesvømmerJunior.getMembers().size(); i++) {
-                Swimmer swimmer = konkurrencesvømmerJunior.getMembers().get(i);
-                model.insertRow(model.getRowCount(), new Object[]{swimmer.getName(), swimmer.getDob(), swimmer.isStatus(), swimmer.isPro()});
-            }
-        }
-        if (jComboBox1.getSelectedItem().equals("Konkurrencesvømmer Senior")) {
-            for (int i = 0; i < konkurrencesvømmerSenior.getMembers().size(); i++) {
-                Swimmer swimmer = konkurrencesvømmerSenior.getMembers().get(i);
-                model.insertRow(model.getRowCount(), new Object[]{swimmer.getName(), swimmer.getDob(), swimmer.isStatus(), swimmer.isPro()});
-            }
-        }
-         */
+        
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
@@ -1445,10 +1314,7 @@ public class GUI3 extends javax.swing.JFrame {
                 jButton50.setVisible(false);
             }
         }
-        /*
-        jPopupMenu1.setVisible(rootPaneCheckingEnabled);
-        jPopupMenu1.setToolTipText("Forket adgangskode");
-         */
+
         password.setText("");
 
     }//GEN-LAST:event_jButton1ActionPerformed

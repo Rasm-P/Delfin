@@ -13,7 +13,6 @@ import delfin.Swimmer;
 import java.awt.Color;
 import java.io.FileNotFoundException;
 import java.io.UnsupportedEncodingException;
-import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;

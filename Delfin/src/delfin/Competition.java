@@ -18,21 +18,15 @@ public class Competition {
     private LocalDate time;
     private int placement;
     private String disciplin;
-    //private ArrayList<Result> placements;
-
-    public Competition(String comName, LocalDate time, String disciplin) /*throws IllegalAccessException*/ 
+ 
+    public Competition(String comName, LocalDate time, String disciplin) 
     {
-        /*
-        if (comName == null || time < 00-00-00 || placement < 0 || disciplin == null || placements.size() < 0)
-        {
-            throw new IllegalAccessException("Input was wrong!");
-        }
-        */
+
         this.comName = comName;
         this.time = time;
         this.placement = placement;
         this.disciplin = disciplin;
-    //    this.placements = placements;
+
     }
 
     public String getComName() {
@@ -66,15 +60,7 @@ public class Competition {
     public void setDisciplin(String disciplin) {
         this.disciplin = disciplin;
     }
-    /*
-    public ArrayList<Result> getPlacements() {
-        return placements;
-    }
-
-    public void setPlacements(ArrayList<Result> placements) {
-        this.placements = placements;
-    }
-    */
+    
     @Override
     public String toString() {
         return comName + ", " + time + ", " + placement + ", " + disciplin;
