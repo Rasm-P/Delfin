@@ -165,6 +165,7 @@ public class RemoveResult extends javax.swing.JFrame {
     {//GEN-HEADEREND:event_jButton1ActionPerformed
         Controller con = new Controller();
         con.compareResults(jTextField1.getText());
+        this.jTextField1.setText("");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jTextField1ActionPerformed
