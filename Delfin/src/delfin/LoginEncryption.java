@@ -34,8 +34,6 @@ public class LoginEncryption {
             pass = pass.replace("e", "afe2fDy");
             pass = pass.replace("E", "hgQg6SD");
             pass = pass.replace("A", "nhO?5=2");
-            pass = pass.replace("k", "xzwertu");
-            pass = pass.replace("u", "uioewl");
             pass = pass.substring(i).replace(".", "*");
             return pass;
         }
