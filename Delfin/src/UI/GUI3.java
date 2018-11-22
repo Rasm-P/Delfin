@@ -261,7 +261,6 @@ public class GUI3 extends javax.swing.JFrame {
                 }
             }
         }
-
     }
 
     public GUI3() {
