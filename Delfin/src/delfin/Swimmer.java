@@ -5,27 +5,24 @@
  */
 package delfin;
 
-
 import java.time.LocalDate;
 import java.time.Period;
-
 
 /**
  *
  * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class Swimmer {
-    
+
     private String name;
     private LocalDate dob;
     private String email;
     private String deciplin;
     private boolean status;
-    private boolean pro; 
+    private boolean pro;
     private boolean payment;
 
-    public Swimmer(String name, LocalDate dob, String email, String deciplin, boolean status, boolean pro, boolean payment)
-    {
+    public Swimmer(String name, LocalDate dob, String email, String deciplin, boolean status, boolean pro, boolean payment) {
         this.name = name;
         this.dob = dob;
         this.email = email;
@@ -38,92 +35,85 @@ public class Swimmer {
     public String getDeciplin() {
         return deciplin;
     }
-    
-    public String getName()
-    {
+
+    public String getName() {
         return name;
     }
 
-    public void setName(String name)
-    {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public LocalDate getDob()
-    {
+    public LocalDate getDob() {
         return dob;
     }
 
-    public void setDob(LocalDate dob)
-    {
+    public void setDob(LocalDate dob) {
         this.dob = dob;
     }
 
-    public String getEmail()
-    {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email)
-    {
+    public void setEmail(String email) {
         this.email = email;
     }
 
-    public boolean isStatus()
-    {
+    public boolean isStatus() {
         return status;
     }
 
-    public void setStatus(boolean status)
-    {
+    public void setStatus(boolean status) {
         this.status = status;
     }
 
-    public boolean isPro()
-    {
+    public boolean isPro() {
         return pro;
     }
 
-    public void setPro(boolean pro)
-    {
+    public void setPro(boolean pro) {
         this.pro = pro;
     }
 
-    public boolean isPayment()
-    {
+    public boolean isPayment() {
         return payment;
     }
 
-    public void setPayment(boolean payment)
-    {
+    public void setPayment(boolean payment) {
         this.payment = payment;
     }
-    
+
     @Override
     public String toString() {
-        return name + ", " + dob + ", "+ email + ", " + deciplin + ", " + status + ", " + pro + ", " + payment;
+        return name + ", " + dob + ", " + email + ", " + deciplin + ", " + status + ", " + pro + ", " + payment;
     }
-    
- /**
- * Calculates the yearly price a member is required to pay to retain their membership based on the apropriate factors.
- * 
-*/
+
+    /**
+     * Calculates the yearly price a member is required to pay to retain their
+     * membership based on the apropriate factors.
+     *
+     */
     public static double calculatorPriceMember(Swimmer swimmer) {
         int age = (Period.between(swimmer.getDob(), LocalDate.now()).getYears());
-        
-        if(swimmer.isStatus()==false)
+
+        if (swimmer.isStatus() == false) {
             return Calculator.getPassivePrice();
-        
-        if(age < 18)
+        }
+
+        if (age < 18) {
             return Calculator.getJuniorPrice();
-        
-        if(age >= 18 && age < 61)
+        }
+
+        if (age >= 18 && age < 61) {
             return Calculator.getSeniorPrice();
-        
-        if(age > 60)
+        }
+
+        if (age > 60) {
             return Calculator.getSeniorDiscountPrice();
-            
+        }
+
         return 0.0;
     }
-    
+
 }

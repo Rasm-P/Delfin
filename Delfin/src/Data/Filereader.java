@@ -1,4 +1,3 @@
-
 package Data;
 
 import delfin.Swimmer;
@@ -24,12 +23,13 @@ public class Filereader {
 
     private static final boolean DEBUG = true;
 
- /**
- * Returns an arraylist containing String arrays.
- * The string arrays each contain a member, and their attributes are split by commas and can be used individually.
- * 
- * 
-*/
+    /**
+     * Returns an arraylist containing String arrays. The string arrays each
+     * contain a member, and their attributes are split by commas and can be
+     * used individually.
+     *
+     *
+     */
     public ArrayList<String[]> getSwimmersByName(String inFilename) {
 
         inFilename = "delfiner2.txt";
@@ -55,12 +55,12 @@ public class Filereader {
         }
         return null;
     }
-    
- /**
- * Converts the swimmer string array to an object.
- * Constructs a swimmer from the individual strings in the swimmers string array.
- * 
-*/
+
+    /**
+     * Converts the swimmer string array to an object. Constructs a swimmer from
+     * the individual strings in the swimmers string array.
+     *
+     */
     public ArrayList<Swimmer> swimmerToObject(ArrayList<String[]> swimmers) {
         ArrayList<Swimmer> swim = new ArrayList<>();
 
@@ -68,7 +68,7 @@ public class Filereader {
             String[] strings = swimmers.get(i);
 
             DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-            
+
             Swimmer swimmer = new Swimmer(strings[0], LocalDate.parse(strings[1], formatter), strings[2], strings[3], Boolean.parseBoolean(strings[4]), Boolean.parseBoolean(strings[5]), Boolean.parseBoolean(strings[6]));
 
             swim.add(swimmer);
@@ -76,26 +76,28 @@ public class Filereader {
         return swim;
     }
 
- /**
- * Removes a member from the file containing all members.
- * User input is given and compared to the string arrays until a match is made, then the desired member will be removed.
- * 
-*/
+    /**
+     * Removes a member from the file containing all members. User input is
+     * given and compared to the string arrays until a match is made, then the
+     * desired member will be removed.
+     *
+     */
     public void removeSwimmer(String str, String inFilename) throws IOException {
 
         inFilename = "delfiner2.txt";
-        
+
         File file = new File(inFilename);
         List<String> out = Files.lines(file.toPath()).filter(line -> !line.contains(str)).collect(Collectors.toList());
         Files.write(file.toPath(), out, StandardCharsets.ISO_8859_1, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
     }
 
-     /**
- * Returns an arraylist containing String arrays.
- * The string arrays each contain a members result, and their attributes are split by commas and can be used individually.
- * 
- * 
-*/
+    /**
+     * Returns an arraylist containing String arrays. The string arrays each
+     * contain a members result, and their attributes are split by commas and
+     * can be used individually.
+     *
+     *
+     */
     public ArrayList<String[]> getResults(String inFIlename) {
 
         String inFilename = "Results.txt";
@@ -121,11 +123,12 @@ public class Filereader {
         return null;
     }
 
-     /**
- * Returns an arraylist containing String arrays.
- * The string arrays each contain a team, and their attributes are split by commas and can be used individually. 
- * 
-*/
+    /**
+     * Returns an arraylist containing String arrays. The string arrays each
+     * contain a team, and their attributes are split by commas and can be used
+     * individually.
+     *
+     */
     public ArrayList<String[]> getTeams(String inFilename) {
 
         inFilename = "Teams.txt";
@@ -151,38 +154,36 @@ public class Filereader {
         return null;
     }
 
-/**
- * Given user input this method searches for matching information in the arraylist containing members.
- * 
-*/
+    /**
+     * Given user input this method searches for matching information in the
+     * arraylist containing members.
+     *
+     */
     public Swimmer seachSwimmer(ArrayList<Swimmer> swimmers, String name) {
 
         Swimmer swims = null;
-            for (int i = 0; i < swimmers.size(); i++) {
-                Swimmer swim = swimmers.get(i);
-                if (swim.getName().equals(name)) {
-                        swims = swim;
-                } 
+        for (int i = 0; i < swimmers.size(); i++) {
+            Swimmer swim = swimmers.get(i);
+            if (swim.getName().equals(name)) {
+                swims = swim;
             }
+        }
         return swims;
     }
 
     /**
- * Removes a result from the file containing all results.
- * User input is given and compared to the string arrays until a match is made, then the desired result will be removed.
- * 
-*/
+     * Removes a result from the file containing all results. User input is
+     * given and compared to the string arrays until a match is made, then the
+     * desired result will be removed.
+     *
+     */
     void removeResults(String str, String inFilename) throws IOException {
-        
+
         inFilename = "Results.txt";
-        
+
         File file = new File(inFilename);
         List<String> out = Files.lines(file.toPath()).filter(line -> !line.contains(str)).collect(Collectors.toList());
         Files.write(file.toPath(), out, StandardCharsets.ISO_8859_1, StandardOpenOption.WRITE, StandardOpenOption.TRUNCATE_EXISTING);
     }
 
-
 }
-
-
-

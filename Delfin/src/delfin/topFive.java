@@ -9,7 +9,8 @@ package delfin;
  *
  * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
-public class topFive implements Comparable{
+public class topFive implements Comparable {
+
     private String name;
     private String email;
     private double time;
@@ -21,7 +22,7 @@ public class topFive implements Comparable{
         this.time = time;
         this.deciplin = deciplin;
     }
-        
+
     public String getName() {
         return name;
     }
@@ -29,11 +30,11 @@ public class topFive implements Comparable{
     public String getEmail() {
         return email;
     }
-    
+
     public double getIntTime() {
         return time;
     }
-    
+
     public double getTime() {
         return time;
     }
@@ -44,14 +45,14 @@ public class topFive implements Comparable{
 
     @Override
     public int compareTo(Object comparestu) {
-        int compareage=(int) ((topFive)comparestu).getTime();
-        
-        return (int) (this.time-compareage);
+        int compareage = (int) ((topFive) comparestu).getTime();
+
+        return (int) (this.time - compareage);
     }
-    
+
     @Override
     public String toString() {
         return name + ", " + email + ", " + time + ", " + deciplin;
     }
-    
+
 }

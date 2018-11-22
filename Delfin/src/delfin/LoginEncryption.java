@@ -5,7 +5,6 @@
  */
 package delfin;
 
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -15,22 +14,20 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
 
-
 /**
  *
  * @author Rasmus P, Ditlev, Emil og Rasmus H.
  */
 public class LoginEncryption {
 
-
     public static void checkPassword() {
 
     }
 
- /**
- * Encrypts a user input.
- * 
-*/
+    /**
+     * Encrypts a user input.
+     *
+     */
     public static String createSecurePassword(String pass) {
         for (int i = 0; i < pass.length(); ++i) {
             pass = pass.substring(i, pass.length() - pass.length() / 2) + "fs5Sg6" + pass.substring(pass.length() / 2, pass.length() - 1) + pass.substring(i, pass.length());
@@ -45,10 +42,10 @@ public class LoginEncryption {
         return pass;
     }
 
-     /**
- * Stores encrypted passwords in a file
- * 
-*/
+    /**
+     * Stores encrypted passwords in a file
+     *
+     */
     public static void storePassword(String passW) {
 
         try {
@@ -60,10 +57,10 @@ public class LoginEncryption {
         }
     }
 
-     /**
- * Checks if password entered on login matches the stored password.
- * 
-*/
+    /**
+     * Checks if password entered on login matches the stored password.
+     *
+     */
     public static boolean checkPassword(String passW) {
         boolean app = false;
 

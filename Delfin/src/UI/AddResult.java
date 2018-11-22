@@ -26,8 +26,7 @@ public class AddResult extends javax.swing.JFrame {
     /**
      * Creates new form NewMemberGUI
      */
-    public AddResult()
-    {
+    public AddResult() {
         initComponents();
         getContentPane().setBackground(Color.white);
     }
@@ -188,8 +187,7 @@ public class AddResult extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void clearTextFields()
-    {
+    private void clearTextFields() {
 
         this.jTextField1.setText("");
         this.jTextField7.setText("");
@@ -199,11 +197,11 @@ public class AddResult extends javax.swing.JFrame {
 
     }
 
- /**
- * The necessary constructor parameters to create a new result are taken from text fields containing user input,
- * and used to create a new result.
- * 
-*/
+    /**
+     * The necessary constructor parameters to create a new result are taken
+     * from text fields containing user input, and used to create a new result.
+     *
+     */
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt)//GEN-FIRST:event_jButton1ActionPerformed
     {//GEN-HEADEREND:event_jButton1ActionPerformed
         DateTimeFormatter formatter;
@@ -213,40 +211,34 @@ public class AddResult extends javax.swing.JFrame {
         int tempPlacering = 0;
         String tempDisciplin = null;
 
-        try
-        {
-            
+        try {
+
             tempname = this.jTextField1.getText();
             tempStævne = this.jTextField7.getText();
             tempTime = Double.parseDouble(this.jTextField8.getText());
             tempPlacering = Integer.parseInt(this.jTextField9.getText());
             tempDisciplin = this.jTextField10.getText();
-        } catch (Exception ex)
-        {
+        } catch (Exception ex) {
             JOptionPane.showMessageDialog(rootPane, ex.getMessage());
         }
-       
-        
+
         Controller con = new Controller();
         Filereader file = new Filereader();
         ArrayList<String[]> results = con.getResults();
         ArrayList<String[]> swimmers = con.readTextFile();
         ArrayList<Swimmer> swim = file.swimmerToObject(swimmers);
-        
-         Swimmer person = file.seachSwimmer(swim, tempname);
-         Result NewResult = new Result(person, tempStævne, tempTime, tempPlacering, tempDisciplin.toLowerCase());
+
+        Swimmer person = file.seachSwimmer(swim, tempname);
+        Result NewResult = new Result(person, tempStævne, tempTime, tempPlacering, tempDisciplin.toLowerCase());
 
         this.clearTextFields();
 
-        try
-        {
-            String inFilename= "Result.txt";
+        try {
+            String inFilename = "Result.txt";
             FileWriter.writeResult(NewResult, inFilename);
-        } catch (FileNotFoundException ex)
-        {
+        } catch (FileNotFoundException ex) {
             System.out.println("Error!");
-        } catch (UnsupportedEncodingException ex)
-        {
+        } catch (UnsupportedEncodingException ex) {
             System.out.println("Error!");
         }
 
@@ -285,34 +277,26 @@ public class AddResult extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[])
-    {
+    public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-        try
-        {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels())
-            {
-                if ("Nimbus".equals(info.getName()))
-                {
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex)
-        {
+        } catch (ClassNotFoundException ex) {
             java.util.logging.Logger.getLogger(AddResult.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex)
-        {
+        } catch (InstantiationException ex) {
             java.util.logging.Logger.getLogger(AddResult.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex)
-        {
+        } catch (IllegalAccessException ex) {
             java.util.logging.Logger.getLogger(AddResult.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex)
-        {
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(AddResult.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
@@ -320,8 +304,7 @@ public class AddResult extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run()
-            {
+            public void run() {
                 new AddResult().setVisible(true);
             }
         });

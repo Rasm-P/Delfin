@@ -24,13 +24,13 @@ public class FilereaderTest {
     }
 
     /**
-     *
+     * Setting test.txt up so the tests work.
      */
     @Before
     public void initialize() throws FileNotFoundException, UnsupportedEncodingException {
-      String Filename = "test.txt";
-      Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", "rygcrawl", true, false, false);
-      FileWriter.writeFile(swim, Filename);
+        String Filename = "test.txt";
+        Swimmer swim = new Swimmer("Ole", LocalDate.of(1999, 5, 2), "ole@gmail.com", "rygcrawl", true, false, false);
+        FileWriter.writeFile(swim, Filename);
     }
 
     /**
@@ -81,6 +81,7 @@ public class FilereaderTest {
         assertNotNull(result);
         assertEquals(exp, result.size());
     }
+
     /**
      * Test of removeSwimmer method, of class Filereader.
      */

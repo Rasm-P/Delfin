@@ -235,7 +235,7 @@ public class NewMemberGUI extends javax.swing.JFrame {
 
     }
 
-     /**
+ /**
  * The necessary constructor parameters to create a new member are taken from text fields containing user input,
  * and used to create a new member.
  * 

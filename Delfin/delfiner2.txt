@@ -22,4 +22,18 @@ Emil, 1999-04-07, emil.gmail.com, brystsvoemning, false, true, true
 Ole, 1999-05-02, ole@gmail.com, brystsvoemning, true, false, false
 Elma, 2004-03-05, elma@gmail.com, crawl, true, true, false
 Lise, 2004-03-09, lise@gmail.com, crawl, true, true, true
-
+Ole, 1999-05-02, ole@gmail.com, rygcrawl, true, false, false
+Rasmus, 1995-03-18, rasmus@gmail.com, crawl, true, true, true
+Peter, 1998-05-03, peter@gmail.com, crawl, true, false, true
+John, 1994-07-10, john@hotmail.com, brystsvoemning, true, true, false
+Nana, 1993-10-14, nana@blackmarkettrading.net.io, rygcrawl, true, true, false
+Helmer, 1985-01-14, helmer@bitcoinforfree.io.net.com, butterfly, true, true, true
+Lis, 1975-05-15, lis@gameofthronsfan.com, butterfly, true, true, true
+Viktor, 1989-04-14, viktor@copenhagencannons.com, crawl, true, true, true
+Ditlev, 1999-10-15, ditlev@bandit1.labs.overthewire.com, crawl, true, true, true
+Mark, 1984-05-14, markzuckerberg@facebook.com, butterfly, false, false, false
+Luke, 1980-05-15, lukeskywalker@starwars.com, butterfly, true, true, true 
+Erik, 1939-01-11, erik@gmail.com, crawl, true, false, false
+Gitte, 2000-03-11, Skrrt@swerve.co.uk, butterfly, false, false, false
+Mads, 1988-10-12, mads@gmail.com, crawl, true, true, true
+Yikes, 1995-09-04, big@yikes.ru, brystsvoemning, false, true, false
