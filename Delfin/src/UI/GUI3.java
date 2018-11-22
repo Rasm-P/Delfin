@@ -204,19 +204,19 @@ public class GUI3 extends javax.swing.JFrame {
 
         for (int i = 0; i < results.size(); i++) {
             String[] strings = results.get(i);
-            if (strings[10].equals("butterfly") && butterflyTop.size() <= 5) {
+            if (strings[10].equals("butterfly") && butterflyTop.size() < 5) {
                 topFive swimmer = new topFive(strings[0], strings[1], Double.parseDouble(strings[8]), strings[10]);
                 butterflyTop.add(swimmer);
             }
-            if (strings[10].equals("crawl") && crawlTop.size() <= 5) {
+            if (strings[10].equals("crawl") && crawlTop.size() < 5) {
                 topFive swimmer = new topFive(strings[0], strings[1], Double.parseDouble(strings[8]), strings[10]);
                 crawlTop.add(swimmer);
             }
-            if (strings[10].equals("rygcrawl") && rygcrawlTop.size() <= 5) {
+            if (strings[10].equals("rygcrawl") && rygcrawlTop.size() < 5) {
                 topFive swimmer = new topFive(strings[0], strings[1], Double.parseDouble(strings[8]), strings[10]);
                 rygcrawlTop.add(swimmer);
             }
-            if (strings[10].equals("brystsvoemning") && brystsvoemningTop.size() <= 5) {
+            if (strings[10].equals("brystsvoemning") && brystsvoemningTop.size() < 5) {
                 topFive swimmer = new topFive(strings[0], strings[1], Double.parseDouble(strings[8]), strings[10]);
                 brystsvoemningTop.add(swimmer);
             }
